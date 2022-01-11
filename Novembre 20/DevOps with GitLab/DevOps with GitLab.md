@@ -238,7 +238,7 @@ exclude_patterns:
 > _Figure 10: Rapport html généré par Code Climate_
 
 ## Conclusion
-Dans cette présentation, nous avons vu comment construire un pipeline d'intégration continue avec GitLab. Les différentes étapes du pipeline nous permettent dorénavant de récupérer des rapports sur l'exécution des tests unitaires, sur la couverture du code par les tests et sur la qualité du code source de notre projet. Cette configuration peut évidemment être améliorée. Elle constitue une base de travail à laquelle nous pouvons par exemple ajouter des tests d'intégration mais aussi une étape de création de conteneur pour nos applications afin de compléter l'autre aspect DevOps, la mise en production automatisée de nos applications.
+Dans cette présentation, nous avons vu comment construire un pipeline d'intégration continue avec GitLab. Les différentes étapes du pipeline nous permettent dorénavant de récupérer des rapports sur l'exécution des tests unitaires, sur la couverture du code par les tests et sur la qualité du code source de notre projet. Cette configuration peut évidemment être améliorée. Elle constitue une base de travail à laquelle nous pouvons par exemple ajouter des tests d'intégration mais aussi une étape de création de conteneur pour nos applications afin de compléter d'autres aspects DevOps, comme la mise en production automatisée de nos applications.
 
 ## References
 
