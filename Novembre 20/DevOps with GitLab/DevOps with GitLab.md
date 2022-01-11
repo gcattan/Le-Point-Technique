@@ -17,8 +17,7 @@ Dans cette partie, je vais définir le vocabulaire employé pour ce tutoriel d'u
 L'intégration continue est une pratique qui consiste à mettre en place un ensemble de vérifications qui se déclenche automatiquement lorsque les développeurs envoient les modifications apportées au code source, lui même stocké dans un dépôt Git, dans notre cas sur un serveur GitLab. L'exécution de scripts automatiques permet de réduire le risque d'introduction de nouveau bug dans l'application et de garantir que les modifications passent tous les tests et respectent les différentes normes qualitatives exigées pour un projet.
 
 ### Job
-Un Job est une tâche regroupant un ensemble de commandes à exécuter.
-
+Un _job_ est une tâche regroupant un ensemble de commandes à exécuter.
 ### Job Artifacts
 L'exécution d'un job peut produire une archive, un fichier, un répertoire. Ce sont des artefacts que l'on peut télécharger ou visualiser en utilisant l'interface utilisateur de GitLab.
 
