@@ -3,9 +3,9 @@ _Nicolas, BERTRAND_
 
 _Le-Point-Technique_, _Janvier/2022_
 
-__abstract__: GitLab est une plateforme de développement open source dédiée à la gestion de project informatique. De la gestion de version du code source, en passant par son tableau de bord permettant de suivre les tâches en cours ou encore par la définition précise des rôles de chaque membre de l'équipe, GitLab offre un grand nombre de fonctionnalités qui facilitent le travail collaboratif. Dans ce tutoriel, je vais tenter d'expliquer quelques notions techniques et fournir des extraits de code en me concentrant sur l'aspect intégration continue. Pour ce faire, je vais utiliser la plateforme DevOps accessible en ligne à l'adresse [About GitLab](https://about.gitlab.com). L'objectif est de créer un pipeline d'intégration continue contenant quatre étapes d'automatisation, à savoir, l'étape de 'build', de 'unit test', de 'code coverage' et de 'code quality'.
+__abstract__: GitLab est une plateforme de développement open source dédiée à la gestion de projet informatique. De la gestion de version du code source, en passant par son tableau de bord qui permet de suivre les tâches en cours ou encore par la définition précise des rôles de chaque membre de l'équipe, GitLab offre un grand nombre de fonctionnalités qui facilitent le travail collaboratif. Dans ce tutoriel, je vais tenter d'expliquer quelques notions techniques et fournir des extraits de code en me concentrant sur l'aspect intégration continue. Pour ce faire, je vais utiliser la plateforme DevOps accessible en ligne à l'adresse [About GitLab](https://about.gitlab.com). L'objectif est de créer un pipeline d'intégration continue contenant six étapes d'automatisation, à savoir, l'étape de compilation, des tests unitaires, de la couverture du code par les tests, de la qualité du code, de la création de package pour terminer avec la création d'image pour conteneuriser nos applications.
 
-__keywords__: pipeline CI, intégration continue, GitLab, GitLab Runner, build, unit test, code coverage, code quality, Spring, Maven
+__keywords__: pipeline CI, intégration continue, GitLab, GitLab Runner, build, unit test, code coverage, code quality, Spring, Maven, Docker, Kaniko
 
 ## Introduction
 Afin de garantir une certaine compréhension, je vais commencer par décrire quelques concepts, en fournissant la définition des mots clés utilisés sur la plateforme GitLab. Je vais poursuivre avec un mot sur l'installation de l'outil et sur la création d'un nouveau projet. Enfin, je vais expliquer comment mettre en place le pipeline en fournissant d'abord un exemple basique, puis des exemples plus complets de manière à créer notre pipeline d'intégration continue.
@@ -14,7 +14,7 @@ Afin de garantir une certaine compréhension, je vais commencer par décrire que
 Dans cette partie, je vais définir le vocabulaire employé pour ce tutoriel d'un point de vue utilisateur de la solution GitLab.
 
 ### Intégration continue
-L'intégration continue est une pratique qui consiste à mettre en place un ensemble de vérifications qui se déclenche automatiquement lorsque les développeurs envoient les modifications apportées au code source, lui même stocké dans un dépôt Git, dans notre cas sur un serveur GitLab. L'exécution de scripts automatiques permet de réduire le risque d'introduction de nouveau bug dans l'application et de garantir que les modifications passent tous les tests et respectent les différentes normes qualitatives exigées pour un projet.
+L'intégration continue est une pratique qui consiste à mettre en place un ensemble de vérifications qui se déclenchent automatiquement lorsque les développeurs envoient les modifications apportées au code source, lui même stocké dans un dépôt Git, dans notre cas sur un serveur GitLab. L'exécution de scripts automatiques permet de réduire le risque d'introduction de nouveaux bugs dans l'application et de garantir que les modifications passent tous les tests et respectent les différentes normes qualitatives exigées pour un projet.
 
 ### Job
 Un _job_ est une tâche regroupant un ensemble de commandes à exécuter.
@@ -23,7 +23,7 @@ Un _job_ est une tâche regroupant un ensemble de commandes à exécuter.
 L'exécution d'un job peut produire une archive, un fichier, un répertoire. Ce sont des artefacts que l'on peut télécharger ou visualiser en utilisant l'interface utilisateur de GitLab.
 
 ### Pipeline
-Représente le composant de plus haut niveau. Il est composé de jobs (tâches), qui définissent ce qu'il faut faire, et de _stages_ (étapes) qui définissent quand les tâches doivent être exécutées. Dans notre cas, les quatre stages que nous allons mettre en place sont 'build', 'unit-test', 'coverage' et 'quality'.
+Représente le composant de plus haut niveau. Il est composé de jobs (tâches), qui définissent ce qu'il faut faire, et de _stages_ (étapes) qui définissent quand les tâches qui donnent le timing d'exécution des dites tâches. Dans notre cas, les six stages que nous allons mettre en place sont 'build', 'unit-test', 'coverage', 'quality', 'package' et 'docker'.
 
 ### Gitlab Runners
 Gitlab Runner est une application qui prend en charge l'exécution automatique des builds, tests et différents scripts avant d'intégrer le code source au dépôt et d'envoyer les rapports d'exécutions à GitLab. Ce sont des processus qui récupèrent et exécutent les jobs des pipelines pour GitLab. Il existe deux types de runner, les _shared runners_, qui sont mis à notre disposition à travers la plateforme et les _specific runners_ qui sont spécifiques à un projet et peuvent être installés sur nos machines.
@@ -47,7 +47,7 @@ Par défaut, le pipeline de GitLab utilise les shared runners pour exécuter les
 >
 > _Figure 2: Installer un runner spécifique_
 
-Un fois installé en local, nous devons enregistrer le runner pour notre projet (voir [Registering runners](https://docs.gitlab.com/runner/register/index.html#example)). Nous pouvons réaliser cette tâche en mode interactif ou one-line. Voici les différentes étapes communes à tous les environnements en mode interactif :
+Une fois installé en local, nous devons enregistrer le runner pour notre projet (voir [Registering runners](https://docs.gitlab.com/runner/register/index.html#example)). Nous pouvons réaliser cette tâche en mode interactif ou one-line. Voici les différentes étapes communes à tous les environnements en mode interactif :
 
 1. Exécutez la commande (suivant votre os, voir la [doc](https://docs.gitlab.com/runner/register/index.html#example)) : sudo gitlab-runner register
 2. Entrez l'URL de l'instance GitLab (voir colonne Specific runners) : https://gitlab.com/
@@ -138,7 +138,7 @@ test-job:
 
 ```
 
-Maintenant que le fichier est créé nous pouvons effectuer un commit, cette action va démarrer l'exécution automatique du pipeline, que nous pouvons suivre dans l'onglet _Pipelines_ de l'interface (voir _Figure 8_ ci-dessous). Le pipeline peut avoir différents états, _running_ quand il est en cours d'exécution puis, _passed_ ou _failed_, qui indiquent respectivement que l'exécution s'est déroulée sans erreur ou, au contraire, qu'elle est stoppée car des erreurs ont été trouvées.
+Maintenant que le fichier est créé nous pouvons effectuer un commit, cette action va démarrer l'exécution automatique du pipeline, que nous pouvons suivre dans l'onglet _Pipelines_ de l'interface (voir _Figure 8_ ci-dessous). Le pipeline peut avoir différents états, _running_ quand il est en cours d'exécution puis, _passed_ ou _failed_, qui indiquent respectivement que l'exécution s'est déroulée correctement ou, au contraire, qu'elle est stoppée car des erreurs ont été trouvées.
 
 > ![image](images/figure8.png)
 >
@@ -188,7 +188,7 @@ Une fois le job _build-ms-emergency_ traité par le pipeline, nous pouvons visua
 >
 > _Figure 9: Visualisation du résultat du build_
 
-Le pipeline poursuit son exécution avec le job nommé _unit-test-ms-emergency_. Ce job va nous permettre d'exécuter les tests unitaires développés pour l'application _emergency_. En complément, nous allons générer un rapport que nous allons pouvoir sauvegarder grâce à l'utilisation du mot clé _artifacts_. Nous allons spécifier la fréquence de création de ce rapport avec _when_ et le sauvegarder, dans un format html avec _paths_ pour le consulter ou le télécharger ultérieurement (voir _Figure 10_ ci-dessous), et dans un format xml avec _reports:junit_ pour qu'il soit intégré dans l'interface utilisateur de Gitlab (voir _Figure 11_ ci-dessous).
+Le pipeline poursuit son exécution avec le job nommé _unit-test-ms-emergency_. Ce job va nous permettre d'exécuter les tests unitaires développés pour l'application _emergency_. En complément, nous allons générer un rapport que nous pourrons sauvegarder grâce à l'utilisation du mot clé _artifacts_. Nous spécifierons la fréquence de création de ce rapport avec _when_ et le sauvegarderons, dans un format html avec _paths_ pour le consulter ou le télécharger ultérieurement (voir _Figure 10_ ci-dessous), ainsi que dans un format xml avec _reports:junit_ pour qu'il soit intégré dans l'interface utilisateur de Gitlab (voir _Figure 11_ ci-dessous).
 
 > ![image](images/figure10.png)
 >
@@ -200,7 +200,7 @@ Le pipeline poursuit son exécution avec le job nommé _unit-test-ms-emergency_.
 
 ### .gitlab-ci.yml, Code Coverage
 
-Dans l'extrait de code suivant, j'ai ajouté le stage _coverage_ et le job _coverage-ms-emergency_. Cela va nous permettre de générer automatiquement un rapport de couverture du code par les tests. Comme pour le job précédent un rapport de couverture est généré puis sauvegardé afin d'être consulté ou téléchargé ultérieurement (voir _Figure 12_ ci-dessous). L'intégration des résultats du rapport dans l'interface GitlLab n'est pas abordée dans ce tutoriel. Si vous le souhaitez vous trouverez les informations nécessaires pour activer cette visualisation à cette adresse [Test coverage visualization](https://docs.gitlab.com/ee/user/project/merge_requests/test_coverage_visualization.html#maven-example).
+Dans l'extrait de code suivant, j'ai ajouté le stage _coverage_ et le job _coverage-ms-emergency_. Cela va nous permettre de générer automatiquement un rapport de couverture du code par les tests. Comme pour le job précédent celui-ci est généré puis sauvegardé afin d'être consulté ou téléchargé ultérieurement (voir _Figure 12_ ci-dessous). L'intégration des résultats du rapport dans l'interface GitlLab n'est pas abordée dans ce tutoriel. Si vous le souhaitez vous trouverez les informations nécessaires pour activer cette visualisation à cette adresse [Test coverage visualization](https://docs.gitlab.com/ee/user/project/merge_requests/test_coverage_visualization.html#maven-example).
 
 ```yml
 image: maven:latest
@@ -236,9 +236,9 @@ coverage-ms-emergency:
 
 ### .gitlab-ci.yml, Code Quality
 
-Dans ce paragraphe, je vais décrire la dernière phase de notre pipeline d'intégration continue, le stage _quality_.
+Dans ce paragraphe, je vais décrire le stage _quality_ de notre pipeline d'intégration continue.
 Pour l'exécution du job _code_quality_job_ nous allons utiliser une _image_ docker, différente de l'image maven utilisée jusqu'à maintenant.
-Une chose intéressant à remarquer est le mot clé _services_ qui spécifie _docker:stable-dind_. Le _dind_ signifie Docker in Docker et veut dire que le runner va utiliser Docker comme _executor_, pour exécuter les scripts, et que le script utilise lui même une image Docker de Code Climate afin de créer un rapport sur la qualité du code source. Nous ajoutons le plugin _SonarJava_, un analyseur de code qui nous permet de détecter les code smells, bugs et failles de sécurité. Pour activer ce plugin nous créons un fichier nommé _.codeclimate.yml_ à la racine du projet. Ce fichier nous permet non seulement d'activer le plugin mais aussi d'exclure les répertoires _mvn_, _test_ et _target_ de l'analyse.
+Une chose intéressante à remarquer est le mot clé _services_ qui spécifie _docker:stable-dind_. Le _dind_ signifie Docker in Docker et veut dire que le runner va utiliser Docker comme _executor_, pour exécuter les scripts, et que le script utilise lui même une image Docker de Code Climate afin de créer un rapport sur la qualité du code source. Nous ajoutons le plugin _SonarJava_, un analyseur de code qui nous permet de détecter les code smells, bugs et failles de sécurité. Pour activer ce plugin nous créons un fichier nommé _.codeclimate.yml_ à la racine du projet. Ce fichier nous permet non seulement d'activer le plugin mais aussi d'exclure les répertoires _mvn_, _test_ et _target_ de l'analyse.
 Une fois terminé, comme pour les autres jobs, un artefact est créé et peut être téléchargé ou visualisé dans un navigateur (voir _Figure 13_ ci-dessous).
 
 > _.gitlab-ci.yml_
@@ -296,8 +296,98 @@ exclude_patterns:
 >
 > _Figure 13: Rapport html généré par Code Climate_
 
+### .gitlab-ci.yml, Package
+
+Cette nouvelle étape est celle dans laquelle nous allons créer des packages pour notre application et les stocker dans le _Package Registry_ de GitLab. Le but de ce processus est de préparer le travail de déploiement de la phase de livraison continue en sauvegardant nos artefacts. Pour cela nous ajoutons un nouveau stage, _package_ et un job _package-ms-emergency_. Dans la partie script du job, j'utilise le plugin deploy de Maven pour ajouter les différents artefacts au package registry. Deploy représente la dernière phase du cycle de vie par defaut de la création d'une application avec Maven. Une fois le job achevé nous retrouvons les Fat JAR de nos applications contenant toutes nos classes, ressources et dépendances dans le menu Package Registry (voir _Figure 14_ ci-dessous). Nous pouvons aussi accéder à notre application via l'onglet dowload ou browse du job, comme pour les rapports.
+
+```yml
+image: maven:latest
+
+stages:
+  - build
+  - unit-test
+  - coverage
+  - quality
+  - package
+
+build-ms-emergency:
+  ...
+
+unit-test-ms-emergency:
+  ...
+
+coverage-ms-emergency:
+  ...
+
+code_quality_job:
+  ...
+
+package-ms-emergency:
+  stage: package
+  script:
+    - cd emergency
+    - 'mvn deploy -s ci_settings.xml'
+  artifacts:
+    when: always
+    paths:
+      - emergency/target/*.jar
+```
+
+> ![image](images/figure14.png)
+>
+> _Figure 14: Visualisation du Package Registry de GitLab_
+
+### .gitlab-ci.yml, Docker
+
+L’ultime étape de notre pipeline d’intégration continue, repose sur la création d’image docker que nous stockons dans le _Container Registry_ de GitLab. L’objectif de ce processus est de faciliter le travail de déploiement de la phase de livraison continue. Pour cela nous ajoutons un nouveau stage, _docker_ et un job _dockerize-ms-emergency_. J'utilise _Kaniko_, un outil de création d'image docker qui n'a pas besoin d'accès privilégiés sur la machine hôte et nous évite des problèmes de sécurité. Une fois le job achevé nous retrouvons les images de nos applications dans le menu Container Registry (voir _Figure 15_ ci-dessous). Désormais, nous pouvons utiliser ces images pour la création de nos conteneurs.
+
+```yml
+image: maven:latest
+
+stages:
+  - build
+  - unit-test
+  - coverage
+  - quality
+  - package
+  - docker
+
+build-ms-emergency:
+  ...
+
+unit-test-ms-emergency:
+  ...
+
+coverage-ms-emergency:
+  ...
+
+code_quality_job:
+  ...
+
+package-ms-emergency:
+  ...
+
+dockerize-ms-emergency:
+  stage: docker
+  image:
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint: [""]
+  script:
+    - mkdir -p /kaniko/.docker
+    - echo "{\"auths\":{\"${CI_REGISTRY}\":{\"auth\":\"$(printf "%s:%s" "${CI_REGISTRY_USER}" "${CI_REGISTRY_PASSWORD}" | base64 | tr -d '\n')\"}}}" > /kaniko/.docker/config.json
+    - >-
+      /kaniko/executor
+      --context "${CI_PROJECT_DIR}"
+      --dockerfile "${CI_PROJECT_DIR}/emergency/Dockerfile"
+      --destination "${CI_REGISTRY_IMAGE}/emergency:${CI_COMMIT_TAG}"
+```
+
+> ![image](images/figure15.png)
+>
+> _Figure 15: Visualisation du Container Registry de GitLab_
+
 ## Conclusion
-Dans cette présentation, nous avons vu comment construire un pipeline d'intégration continue avec GitLab. Les différentes étapes du pipeline nous permettent dorénavant de récupérer des rapports sur l'exécution des tests unitaires, sur la couverture du code par les tests et sur la qualité du code source de notre projet. Cette configuration peut évidemment être améliorée. Elle constitue une base de travail à laquelle nous pouvons par exemple ajouter des tests d'intégration mais aussi une étape de création de conteneur pour nos applications afin de compléter d'autres aspects DevOps, comme la mise en production automatisée de nos applications.
+Dans cette présentation, nous avons vu comment construire un pipeline d'intégration continue avec GitLab. Les différentes étapes du pipeline nous permettent dorénavant de récupérer des rapports sur l'exécution des tests unitaires, sur la couverture du code par les tests, sur la qualité du code source de notre projet et finalement, non seulement créer, mais aussi conteneuriser nos applications. Cette configuration peut évidemment être améliorée. Elle constitue une base de travail à laquelle nous pouvons par exemple ajouter des tests d'intégration mais aussi une étape de vérification des vulnérabilités de nos conteneurs pour ensuite compléter d'autres aspects DevOps, comme la mise en production automatisée de nos applications.
 
 ## Références
 
@@ -323,6 +413,9 @@ Dans cette présentation, nous avons vu comment construire un pipeline d'intégr
 [Code Quality | Code Climate](https://docs.gitlab.com/ee/user/project/merge_requests/code_quality.html) <br/>
 [Code Quality | Sonar Java](https://docs.codeclimate.com/docs/sonar-java) <br/>
 [Code Quality | Docker in Docker](https://docs.gitlab.com/ee/ci/docker/using_docker_build.html#use-the-docker-executor-with-the-docker-image-docker-in-docker) <br/>
+[Package | Maven Gitlab](https://docs.gitlab.com/ee/user/packages/maven_repository/#create-maven-packages-with-gitlab-cicd-by-using-maven) <br/>
+[Package | Maven Deploy](https://maven.apache.org/plugins/maven-deploy-plugin/) <br/>
+[Docker | Kaniko](https://docs.gitlab.com/ee/ci/docker/using_kaniko.html) <br/>
 
 ### Vidéos
 [Gitlab CI pipeline tutorial for beginners](https://www.youtube.com/watch?v=Jav4vbUrqII) <br/>
