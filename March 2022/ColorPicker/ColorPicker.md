@@ -1,7 +1,7 @@
 # ColorPicker: Une librairie pour choisir une couleur sous Android
 
-_Amelin, Lucas_; 
-_Abdelouahad, Mustapha_ 
+_Amelin, Lucas_;
+_Abdelouahad, Mustapha_
 
 _Le-Point-Technique_, _March/2022_
 
