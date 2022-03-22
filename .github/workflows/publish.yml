@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: baileyjm02/markdown-to-pdf@v1
         with:
-          input_dir: March 2022
+          input_dir: 'March 2022/**'
           output_dir: March 2022
           # images_dir: docs/images
           # for example <img src="./images/file-name.png">
