@@ -1,29 +1,22 @@
-# .github/workflows/convert-to-pdf.yml
+name: Upload Document as Artifact
 
-name: Docs to PDF
-# This workflow is triggered on pushes to the repository.
-on:
-  push:
-    # Paths can be used to only trigger actions when you have edited certain files, such as a file within the /docs directory
-    paths:
-      - 'March 2022/**.md'
+on: [push]
 
 jobs:
-  converttopdf:
-    name: Build PDF
+  publish:
     runs-on: ubuntu-latest
+    name: Publish Document
     steps:
-      - uses: actions/checkout@v2
-      - uses: baileyjm02/markdown-to-pdf@v1
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Publish PDF Document
+        uses: shrink/actions-document-publish@v1
+        id: publish-document
         with:
-          input_dir: 'March 2022/**'
-          output_dir: March 2022
-          # images_dir: docs/images
-          # for example <img src="./images/file-name.png">
-          # image_import: ./images
-          # Default is true, can set to false to only get PDF files
-          build_html: false
-      - uses: actions/upload-artifact@v1
+          sources: 'March 2022/Sommaire.md March 2022/**/*.md'
+      - name: Upload Document
+        uses: actions/upload-artifact@v2
+        id: upload-document
         with:
-          name: March 2022
-          path: March 2022
+          name: 'document.pdf'
+          path: ${{ steps.publish-document.outputs.pdf }}
