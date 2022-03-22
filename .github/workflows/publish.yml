@@ -2,6 +2,9 @@ name: Upload Document as Artifact
 
 on: [push]
 
+env:
+  DATE: March 2022
+
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -13,7 +16,7 @@ jobs:
         uses: shrink/actions-document-publish@v1
         id: publish-document
         with:
-          sources: 'March%202022/Sommaire.md March%202022/**/*.md'
+          sources: '${DATE}/Sommaire.md ${DATE}/**/*.md'
       - name: Upload Document
         uses: actions/upload-artifact@v2
         id: upload-document
