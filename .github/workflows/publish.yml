@@ -16,7 +16,7 @@ jobs:
         uses: shrink/actions-document-publish@v1
         id: publish-document
         with:
-          sources: '${DATE}/Sommaire.md ${DATE}/**/*.md'
+          sources: "$DATE/Sommaire.md $DATE/**/*.md"
       - name: Upload Document
         uses: actions/upload-artifact@v2
         id: upload-document
