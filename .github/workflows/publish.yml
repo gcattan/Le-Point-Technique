@@ -1,9 +1,6 @@
-name: Upload Document as Artifact
+name: Publish document
 
 on: [push]
-
-env:
-  DATE: March 2022
 
 jobs:
   publish:
@@ -13,13 +10,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Publish PDF Document
-        uses: shrink/actions-document-publish@v1
-        id: publish-document
-        with:
-          sources: 'March2022/Sommaire.md March2022/**/*.md'
+        run: |
+          sudo apt-get install pandoc
+          sudo bash "March 2022"/generate_standalone.cmd
       - name: Upload Document
         uses: actions/upload-artifact@v2
         id: upload-document
         with:
-          name: 'document.pdf'
+          name: 'March 2022.pdf'
           path: ${{ steps.publish-document.outputs.pdf }}
