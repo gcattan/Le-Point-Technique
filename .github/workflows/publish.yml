@@ -13,7 +13,7 @@ jobs:
         run: |
           sudo apt-get install pandoc
           cd "March 2022"
-          ./generate_standalone.cmd
+          sudo ./generate_standalone.cmd
       - name: Upload Document
         uses: actions/upload-artifact@v2
         id: upload-document
