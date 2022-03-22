@@ -13,7 +13,7 @@ jobs:
         uses: shrink/actions-document-publish@v1
         id: publish-document
         with:
-          sources: 'March 2022/Sommaire.md March 2022/**/*.md'
+          sources: 'March%202022/Sommaire.md March%202022/**/*.md'
       - name: Upload Document
         uses: actions/upload-artifact@v2
         id: upload-document
