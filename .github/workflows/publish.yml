@@ -11,6 +11,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Publish PDF Document
         run: |
+          sudo apt-get update
           sudo apt-get install pandoc
           sudo bash "March 2022"/generate_standalone.cmd
       - name: Upload Document
