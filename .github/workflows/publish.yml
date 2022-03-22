@@ -13,7 +13,8 @@ jobs:
         run: |
           wget https://github.com/jgm/pandoc/releases/download/2.14.0.3/pandoc-2.14.0.3-1-amd64.deb
           sudo dpkg -i pandoc-2.14.0.3-1-amd64.deb
-          sudo bash "March 2022"/generate_standalone.cmd
+          cd "March 2022"
+          sudo bash ./generate_standalone.cmd
       - name: Upload Document
         uses: actions/upload-artifact@v2
         id: upload-document
