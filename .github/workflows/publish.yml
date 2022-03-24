@@ -27,10 +27,15 @@ jobs:
         with:
           name: 'March2022.pdf'
           path: 'March2022/March2022.pdf'
+      - name: Extract branch name
+        shell: bash
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        id: extract_branch
       - name: Pull request artifacts
         uses: gavv/pull-request-artifacts@v1.0.0
         with:
           commit: ${{ github.event.pull_request.head.sha }}
           repo-token: ${{ secrets.GITHUB_TOKEN }}
+          artifacts-branch: ${{ steps.extract_branch.outputs.branch }}
           artifacts: |
             March2022.pdf
