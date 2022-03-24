@@ -19,18 +19,18 @@ jobs:
           sudo apt-get install texlive-full
           wget https://github.com/jgm/pandoc/releases/download/2.14.0.3/pandoc-2.14.0.3-1-amd64.deb
           sudo dpkg -i pandoc-2.14.0.3-1-amd64.deb
-          cd "March 2022"
+          cd "March2022"
           sudo bash ./generate_standalone.cmd
       - name: Upload Document
         uses: actions/upload-artifact@v2
         id: upload-document
         with:
           name: 'March2022.pdf'
-          path: 'March 2022/March 2022.pdf'
+          path: 'March2022/March2022.pdf'
       - name: Pull request artifacts
         uses: gavv/pull-request-artifacts@v1.0.0
         with:
           commit: ${{ github.event.pull_request.head.sha }}
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           artifacts: |
-            "March 2022/March 2022.pdf"
+            "March2022/March2022.pdf"
