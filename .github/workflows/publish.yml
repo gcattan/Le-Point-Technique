@@ -34,4 +34,4 @@ jobs:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           artifacts-branch: test_devop
           artifacts: |
-            March2022.pdf
+            March2022/March2022.pdf
