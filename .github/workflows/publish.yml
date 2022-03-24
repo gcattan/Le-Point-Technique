@@ -1,9 +1,13 @@
 name: Publish document
 
-on: [push]
+on:
+  pull_request:
+    types:
+      - labeled
 
 jobs:
   publish:
+    if: github.event.label.name == 'publish'
     runs-on: ubuntu-latest
     name: Publish Document
     steps:
