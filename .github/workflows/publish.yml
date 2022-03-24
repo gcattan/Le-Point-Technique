@@ -25,7 +25,7 @@ jobs:
         uses: actions/upload-artifact@v2
         id: upload-document
         with:
-          name: 'March 2022.pdf'
+          name: 'March2022.pdf'
           path: 'March 2022/March 2022.pdf'
       - name: Pull request artifacts
         uses: gavv/pull-request-artifacts@v1.0.0
@@ -33,4 +33,4 @@ jobs:
           commit: ${{ github.event.pull_request.head.sha }}
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           artifacts: |
-            "March 2022.pdf"
+            March2022.pdf
