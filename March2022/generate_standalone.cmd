@@ -1,1 +1,0 @@
-pandoc -d pandoc_defaults.yaml

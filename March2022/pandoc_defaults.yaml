@@ -46,7 +46,7 @@ standalone: true
 include-before-body: []
 include-after-body: []
 include-in-header:
-- head.tex
+- ../head.tex
 resource-path: ["."]
 
 # turn on built-in citation processing.  Note that if you need
