@@ -32,6 +32,7 @@ jobs:
         with:
           commit: ${{ github.event.pull_request.head.sha }}
           repo-token: ${{ secrets.GITHUB_TOKEN }}
+          artifacts-dir: March2022
           artifacts-branch: test_devop
           artifacts: |
             March2022/March2022.pdf
