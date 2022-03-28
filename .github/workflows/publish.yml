@@ -24,18 +24,24 @@ jobs:
           sudo dpkg -i pandoc-2.14.0.3-1-amd64.deb
           cd "$FOLDER"
           pandoc -d pandoc_defaults.yaml
+      - name: set env variables for inputs
+        id: set-env
+        run: |
+          echo ::set-output name=dir::$FOLDER
+          echo ::set-output name=name::"$FOLDER.pdf"
+          echo ::set-output name=path::"$FOLDER/$FOLDER.pdf"
       - name: Upload Document
         uses: actions/upload-artifact@v2
         id: upload-document
         with:
-          name: "$FOLDER.pdf"
-          path: "$FOLDER/$FOLDER.pdf"
+          name: ${{ steps.set-env.outputs.name }}
+          path: ${{ steps.set-env.outputs.path }}
       - name: Pull request artifacts
         uses: gavv/pull-request-artifacts@v1.0.0
         with:
           commit: ${{ github.event.pull_request.head.sha }}
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          artifacts-dir: "$FOLDER"
+          artifacts-dir: ${{ steps.set-env.outputs.dir }}
           artifacts-branch: test_devop
           artifacts: |
-            "$FOLDER/$FOLDER.pdf"
+            ${{ steps.set-env.outputs.path }}
