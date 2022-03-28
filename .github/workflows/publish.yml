@@ -22,20 +22,20 @@ jobs:
           sudo apt-get install texlive-full
           wget https://github.com/jgm/pandoc/releases/download/2.14.0.3/pandoc-2.14.0.3-1-amd64.deb
           sudo dpkg -i pandoc-2.14.0.3-1-amd64.deb
-          cd $FOLDER
+          cd "$FOLDER"
           pandoc -d pandoc_defaults.yaml
       - name: Upload Document
         uses: actions/upload-artifact@v2
         id: upload-document
         with:
-          name: $FOLDER.pdf
-          path: $FOLDER/$FOLDER.pdf'
+          name: "$FOLDER.pdf"
+          path: "$FOLDER/$FOLDER.pdf"
       - name: Pull request artifacts
         uses: gavv/pull-request-artifacts@v1.0.0
         with:
           commit: ${{ github.event.pull_request.head.sha }}
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          artifacts-dir: $FOLDER
+          artifacts-dir: "$FOLDER"
           artifacts-branch: test_devop
           artifacts: |
-            $FOLDER/$FOLDER.pdf
+            "$FOLDER/$FOLDER.pdf"
