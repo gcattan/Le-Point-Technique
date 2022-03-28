@@ -11,7 +11,7 @@ __keywords__: Android, Jetpack, library, color picker
 
 ## Introduction
 
-ColorPicker est une [librairie Android](https://github.com/LucasGitHubz/ColorPicker) qui permet de choisir a un utilisateur de choisir une couleur sur un disque colore. La librairie s'intègre sous la forme d'un bouton dit `flottant` au layout de l'application (_Figure 1_).
+ColorPicker est une [librairie Android](https://github.com/LucasGitHubz/ColorPicker) qui permet a un utilisateur de choisir une couleur sur un disque coloré. La librairie s'intègre sous la forme d'un bouton dit `flottant` au layout de l'application (_Figure 1_).
 
 > ![image 1](images/image-1.png)
 >
