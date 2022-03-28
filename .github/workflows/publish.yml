@@ -5,6 +5,9 @@ on:
     types:
       - labeled
 
+env:
+  FOLDER: March2022
+
 jobs:
   publish:
     if: github.event.label.name == 'publish'
@@ -19,20 +22,20 @@ jobs:
           sudo apt-get install texlive-full
           wget https://github.com/jgm/pandoc/releases/download/2.14.0.3/pandoc-2.14.0.3-1-amd64.deb
           sudo dpkg -i pandoc-2.14.0.3-1-amd64.deb
-          cd "March2022"
+          cd $FOLDER
           pandoc -d pandoc_defaults.yaml
       - name: Upload Document
         uses: actions/upload-artifact@v2
         id: upload-document
         with:
-          name: 'March2022.pdf'
-          path: 'March2022/March2022.pdf'
+          name: $FOLDER.pdf
+          path: $FOLDER/$FOLDER.pdf'
       - name: Pull request artifacts
         uses: gavv/pull-request-artifacts@v1.0.0
         with:
           commit: ${{ github.event.pull_request.head.sha }}
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          artifacts-dir: March2022
+          artifacts-dir: $FOLDER
           artifacts-branch: test_devop
           artifacts: |
-            March2022/March2022.pdf
+            $FOLDER/$FOLDER.pdf
