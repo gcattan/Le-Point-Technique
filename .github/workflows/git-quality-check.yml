@@ -1,8 +1,9 @@
 name: Git Quality Check
 
-push:
-  branches:
-    - master
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   build-linux:
