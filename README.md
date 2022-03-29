@@ -1,3 +1,5 @@
+<img type="image/svg" src="https://byob.yarr.is/Le-Point-Technique/git-quality-check/score"/>
+
 # Le-Point-Technique 
 Tutorial and technical demos for the purpose of education.
 
