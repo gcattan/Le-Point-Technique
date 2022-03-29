@@ -1,0 +1,31 @@
+name: Git Quality Check
+
+push:
+  branches:
+    - master
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - name: Git Quality Check
+      id: git-quality-check
+      uses: gcattan/git-quality-check@v0.0-alpha
+      with:
+        badWords: WIP, todo
+        mainBranches: origin/master, origin/develop, origin/main
+    - name: Check outputs
+      run: |
+        test "${{ steps.git-quality-check.outputs.score }}" != ""
+    - name: Create badge
+      uses: RubbaBoy/BYOB@v1.2.1
+      with:
+        NAME: score
+        LABEL: 'Git Quality Score'
+        STATUS: ${{ steps.git-quality-check.outputs.score }}
+        COLOR: 00EEFF
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
