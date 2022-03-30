@@ -9,7 +9,6 @@ un environement Java Spring.
 __keywords__: GitLab, DevOps, MySQL, Java, Spring
 
 ## Introduction 
-
 Ce document decrit les etapes de configuration d'une action GitLab avec une base de donnees MySQL dans une application
 Java utilisant le framework Spring. Il s'inspire en partie du tutoriel [DevOps with GitLab](https://github.com/gcattan/Le-Point-Technique/blob/master/March2022/DevOps%20with%20GitLab/DevOps%20with%20GitLab.md).
 Ce document comprend deux sections: creation du pipeline CI et conclusion.
@@ -17,14 +16,12 @@ La creation du pipeline CI contient cinq sous-sections : configuration du pipeli
 avec GitLab, exécution de la pipeline et presentation des artifacts de builds. 
 
 ## Creation du pipeline CI
-
 Dans cette section, nous décrivons les différentes étapes de la configuration du
 fichier .gitlab-ci.yml, configuration centrale de notre pipeline. Nous verrons ensuite
 comment se déroulent les tests, les rapports associés et comment déboguer notre
 pipeline jusqu’à son fonctionnement.
 
 ### Configuration
-
 Afin de paramétrer notre pipeline, nous devons commencer par créer un fichier,
 nommé _.gitlab-ci.yml_, à la racine de notre repository. Ce fichier est composé de l’extrait
 de code visible _Figure 1_. Nous allons décrire sa composition pour chaque élément
@@ -89,7 +86,6 @@ trouve pas. Nous inversons la condition avec le point d’exclamation : s' il la
 renverra 1 qui fera échouer le job et donc notre pipeline.
 
 ###  Instanciation du service MySQL
-
 Nous devons tout d'abord ajouter (ligne 9) nos variables MySQL pour permettre la
 connexion à la base de données. Attention, il conviendra de mettre en place [External
 Secret Gitlab](https://docs.gitlab.com/ee/ci/secrets/) pour sécuriser les variables de connexion qui sont visibles (_Figure 2_).
@@ -119,7 +115,6 @@ affichons les tables créées de la base de données dans nos logs (ligne 38) pu
 les tests grâce aux commandes déjà vues précédemment (lignes 39/40).
 
 ### Enregistrement des variables GitLab
-
 Gitlab permet d’enregistrer des variables d’environnement qui seront réutilisées
 dans notre pipeline et donc par notre application en fonctionnement dans nos stages
 (voir _Figure 4_). Suivre : `seetings > Ci/CD > Variables` et `Expand`.
@@ -155,7 +150,6 @@ clefs API ou des clefs de connexion à des bases de données il conviendra d’u
 [external secret gitlab](https://docs.gitlab.com/ee/ci/secrets/)
 
 ### Exécution de la pipeline
-
 A chaque commit le pipeline est exécuté. Son exécution
 peut passer par l’état “running” quand il est en cours d'exécution,
 “passed” quand l'exécution s’est déroulée correctement ou
@@ -174,7 +168,6 @@ s’est correctement déroulée.
 > _Figure 7: Exemple de logs d'exécution._
 
 ###  Artefacts créés lors du pipeline
-
 Nous disposons d’un rapport sauvegardé au format html disponible en suivant le
 chemin suivant : `<<appli>>/target/site/surefire-report.html`
 Nous pouvons également voir le statut de réussite ou d’échec des tests et leurs
@@ -185,7 +178,6 @@ origines sur la `_Figure 8_` (cliquer sur le stage puis sur l’onglet test) :
 > _Figure 8: Screenshot de l'onglet `Pipelines`._
 
 ## Conclusion
-
 Ce document nous a permis de mettre en place notre pipeline d’intégration continue
 pour une application Spring avec sa base de données de test MySQL. 
 Ce document pourra être complété avec la mise en place d'outils de [securite](https://docs.gitlab.com/ee/user/application_security/), notamment
@@ -193,6 +185,9 @@ des tests de [fuzzing](https://docs.gitlab.com/ee/user/application_security/api_
 
 ## References
 [DevOps with GitLab](https://github.com/gcattan/Le-Point-Technique/blob/master/March2022/DevOps%20with%20GitLab/DevOps%20with%20GitLab.md)
-[GitLab - API Fuzzing](https://docs.gitlab.com/ee/user/application_security/api_fuzzing/).
+
+[GitLab - API Fuzzing](https://docs.gitlab.com/ee/user/application_security/api_fuzzing/)
+
 [GitLab - Application Security](https://docs.gitlab.com/ee/user/application_security/)
+
 [External Secret Gitlab](https://docs.gitlab.com/ee/ci/secrets/)
