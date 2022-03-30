@@ -1,14 +1,20 @@
-# GitLab Action with MySQL
+# GitLab Action with MySQL on a Java Spring Application
+
 _Cansell, Maxime_
 _Le-Point-Technique_, _March/2022_
 
-__abstract__: blablablablabla
+__abstract__: Ce document presente la configuration d'une action GitLab avec une base de donnees MySQL dans 
+un environement Java Spring.
 
-__keywords__: bla1, bla2
+__keywords__: GitLab, DevOps, MySQL, Java, Spring
 
 ## Introduction 
 
-TODO
+Ce document decrit les etapes de configuration d'une action GitLab avec une base de donnees MySQL dans une application
+Java utilisant le framework Spring. Il s'inspire en partie du tutoriel [DevOps with GitLab](https://github.com/gcattan/Le-Point-Technique/blob/master/March2022/DevOps%20with%20GitLab/DevOps%20with%20GitLab.md).
+Ce document comprend deux sections: creation du pipeline CI et conclusion.
+La creation du pipeline CI contient cinq sous-sections : configuration du pipeline, Instanciation du service MySQL, enregistrement des variables d'environnement
+avec GitLab, exécution de la pipeline et presentation des artifacts de builds. 
 
 ## Creation du pipeline CI
 
@@ -82,11 +88,11 @@ le rapport Junit. Cette commande renvoie 0 si elle trouve l’expression et 1 si
 trouve pas. Nous inversons la condition avec le point d’exclamation : s' il la trouve il
 renverra 1 qui fera échouer le job et donc notre pipeline.
 
-###  Ajout du code pour instancier un service MySQL pour notre base de donnée de tests
+###  Instanciation du service MySQL
 
 Nous devons tout d'abord ajouter (ligne 9) nos variables MySQL pour permettre la
-connexion à la base de données. Attention, il conviendra de mettre en place “External
-Secret Gitlab” https://docs.gitlab.com/ee/ci/secrets/ pour sécuriser les variables de connexion qui sont visibles (_Figure 2_).
+connexion à la base de données. Attention, il conviendra de mettre en place [External
+Secret Gitlab](https://docs.gitlab.com/ee/ci/secrets/) pour sécuriser les variables de connexion qui sont visibles (_Figure 2_).
 
 > ![image 2](images/image-2.png)
 >
@@ -112,7 +118,7 @@ données grâce au script data.sql contenu à la racine de notre application (li
 affichons les tables créées de la base de données dans nos logs (ligne 38) puis exécutons
 les tests grâce aux commandes déjà vues précédemment (lignes 39/40).
 
-### Enregistrement des variables Gitlab
+### Enregistrement des variables GitLab
 
 Gitlab permet d’enregistrer des variables d’environnement qui seront réutilisées
 dans notre pipeline et donc par notre application en fonctionnement dans nos stages
@@ -186,4 +192,7 @@ Ce document pourra être complété avec la mise en place d'outils de [securite]
 des tests de [fuzzing](https://docs.gitlab.com/ee/user/application_security/api_fuzzing/).
 
 ## References
-
+[DevOps with GitLab](https://github.com/gcattan/Le-Point-Technique/blob/master/March2022/DevOps%20with%20GitLab/DevOps%20with%20GitLab.md)
+[GitLab - API Fuzzing](https://docs.gitlab.com/ee/user/application_security/api_fuzzing/).
+[GitLab - Application Security](https://docs.gitlab.com/ee/user/application_security/)
+[External Secret Gitlab](https://docs.gitlab.com/ee/ci/secrets/)
