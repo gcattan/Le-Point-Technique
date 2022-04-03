@@ -9,6 +9,8 @@ output-file: March2022.pdf
 input-files:
 # - Sommaire.md
 - DevOps with GitLab/DevOps with GitLab.md
+- ColorPicker/ColorPicker.md
+- GitLab Action with MySQL/gitlab_action_with_sql.md
 # or you may use input-file: with a single value
 
 # Include options from the specified defaults files.
