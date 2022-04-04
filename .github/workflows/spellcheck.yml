@@ -1,14 +1,12 @@
-name: spellcheck
-
-on:
-  push:
+name: Spellcheck Action
+on: push
 
 jobs:
-  spellcheck:
-    name: runner / spellcheck
+  build:
+    name: Spellcheck
     runs-on: ubuntu-latest
     steps:
-    - name: Check out code.
-      uses: actions/checkout@v2
-    - name: Run PySpelling as a GitHub action
-      uses: sbates130272/spellcheck-github-actions@v0.6.0
+    # The checkout step
+    - uses: actions/checkout@master
+    - uses: rojopolis/spellcheck-github-actions@0.22.1
+      name: Spellcheck
