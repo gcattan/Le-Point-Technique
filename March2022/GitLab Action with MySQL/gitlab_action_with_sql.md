@@ -3,17 +3,17 @@
 _Cansell, Maxime_
 _Le-Point-Technique_, _March/2022_
 
-__abstract__: Ce document presente la configuration d'une action GitLab avec une base de donnees MySQL dans 
+__abstract__: Ce document présente la configuration d'une action GitLab avec une base de données MySQL dans 
 un environement Java Spring.
 
 __keywords__: GitLab, DevOps, MySQL, Java, Spring
 
 ## Introduction 
-Ce document decrit les etapes de configuration d'une action GitLab avec une base de donnees MySQL dans une application
+Ce document décrit les étapes de configuration d'une action GitLab avec une base de données MySQL dans une application
 Java utilisant le framework Spring. Il s'inspire en partie du tutoriel [DevOps with GitLab](https://github.com/gcattan/Le-Point-Technique/blob/master/March2022/DevOps%20with%20GitLab/DevOps%20with%20GitLab.md).
 Ce document comprend deux sections: création du pipeline CI et conclusion.
 La création du pipeline CI contient cinq sous-sections : configuration du pipeline, Instanciation du service MySQL, enregistrement des variables d'environnement
-avec GitLab, exécution de la pipeline et presentation des artifacts de builds. 
+avec GitLab, exécution de la pipeline et présentation des artifacts de builds. 
 
 ## Création du pipeline CI
 Dans cette section, nous décrivons les différentes étapes de la configuration du
@@ -137,7 +137,7 @@ application.properties de notre application Spring :
 
 > ![image 5](images/image-5.png)
 >
-> _Figure 5: Mise a jour des proprietes spring boot._
+> _Figure 5: Mise à jour des propriétés spring boot._
 
 La variable se nommera donc “spring_datasource_url” et aura pour valeur,
 comme nous l’avons vu précédemment : “jdbc:mysql//mariadb:3306/hospitals”
