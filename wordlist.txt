@@ -281,3 +281,9 @@ grep
 regex
 failure
 fail
+view
+Print
+Regular
+error
+framework
+Cansell
