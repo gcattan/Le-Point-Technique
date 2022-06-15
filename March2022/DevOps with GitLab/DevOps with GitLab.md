@@ -1,7 +1,7 @@
 # Intégration continue avec GitLab
 _Nicolas, BERTRAND_
 
-_Le-Point-Technique_, _Janvier/2022_
+_Le-Point-Technique_, _January/2022_
 
 __abstract__: GitLab est une plateforme de développement open source dédiée à la gestion de projet informatique. De la gestion de version du code source, en passant par son tableau de bord qui permet de suivre les tâches en cours ou encore par la définition précise des rôles de chaque membre de l'équipe, GitLab offre un grand nombre de fonctionnalités qui facilitent le travail collaboratif. Dans ce tutoriel, je vais tenter d'expliquer quelques notions techniques et fournir des extraits de code en me concentrant sur l'aspect intégration continue. Pour ce faire, je vais utiliser la plateforme DevOps accessible en ligne à l'adresse [About GitLab](https://about.gitlab.com). L'objectif est de créer un pipeline d'intégration continue contenant six étapes d'automatisation, à savoir, l'étape de compilation, des tests unitaires, de la couverture du code par les tests, de la qualité du code, de la création de package pour terminer avec la création d'image pour conteneuriser nos applications.
 
@@ -25,10 +25,10 @@ L'exécution d'un job peut produire une archive, un fichier, un répertoire. Ce 
 ### Pipeline
 Représente le composant de plus haut niveau. Il est composé de jobs (tâches), qui définissent ce qu'il faut faire, et de _stages_ (étapes) qui définissent quand les tâches qui donnent le timing d'exécution des dites tâches. Dans notre cas, les six stages que nous allons mettre en place sont 'build', 'unit-test', 'coverage', 'quality', 'package' et 'docker'.
 
-### Gitlab Runners
-Gitlab Runner est une application qui prend en charge l'exécution automatique des builds, tests et différents scripts avant d'intégrer le code source au dépôt et d'envoyer les rapports d'exécutions à GitLab. Ce sont des processus qui récupèrent et exécutent les jobs des pipelines pour GitLab. Il existe deux types de runner, les _shared runners_, qui sont mis à notre disposition à travers la plateforme et les _specific runners_ qui sont spécifiques à un projet et peuvent être installés sur nos machines.
+### GitLab Runners
+GitLab Runner est une application qui prend en charge l'exécution automatique des builds, tests et différents scripts avant d'intégrer le code source au dépôt et d'envoyer les rapports d'exécutions à GitLab. Ce sont des processus qui récupèrent et exécutent les jobs des pipelines pour GitLab. Il existe deux types de runner, les _shared runners_, qui sont mis à notre disposition à travers la plateforme et les _specific runners_ qui sont spécifiques à un projet et peuvent être installés sur nos machines.
 
-### Gitlab Server
+### GitLab Server
 Le serveur GitLab est un serveur web qui fournit à l'utilisateur des informations sur les dépôts git hébergés dans son espace. Il a essentiellement deux fonctions. Il contient le dépôt git et il contrôle les runners.
 
 ## Installation
@@ -101,7 +101,7 @@ Une fois les étapes d'inscription et d'installation franchies, nous pouvons cr�
 >
 > _Figure 4: Page de création d'un nouveau projet_
 
-Gitlab crée un repository vide  (voir _Figure 5_ ci-dessous) et nous indique les commandes git à exécuter  (voir _Figure 6_ ci-dessous) afin de poursuivre la création du projet.
+GitLab crée un repository vide  (voir _Figure 5_ ci-dessous) et nous indique les commandes git à exécuter  (voir _Figure 6_ ci-dessous) afin de poursuivre la création du projet.
 
 > ![image](images/figure5.png)
 >
@@ -188,7 +188,7 @@ Une fois le job _build-ms-emergency_ traité par le pipeline, nous pouvons visua
 >
 > _Figure 9: Visualisation du résultat du build_
 
-Le pipeline poursuit son exécution avec le job nommé _unit-test-ms-emergency_. Ce job va nous permettre d'exécuter les tests unitaires développés pour l'application _emergency_. En complément, nous allons générer un rapport que nous pourrons sauvegarder grâce à l'utilisation du mot clé _artifacts_. Nous spécifierons la fréquence de création de ce rapport avec _when_ et le sauvegarderons, dans un format html avec _paths_ pour le consulter ou le télécharger ultérieurement (voir _Figure 10_ ci-dessous), ainsi que dans un format xml avec _reports:junit_ pour qu'il soit intégré dans l'interface utilisateur de Gitlab (voir _Figure 11_ ci-dessous).
+Le pipeline poursuit son exécution avec le job nommé _unit-test-ms-emergency_. Ce job va nous permettre d'exécuter les tests unitaires développés pour l'application _emergency_. En complément, nous allons générer un rapport que nous pourrons sauvegarder grâce à l'utilisation du mot clé _artifacts_. Nous spécifierons la fréquence de création de ce rapport avec _when_ et le sauvegarderons, dans un format html avec _paths_ pour le consulter ou le télécharger ultérieurement (voir _Figure 10_ ci-dessous), ainsi que dans un format xml avec _reports:junit_ pour qu'il soit intégré dans l'interface utilisateur de GitLab (voir _Figure 11_ ci-dessous).
 
 > ![image](images/figure10.png)
 >
@@ -200,7 +200,7 @@ Le pipeline poursuit son exécution avec le job nommé _unit-test-ms-emergency_.
 
 ### .gitlab-ci.yml, Code Coverage
 
-Dans l'extrait de code suivant, j'ai ajouté le stage _coverage_ et le job _coverage-ms-emergency_. Cela va nous permettre de générer automatiquement un rapport de couverture du code par les tests. Comme pour le job précédent celui-ci est généré puis sauvegardé afin d'être consulté ou téléchargé ultérieurement (voir _Figure 12_ ci-dessous). L'intégration des résultats du rapport dans l'interface GitlLab n'est pas abordée dans ce tutoriel. Si vous le souhaitez vous trouverez les informations nécessaires pour activer cette visualisation à cette adresse [Test coverage visualization](https://docs.gitlab.com/ee/user/project/merge_requests/test_coverage_visualization.html#maven-example).
+Dans l'extrait de code suivant, j'ai ajouté le stage _coverage_ et le job _coverage-ms-emergency_. Cela va nous permettre de générer automatiquement un rapport de couverture du code par les tests. Comme pour le job précédent celui-ci est généré puis sauvegardé afin d'être consulté ou téléchargé ultérieurement (voir _Figure 12_ ci-dessous). L'intégration des résultats du rapport dans l'interface GitLab n'est pas abordée dans ce tutoriel. Si vous le souhaitez vous trouverez les informations nécessaires pour activer cette visualisation à cette adresse [Test coverage visualization](https://docs.gitlab.com/ee/user/project/merge_requests/test_coverage_visualization.html#maven-example).
 
 ```yml
 image: maven:latest
@@ -224,7 +224,7 @@ coverage-ms-emergency:
     - ./mvnw jacoco:report
   artifacts:
     when: always
-    # paths permet de sauvegarder les artefacts générés pendant l'execution du script sur le GitLab Server
+    # paths permet de sauvegarder les artefacts générés pendant l'exécution du script sur le GitLab Server
     # et de les retrouver dans l'onglet browse du job ou download du pipeline
     paths:
       - emergency/target/site/jacoco/
@@ -294,7 +294,7 @@ exclude_patterns:
 
 > ![image](images/figure13.png)
 >
-> _Figure 13: Rapport html généré par Code Climate_
+> _Figure 13: Rapport HTML généré par Code Climate_
 
 ### .gitlab-ci.yml, Package
 
@@ -413,12 +413,12 @@ Dans cette présentation, nous avons vu comment construire un pipeline d'intégr
 [Code Quality | Code Climate](https://docs.gitlab.com/ee/user/project/merge_requests/code_quality.html) <br/>
 [Code Quality | Sonar Java](https://docs.codeclimate.com/docs/sonar-java) <br/>
 [Code Quality | Docker in Docker](https://docs.gitlab.com/ee/ci/docker/using_docker_build.html#use-the-docker-executor-with-the-docker-image-docker-in-docker) <br/>
-[Package | Maven Gitlab](https://docs.gitlab.com/ee/user/packages/maven_repository/#create-maven-packages-with-gitlab-cicd-by-using-maven) <br/>
+[Package | Maven GitLab](https://docs.gitlab.com/ee/user/packages/maven_repository/#create-maven-packages-with-gitlab-cicd-by-using-maven) <br/>
 [Package | Maven Deploy](https://maven.apache.org/plugins/maven-deploy-plugin/) <br/>
 [Docker | Kaniko](https://docs.gitlab.com/ee/ci/docker/using_kaniko.html) <br/>
 
 ### Vidéos
-[Gitlab CI pipeline tutorial for beginners](https://www.youtube.com/watch?v=Jav4vbUrqII) <br/>
+[GitLab CI pipeline tutorial for beginners](https://www.youtube.com/watch?v=Jav4vbUrqII) <br/>
 [1. Switzerland GitLab meetup: First time GitLab & CI/CD workshop with Michael Friedrich](https://www.youtube.com/watch?v=kTNfi5z6Uvk&t=553s) <br/>
 [GitLab Virtual Meetup - Intro to GitLab CI featuring Michael Friedrich](https://www.youtube.com/watch?v=l5705U8s_nQ&t=358s) <br/>
 [Getting started with GitLab CI/CD](https://www.youtube.com/watch?v=sIegJaLy2ug) <br/>

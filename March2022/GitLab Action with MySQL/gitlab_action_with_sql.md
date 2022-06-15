@@ -3,19 +3,19 @@
 _Cansell, Maxime_
 _Le-Point-Technique_, _March/2022_
 
-__abstract__: Ce document presente la configuration d'une action GitLab avec une base de donnees MySQL dans 
-un environement Java Spring.
+__abstract__: Ce document présente la configuration d'une action GitLab avec une base de données MySQL dans 
+un environnement Java Spring.
 
 __keywords__: GitLab, DevOps, MySQL, Java, Spring
 
 ## Introduction 
-Ce document decrit les etapes de configuration d'une action GitLab avec une base de donnees MySQL dans une application
+Ce document décrit les étapes de configuration d'une action GitLab avec une base de données MySQL dans une application
 Java utilisant le framework Spring. Il s'inspire en partie du tutoriel [DevOps with GitLab](https://github.com/gcattan/Le-Point-Technique/blob/master/March2022/DevOps%20with%20GitLab/DevOps%20with%20GitLab.md).
-Ce document comprend deux sections: creation du pipeline CI et conclusion.
-La creation du pipeline CI contient cinq sous-sections : configuration du pipeline, Instanciation du service MySQL, enregistrement des variables d'environnement
-avec GitLab, exécution de la pipeline et presentation des artifacts de builds. 
+Ce document comprend deux sections: création du pipeline CI et conclusion.
+La création du pipeline CI contient cinq sous-sections : configuration du pipeline, Instanciation du service MySQL, enregistrement des variables d'environnement
+avec GitLab, exécution de la pipeline et présentation des artifacts de builds. 
 
-## Creation du pipeline CI
+## Création du pipeline CI
 Dans cette section, nous décrivons les différentes étapes de la configuration du
 fichier .gitlab-ci.yml, configuration centrale de notre pipeline. Nous verrons ensuite
 comment se déroulent les tests, les rapports associés et comment déboguer notre
@@ -32,9 +32,9 @@ A chaque push du code source des applications ou du fichier .gitlab-ci.yml sur l
 
 > ![image 1](images/image-1.png)
 >
-> _Figure 1: Example d'action gitlab._
+> _Figure 1: Exemple d'action GitLab._
 
-Prenons le temps d'analyser cette example ligne par ligne:
+Prenons le temps d'analyser cette exemple ligne par ligne:
 
 - `image` (ligne 1) :
 Nous installons l'image docker Alpine qui est une distribution Linux ultra-légère que
@@ -88,7 +88,7 @@ renverra 1 qui fera échouer le job et donc notre pipeline.
 ###  Instanciation du service MySQL
 Nous devons tout d'abord ajouter (ligne 9) nos variables MySQL pour permettre la
 connexion à la base de données. Attention, il conviendra de mettre en place [External
-Secret Gitlab](https://docs.gitlab.com/ee/ci/secrets/) pour sécuriser les variables de connexion qui sont visibles (_Figure 2_).
+Secret GitLab](https://docs.gitlab.com/ee/ci/secrets/) pour sécuriser les variables de connexion qui sont visibles (_Figure 2_).
 
 > ![image 2](images/image-2.png)
 >
@@ -121,7 +121,7 @@ dans notre pipeline et donc par notre application en fonctionnement dans nos sta
 
 > ![image 4](images/image-4.png)
 >
-> _Figure 4: Capture d'ecran des variables d'environnement sous Gitlab_
+> _Figure 4: Capture d'écran des variables d'environnement sous Gitlab_
 
 Ces variables peuvent écraser et remplacer les variables de notre application
 comme celles contenues dans le fichier de configuration Spring de notre application :
@@ -137,7 +137,7 @@ application.properties de notre application Spring :
 
 > ![image 5](images/image-5.png)
 >
-> _Figure 5: Mise a jour des proprietes spring boot._
+> _Figure 5: Mise à jour des propriétés spring boot._
 
 La variable se nommera donc “spring_datasource_url” et aura pour valeur,
 comme nous l’avons vu précédemment : “jdbc:mysql//mariadb:3306/hospitals”
@@ -158,7 +158,7 @@ tests ou de leurs échecs) - _Figure 6_.
 
 > ![image 6](images/image-6.png)
 >
-> _Figure 6: Status de la pipeline._
+> _Figure 6: Statut de la pipeline._
 
 La capture d’écran suivante (_Figure 7_) montre les logs de l'exécution du job stage tests qui
 s’est correctement déroulée.
@@ -180,7 +180,7 @@ origines sur la `_Figure 8_` (cliquer sur le stage puis sur l’onglet test) :
 ## Conclusion
 Ce document nous a permis de mettre en place notre pipeline d’intégration continue
 pour une application Spring avec sa base de données de test MySQL. 
-Ce document pourra être complété avec la mise en place d'outils de [securite](https://docs.gitlab.com/ee/user/application_security/), notamment
+Ce document pourra être complété avec la mise en place d'outils de [sécurité](https://docs.gitlab.com/ee/user/application_security/), notamment
 des tests de [fuzzing](https://docs.gitlab.com/ee/user/application_security/api_fuzzing/).
 
 ## References

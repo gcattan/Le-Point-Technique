@@ -41,7 +41,7 @@ Dans votre layout ajouter le bouton :
 ```
 
 Du côté code, utiliser ensuite la fonctionnalité de _view binding_ ou butterknife pour récupérer le bouton `flottant` grâce à son id.
-Les methodes `getColor` et `setColor(int)` permettront respectivement de recuperer et programmer la couleur du bouton.
+Les méthodes `getColor` et `setColor(int)` permettront respectivement de récupérer et programmer la couleur du bouton.
 
 ## References
 [ColorPicker](https://github.com/LucasGitHubz/ColorPicker)
