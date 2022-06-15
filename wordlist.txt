@@ -1,4 +1,3 @@
-
 Title
 Name
 Surname
@@ -152,3 +151,15 @@ index.html
 run
 stable-dind
 tmp
+codeclimate
+CODECLIMATE
+codeclimate.yml
+pwd
+html
+coverage-ms-emergency
+latest
+maven
+yml
+maven
+runner
+smells
