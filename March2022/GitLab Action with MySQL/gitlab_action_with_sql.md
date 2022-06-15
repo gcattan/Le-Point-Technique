@@ -158,7 +158,7 @@ tests ou de leurs échecs) - _Figure 6_.
 
 > ![image 6](images/image-6.png)
 >
-> _Figure 6: Status de la pipeline._
+> _Figure 6: Statut de la pipeline._
 
 La capture d’écran suivante (_Figure 7_) montre les logs de l'exécution du job stage tests qui
 s’est correctement déroulée.
