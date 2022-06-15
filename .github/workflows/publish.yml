@@ -42,6 +42,6 @@ jobs:
           commit: ${{ github.event.pull_request.head.sha }}
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           artifacts-dir: ${{ steps.set-env.outputs.dir }}
-          artifacts-branch: test_devop
+          artifacts-branch: editorial
           artifacts: |
             ${{ steps.set-env.outputs.path }}
