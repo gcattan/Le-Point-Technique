@@ -287,3 +287,11 @@ Regular
 error
 framework
 Cansell
+cliquant
+implementation
+cliquer
+underscore
+boot
+localhost
+mariaDB
+Instanciation
