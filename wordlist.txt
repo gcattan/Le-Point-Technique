@@ -138,3 +138,9 @@ paths
 settings.xml
 target
 when
+browse
+defaut
+packages
+plugin
+registry
+HTML
