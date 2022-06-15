@@ -4,7 +4,7 @@ _Cansell, Maxime_
 _Le-Point-Technique_, _March/2022_
 
 __abstract__: Ce document présente la configuration d'une action GitLab avec une base de données MySQL dans 
-un environement Java Spring.
+un environnement Java Spring.
 
 __keywords__: GitLab, DevOps, MySQL, Java, Spring
 
@@ -32,7 +32,7 @@ A chaque push du code source des applications ou du fichier .gitlab-ci.yml sur l
 
 > ![image 1](images/image-1.png)
 >
-> _Figure 1: Example d'action gitlab._
+> _Figure 1: Exemple d'action GitLab._
 
 Prenons le temps d'analyser cette example ligne par ligne:
 
@@ -88,7 +88,7 @@ renverra 1 qui fera échouer le job et donc notre pipeline.
 ###  Instanciation du service MySQL
 Nous devons tout d'abord ajouter (ligne 9) nos variables MySQL pour permettre la
 connexion à la base de données. Attention, il conviendra de mettre en place [External
-Secret Gitlab](https://docs.gitlab.com/ee/ci/secrets/) pour sécuriser les variables de connexion qui sont visibles (_Figure 2_).
+Secret GitLab](https://docs.gitlab.com/ee/ci/secrets/) pour sécuriser les variables de connexion qui sont visibles (_Figure 2_).
 
 > ![image 2](images/image-2.png)
 >
@@ -121,7 +121,7 @@ dans notre pipeline et donc par notre application en fonctionnement dans nos sta
 
 > ![image 4](images/image-4.png)
 >
-> _Figure 4: Capture d'ecran des variables d'environnement sous Gitlab_
+> _Figure 4: Capture d'écran des variables d'environnement sous Gitlab_
 
 Ces variables peuvent écraser et remplacer les variables de notre application
 comme celles contenues dans le fichier de configuration Spring de notre application :
@@ -180,7 +180,7 @@ origines sur la `_Figure 8_` (cliquer sur le stage puis sur l’onglet test) :
 ## Conclusion
 Ce document nous a permis de mettre en place notre pipeline d’intégration continue
 pour une application Spring avec sa base de données de test MySQL. 
-Ce document pourra être complété avec la mise en place d'outils de [securite](https://docs.gitlab.com/ee/user/application_security/), notamment
+Ce document pourra être complété avec la mise en place d'outils de [sécurite](https://docs.gitlab.com/ee/user/application_security/), notamment
 des tests de [fuzzing](https://docs.gitlab.com/ee/user/application_security/api_fuzzing/).
 
 ## References
