@@ -129,3 +129,12 @@ package-ms-emergency
 package
 quality
 unit-test
+always
+artifacts
+cd
+deploy
+mvn
+paths
+settings.xml
+target
+when
