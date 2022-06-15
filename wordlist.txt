@@ -163,3 +163,12 @@ yml
 maven
 runner
 smells
+download
+SonarJava
+bugs
+Server
+unit-test-ms-emergency
+build-ms-emergency
+surefire-report
+surefire-report.html
+surefire-reports
