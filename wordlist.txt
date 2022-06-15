@@ -86,3 +86,17 @@ Deploy
 Jacoco
 Kaniko
 Package
+Configuring
+Install
+MedHead
+OpenClassrooms
+Registering
+Runner
+SaaS
+commands
+coverage
+crypto
+mining
+prevent
+runners
+visualization
