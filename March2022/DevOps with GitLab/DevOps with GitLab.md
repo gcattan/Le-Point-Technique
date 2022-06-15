@@ -25,10 +25,10 @@ L'exécution d'un job peut produire une archive, un fichier, un répertoire. Ce 
 ### Pipeline
 Représente le composant de plus haut niveau. Il est composé de jobs (tâches), qui définissent ce qu'il faut faire, et de _stages_ (étapes) qui définissent quand les tâches qui donnent le timing d'exécution des dites tâches. Dans notre cas, les six stages que nous allons mettre en place sont 'build', 'unit-test', 'coverage', 'quality', 'package' et 'docker'.
 
-### Gitlab Runners
-Gitlab Runner est une application qui prend en charge l'exécution automatique des builds, tests et différents scripts avant d'intégrer le code source au dépôt et d'envoyer les rapports d'exécutions à GitLab. Ce sont des processus qui récupèrent et exécutent les jobs des pipelines pour GitLab. Il existe deux types de runner, les _shared runners_, qui sont mis à notre disposition à travers la plateforme et les _specific runners_ qui sont spécifiques à un projet et peuvent être installés sur nos machines.
+### GitLab Runners
+GitLab Runner est une application qui prend en charge l'exécution automatique des builds, tests et différents scripts avant d'intégrer le code source au dépôt et d'envoyer les rapports d'exécutions à GitLab. Ce sont des processus qui récupèrent et exécutent les jobs des pipelines pour GitLab. Il existe deux types de runner, les _shared runners_, qui sont mis à notre disposition à travers la plateforme et les _specific runners_ qui sont spécifiques à un projet et peuvent être installés sur nos machines.
 
-### Gitlab Server
+### GitLab Server
 Le serveur GitLab est un serveur web qui fournit à l'utilisateur des informations sur les dépôts git hébergés dans son espace. Il a essentiellement deux fonctions. Il contient le dépôt git et il contrôle les runners.
 
 ## Installation
@@ -101,7 +101,7 @@ Une fois les étapes d'inscription et d'installation franchies, nous pouvons cr�
 >
 > _Figure 4: Page de création d'un nouveau projet_
 
-Gitlab crée un repository vide  (voir _Figure 5_ ci-dessous) et nous indique les commandes git à exécuter  (voir _Figure 6_ ci-dessous) afin de poursuivre la création du projet.
+GitLab crée un repository vide  (voir _Figure 5_ ci-dessous) et nous indique les commandes git à exécuter  (voir _Figure 6_ ci-dessous) afin de poursuivre la création du projet.
 
 > ![image](images/figure5.png)
 >
@@ -188,7 +188,7 @@ Une fois le job _build-ms-emergency_ traité par le pipeline, nous pouvons visua
 >
 > _Figure 9: Visualisation du résultat du build_
 
-Le pipeline poursuit son exécution avec le job nommé _unit-test-ms-emergency_. Ce job va nous permettre d'exécuter les tests unitaires développés pour l'application _emergency_. En complément, nous allons générer un rapport que nous pourrons sauvegarder grâce à l'utilisation du mot clé _artifacts_. Nous spécifierons la fréquence de création de ce rapport avec _when_ et le sauvegarderons, dans un format html avec _paths_ pour le consulter ou le télécharger ultérieurement (voir _Figure 10_ ci-dessous), ainsi que dans un format xml avec _reports:junit_ pour qu'il soit intégré dans l'interface utilisateur de Gitlab (voir _Figure 11_ ci-dessous).
+Le pipeline poursuit son exécution avec le job nommé _unit-test-ms-emergency_. Ce job va nous permettre d'exécuter les tests unitaires développés pour l'application _emergency_. En complément, nous allons générer un rapport que nous pourrons sauvegarder grâce à l'utilisation du mot clé _artifacts_. Nous spécifierons la fréquence de création de ce rapport avec _when_ et le sauvegarderons, dans un format html avec _paths_ pour le consulter ou le télécharger ultérieurement (voir _Figure 10_ ci-dessous), ainsi que dans un format xml avec _reports:junit_ pour qu'il soit intégré dans l'interface utilisateur de GitLab (voir _Figure 11_ ci-dessous).
 
 > ![image](images/figure10.png)
 >
@@ -413,12 +413,12 @@ Dans cette présentation, nous avons vu comment construire un pipeline d'intégr
 [Code Quality | Code Climate](https://docs.gitlab.com/ee/user/project/merge_requests/code_quality.html) <br/>
 [Code Quality | Sonar Java](https://docs.codeclimate.com/docs/sonar-java) <br/>
 [Code Quality | Docker in Docker](https://docs.gitlab.com/ee/ci/docker/using_docker_build.html#use-the-docker-executor-with-the-docker-image-docker-in-docker) <br/>
-[Package | Maven Gitlab](https://docs.gitlab.com/ee/user/packages/maven_repository/#create-maven-packages-with-gitlab-cicd-by-using-maven) <br/>
+[Package | Maven GitLab](https://docs.gitlab.com/ee/user/packages/maven_repository/#create-maven-packages-with-gitlab-cicd-by-using-maven) <br/>
 [Package | Maven Deploy](https://maven.apache.org/plugins/maven-deploy-plugin/) <br/>
 [Docker | Kaniko](https://docs.gitlab.com/ee/ci/docker/using_kaniko.html) <br/>
 
 ### Vidéos
-[Gitlab CI pipeline tutorial for beginners](https://www.youtube.com/watch?v=Jav4vbUrqII) <br/>
+[GitLab CI pipeline tutorial for beginners](https://www.youtube.com/watch?v=Jav4vbUrqII) <br/>
 [1. Switzerland GitLab meetup: First time GitLab & CI/CD workshop with Michael Friedrich](https://www.youtube.com/watch?v=kTNfi5z6Uvk&t=553s) <br/>
 [GitLab Virtual Meetup - Intro to GitLab CI featuring Michael Friedrich](https://www.youtube.com/watch?v=l5705U8s_nQ&t=358s) <br/>
 [Getting started with GitLab CI/CD](https://www.youtube.com/watch?v=sIegJaLy2ug) <br/>
