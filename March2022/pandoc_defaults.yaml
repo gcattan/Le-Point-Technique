@@ -8,6 +8,7 @@ output-file: March2022.pdf
 # leave blank for input from stdin, use [] for no input:
 input-files:
 # - Sommaire.md
+- notes.md
 - DevOps with GitLab/DevOps with GitLab.md
 - GitLab Action with MySQL/gitlab_action_with_sql.md
 - ColorPicker/ColorPicker.md
