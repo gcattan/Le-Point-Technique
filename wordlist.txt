@@ -123,3 +123,9 @@ kaniko-project
 mkdir
 name
 printf
+Registry
+DevOps
+package-ms-emergency
+package
+quality
+unit-test
