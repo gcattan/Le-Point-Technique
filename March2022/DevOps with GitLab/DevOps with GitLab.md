@@ -224,7 +224,7 @@ coverage-ms-emergency:
     - ./mvnw jacoco:report
   artifacts:
     when: always
-    # paths permet de sauvegarder les artefacts générés pendant l'execution du script sur le GitLab Server
+    # paths permet de sauvegarder les artefacts générés pendant l'exécution du script sur le GitLab Server
     # et de les retrouver dans l'onglet browse du job ou download du pipeline
     paths:
       - emergency/target/site/jacoco/
