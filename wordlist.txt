@@ -144,3 +144,11 @@ packages
 plugin
 registry
 HTML
+GitLab.com
+analyze
+codequality-results
+docker.sock
+index.html
+run
+stable-dind
+tmp
