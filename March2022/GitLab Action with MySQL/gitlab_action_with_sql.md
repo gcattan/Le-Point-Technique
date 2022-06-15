@@ -34,7 +34,7 @@ A chaque push du code source des applications ou du fichier .gitlab-ci.yml sur l
 >
 > _Figure 1: Exemple d'action GitLab._
 
-Prenons le temps d'analyser cette example ligne par ligne:
+Prenons le temps d'analyser cette exemple ligne par ligne:
 
 - `image` (ligne 1) :
 Nous installons l'image docker Alpine qui est une distribution Linux ultra-légère que
@@ -180,7 +180,7 @@ origines sur la `_Figure 8_` (cliquer sur le stage puis sur l’onglet test) :
 ## Conclusion
 Ce document nous a permis de mettre en place notre pipeline d’intégration continue
 pour une application Spring avec sa base de données de test MySQL. 
-Ce document pourra être complété avec la mise en place d'outils de [sécurite](https://docs.gitlab.com/ee/user/application_security/), notamment
+Ce document pourra être complété avec la mise en place d'outils de [sécurité](https://docs.gitlab.com/ee/user/application_security/), notamment
 des tests de [fuzzing](https://docs.gitlab.com/ee/user/application_security/api_fuzzing/).
 
 ## References
