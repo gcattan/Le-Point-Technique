@@ -79,3 +79,10 @@ started
 time
 with
 workshop
+Artifacts
+Climate
+Coverage
+Deploy
+Jacoco
+Kaniko
+Package
