@@ -190,3 +190,10 @@ linux
 runners.docker
 server
 timeout
+JaCoCo
+mvnw
+tr
+téléchargé
+Télécharger
+tutoriel
+xml
