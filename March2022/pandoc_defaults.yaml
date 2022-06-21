@@ -50,6 +50,7 @@ include-before-body: []
 include-after-body: []
 include-in-header:
 - ../head.tex
+- ../listings-setup.tex
 resource-path: ["."]
 
 # turn on built-in citation processing.  Note that if you need
@@ -127,7 +128,7 @@ number-offset: [0,0,0,0,0,0]
 # syntax-definitions:
 # - c.xml
 # or you may use syntax-definition: with a single value
-# listings: false
+listings: true
 
 # reference-doc: myref.docx
 
