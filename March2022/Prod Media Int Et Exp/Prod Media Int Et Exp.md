@@ -42,9 +42,11 @@ Bien que l’implémentation de DASH soit relativement plus complexe, le fonctio
 relativement similaire. _(DASH ne sera pas approfondi dans cette section. Si nécessaire, des ressources 
 documentaires sont disponible en fin de section pour approfondir la compréhension de ces technologies)_
 
-Le schéma ci-après (Figure 1) présente de façon simplifiée le fonctionnement d’un flux HLS :
+Le schéma ci-après (_Figure 1_) présente de façon simplifiée le fonctionnement d’un flux HLS :
 
-[Figure 1]()
+> ![figure 1](images/fig1.png)
+>
+> _Figure 1: Vue synthétique d'un envoi réalisé avec HLS (source : Eleven Labs Blog)_
 
 Comme indiqué précédemment, la découpe des fichiers source en segments de qualité différentes permet 
 l’adaptation du bitrate de la diffusion au fur et à mesure de l’avancé afin de garantir à l’utilisateur une 
@@ -54,10 +56,12 @@ plus à supporter le flux).
 Un manifeste est fourni en complément et permet de décrire au client (navigateur web) comment 
 construire la vidéo.
 
-La figure ci-après (Figure 2) montre le fonctionnement du principe de segmentation du fichier source en 
+La figure ci-après (_Figure 2_) montre le fonctionnement du principe de segmentation du fichier source en 
 section différentes.
 
-[Fig 2]()
+> ![figure 2](images/fig2.png)
+>
+> _Figure 2: Segmentation d’un média en différentes qualités pour diffusion via HLS (source : Eleven Labs Blog)_
 
 **Documentation complémentaire :** 
 - https://www.wowza.com/blog/mpeg-dash-dynamic-adaptive-streaming-over-http
@@ -106,12 +110,14 @@ L’un des besoins décrits dans les briques d’architecture de référence con
 médias produits (format de sortie de l’outil de production) au format compatible avec la diffusion sur le 
 web (par exemple, HLS / DASH comme décrit dans les technologies retenues).
 
-La solution **AWS Elemental Media Converter** (Figure 3) sera utilisée pour la conversion des médias sources. Cet 
+La solution **AWS Elemental Media Converter** (_Figure 3_) sera utilisée pour la conversion des médias sources. Cet 
 outil couvre l’intégralité des besoins nécessaires au projet et s’adapte au volume nécessaire (tarification 
 à la minute convertie). Le workflow peut être automatisé et couplé avec AWS S3 pour automatiser 
 l’ensemble de chaîne et libérer les créateurs de contenu de ce travail.
 
-[Fig 3]()
+> ![figure 3](images/fig3.png)
+>
+> _Figure 3:  Fonctionnement d'AWS Elemental Media Converter (Source : AWS)_
 
 **Documentation complémentaire : **
 - https://aws.amazon.com/fr/mediaconvert/
