@@ -357,7 +357,6 @@ June
 AWS
 Elemental
 interopérables
-l’évolutivité
 codec
 non-exhaustif
 Blog
@@ -385,7 +384,6 @@ premium
 auto-scalable
 Ubuntu
 Windows
-l’OS
 personnalisable
 TV
 multi-plateforme
@@ -399,12 +397,10 @@ PoC
 multiplay
 products
 docs.unity.com
-l’OS
 Multiplay
 Here
 awesome
 Etude
-l’évolutivité
 Adaptive
 HTTP
 over
@@ -412,13 +408,12 @@ sous-fichiers
 AAC-LC
 VP
 DRM
-l’avancé
 connect
 téléchargeable
 plateformes
 AD
 welcome-to-multiplay.html
-l’OS
+l'OS
 MediaStore
 SLA
 Storage
@@ -428,6 +423,7 @@ assetstore.unity.com
 video
 Asset
 plugins
-l’avancé
-l’évolutivité
+l'avancé
+l'évolutivité
 am
+rfc

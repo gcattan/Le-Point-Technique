@@ -20,7 +20,7 @@ coûts de mise en œuvre et favorise une approche modulaire.
 
 Les choix d’outils et de technologies retenues devront répondre à des critères de cohérence d’ensemble. 
 Les solutions compatibles les unes par rapport aux autres et/ou facilement interopérables seront 
-préférées. Cette approche vise à favoriser l’évolutivité de l’architecture retenue.
+préférées. Cette approche vise à favoriser l'évolutivité de l’architecture retenue.
 
 Notons que les critères de popularités des outils, de facilité à trouver des ressources et des profils de 
 collaborateurs expérimentés seront aussi analysés pour le choix des solutions.
@@ -62,7 +62,7 @@ Le schéma ci-après (_Figure 1_) présente de façon simplifiée le fonctionnem
 > _Figure 1: Vue synthétique d'un envoi réalisé avec HLS (source : Eleven Labs Blog)_
 
 Comme indiqué précédemment, la découpe des fichiers source en segments de qualité différentes permet 
-l’adaptation du bitrate de la diffusion au fur et à mesure de l’avancé afin de garantir à l’utilisateur une 
+l’adaptation du bitrate de la diffusion au fur et à mesure de l'avancé afin de garantir à l’utilisateur une 
 lecture fluide en sacrifiant la qualité sur certains passage (lorsque la connexion de l’utilisateur n’arrive 
 plus à supporter le flux).
 
@@ -194,7 +194,7 @@ création de l’intégralité de la couche «front-end » avec Unity (C#).
 Par ailleurs, l’absence de tarification sur les flux de données entrant / sortant peut représenter une source 
 importante d’économie. 
 
-Notons toutefois que cette plateforme impose plusieurs choix technologiques, notamment sur l’OS 
+Notons toutefois que cette plateforme impose plusieurs choix technologiques, notamment sur l'OS 
 embarqué (Windows Server 2012, Windows Server 2019 ou Ubuntu 18.04) et dispose d’une communauté 
 et d’une documentation moins importante que la solution AWS.
 
