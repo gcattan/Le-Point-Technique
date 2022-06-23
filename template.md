@@ -32,6 +32,12 @@ Please check _Table 1_
 |               |               |
 +---------------+---------------+
 
+Here is an awesome list:
+
+- first item
+
+- second item
+
 ### Subsection II
 ## Section II
 
