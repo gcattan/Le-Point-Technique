@@ -428,7 +428,7 @@ assetstore.unity.com
 video
 Asset
 plugins
-l’avancé
-l’implémentation
-l’évolutivité
+avancé
+implémentation
+évolutivité
 am
