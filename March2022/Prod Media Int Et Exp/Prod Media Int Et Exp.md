@@ -3,13 +3,13 @@ _Evan, David_
 
 _Le-Point-Technique_, _June/2022_
 
-__abstract__: Ce document est une etude exploratoire des solutions pour la production de médias interactifs - type vidéos 360 ou avec scenario. 
+__abstract__: Ce document est une étude exploratoire des solutions pour la production de médias interactifs - type vidéos 360 ou avec scenario. 
 
-__keywords__: Etude exploratoire, medias interactifs, Unity, AWS Elemental Media Store
+__keywords__: Etude exploratoire, médias interactifs, Unity, AWS Elemental Media Store
 
 ## Introduction
 
-Dans cette étude, nous nous intéressons aux differentes options architecturales pour l’implémentation d'un systeme informatique destiné a la production de médias interactifs, comme la production de vidéos 360 ou avec scenario.
+Dans cette étude, nous nous intéressons aux différentes options architecturales pour l’implémentation d'un systeme informatique destiné a la production de médias interactifs, comme la production de vidéos 360 ou avec scenario.
 
 ## Choix préférés pour les outils et technologies
 
@@ -40,7 +40,7 @@ Les protocoles disposant d’un bitrate adaptatifs seront préférés afin de sa
 Les protocoles HLS et MPEG-DASH seront retenus comme technologie de diffusion pour le projet de média 
 interactif.
 
-De manière simplifiée, HLS (*HTTP Live Steaming*) et DASH (*Dynamic Adaptive Streaming over HTTP*) sont 
+De manière simplifiée, HLS (*HTTP Live Streaming*) et DASH (*Dynamic Adaptive Streaming over HTTP*) sont 
 deux protocoles de streaming audio / vidéo basé sur HTTP et visant à délivrer des médias à l’utilisateur en 
 « fragmentant » les fichiers d’origines en plusieurs « sous-fichiers » de qualités différentes afin de fournir 
 le plus adapté à l’utilisateur en fonction de l’avancement de sa visualisation.
