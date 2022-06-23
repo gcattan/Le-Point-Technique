@@ -94,7 +94,7 @@ utilisateurs à l’aide des jetons d’identité (*id_tokens*). *Étant hors du
 d’architecture, les mécanismes de fonctionnement de l’authentification / autorisation seront abordés dans 
 les spécifications techniques.*
 
-**Documentation complémentaire : **
+**Documentation complémentaire :**
 
 - https://datatracker.ietf.org/doc/html/rfc6749
 
@@ -116,7 +116,7 @@ offre une gamme très large d’outils pour la création de média et couvre 100
 qu’un système de « plug-ins » téléchargeable via le **Unity Asset Store** permet d’enrichir les fonctionnalités 
 offertes par le logiciel de base.
 
-**Documentation complémentaire : **
+**Documentation complémentaire :**
 
 - https://unity.com/fr/solutions/film-animation-cinematics
 
@@ -139,7 +139,7 @@ l’ensemble de chaîne et libérer les créateurs de contenu de ce travail.
 >
 > _Figure 3:  Fonctionnement d'AWS Elemental Media Converter (Source : AWS)_
 
-**Documentation complémentaire : **
+**Documentation complémentaire :**
 
 - https://aws.amazon.com/fr/mediaconvert/
 
@@ -178,7 +178,7 @@ L’intégration avec les autres services AWS (*IAM* et *CDN* par exemple) en fa
 l’architecture du projet. Notons que la tarification pour la plateforme peut toutefois devenir un frein à la 
 croissance de l’entreprise notamment pour le contenu non premium et faiblement monétisable.
 
-**Documentation complémentaire : **
+**Documentation complémentaire :**
 
 - https://aws.amazon.com/fr/mediastore/
 
