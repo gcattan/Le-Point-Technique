@@ -1,15 +1,15 @@
 # Etude exploratoire pour la production de Médias interactifs
-_Name, Surname_
+_Evan, David_
 
 _Le-Point-Technique_, _June/2022_
 
-__abstract__: TODO
+__abstract__: Ce document est une etude exploratoire des solutions pour la production de medias interactifs - type video 360 ou avec avec scenario. 
 
-__keywords__: TODO 1, TODO 2
+__keywords__: Etude exploratoire, medias interactifs, Unity, AWS Elemental Media Store
 
 ## Introduction
 
-TODO
+Dans cette etude, nous nous interessons aux differentes options architecturales pour l'implementation d'un systeme informatique destine a la production de medias interactifs, comme la production de video 360 ou avec scenario.
 
 ## Choix préférés pour les outils et technologies
 
@@ -318,4 +318,32 @@ rédaction des spécifications techniques que chaque composants.
 
 ## Références
 
-TODO
+https://www.wowza.com/blog/mpeg-dash-dynamic-adaptive-streaming-over-http
+
+https://blog.eleven-labs.com/fr/video-live-dash-hls
+
+https://datatracker.ietf.org/doc/html/rfc6749
+
+https://openid.net/connect/
+
+https://unity.com/fr/solutions/film-animation-cinematics
+
+https://unity.com/fr/solutions/360video
+
+https://assetstore.unity.com/
+
+https://aws.amazon.com/fr/mediaconvert/
+
+https://aws.amazon.com/fr/s3/
+
+https://aws.amazon.com/fr/mediastore/
+
+https://unity.com/fr/products/multiplay
+
+https://docs.unity.com/multiplay/shared/welcome-to-multiplay.html
+
+https://aws.amazon.com/fr/cognito/
+
+https://nexplayersdk.com/
+
+https://github.com/NexPlayer/NexPlayer_Unity_Plugin
