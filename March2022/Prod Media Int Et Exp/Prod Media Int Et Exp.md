@@ -3,13 +3,13 @@ _Evan, David_
 
 _Le-Point-Technique_, _June/2022_
 
-__abstract__: Ce document est une etude exploratoire des solutions pour la production de medias interactifs - type video 360 ou avec avec scenario. 
+__abstract__: Ce document est une etude exploratoire des solutions pour la production de médias interactifs - type vidéos 360 ou avec scenario. 
 
 __keywords__: Etude exploratoire, medias interactifs, Unity, AWS Elemental Media Store
 
 ## Introduction
 
-Dans cette etude, nous nous interessons aux differentes options architecturales pour l'implémentation d'un systeme informatique destine a la production de medias interactifs, comme la production de video 360 ou avec scenario.
+Dans cette étude, nous nous intéressons aux differentes options architecturales pour l’implémentation d'un systeme informatique destiné a la production de médias interactifs, comme la production de vidéos 360 ou avec scenario.
 
 ## Choix préférés pour les outils et technologies
 
@@ -20,7 +20,7 @@ coûts de mise en œuvre et favorise une approche modulaire.
 
 Les choix d’outils et de technologies retenues devront répondre à des critères de cohérence d’ensemble. 
 Les solutions compatibles les unes par rapport aux autres et/ou facilement interopérables seront 
-préférées. Cette approche vise à favoriser l’évolutivité de l'architecture retenue.
+préférées. Cette approche vise à favoriser l’évolutivité de l’architecture retenue.
 
 Notons que les critères de popularités des outils, de facilité à trouver des ressources et des profils de 
 collaborateurs expérimentés seront aussi analysés pour le choix des solutions.
