@@ -9,7 +9,7 @@ __keywords__: Etude exploratoire, medias interactifs, Unity, AWS Elemental Media
 
 ## Introduction
 
-Dans cette etude, nous nous interessons aux differentes options architecturales pour l'implementation d'un systeme informatique destine a la production de medias interactifs, comme la production de video 360 ou avec scenario.
+Dans cette etude, nous nous interessons aux differentes options architecturales pour l'implémentation d'un systeme informatique destine a la production de medias interactifs, comme la production de video 360 ou avec scenario.
 
 ## Choix préférés pour les outils et technologies
 
@@ -248,7 +248,7 @@ prendre en compte les règles à appliquer.
 ### Solution : Visualisation des médias (SBB-6)
 
 La visualisation des médias doit répondre à deux caractéristiques : Fournir une plateforme web pour la 
-présentation des médias (ex : SPA WebApp) et fournir les outils, notamment le player vidéo, compatibles
+présentation des médias (ex : SPA,  WebApp) et fournir les outils, notamment le player vidéo, compatibles
 avec l’ensemble des exigences fonctionnelles : lecture de média disposant d’une interaction avec 
 l’utilisateur, vidéo « 360 » (l’utilisateur peut « déplacer » la caméra), support HLS / DASH ...
 
@@ -256,7 +256,7 @@ La contrainte du multi-plateforme doit être respectée afin que la WebApp puiss
 accessible depuis les supports désignés dans les exigences non fonctionnelles du cahier des charges 
 d’architecture.
 
-**La WebApp sera développée en interne (« from strach »)** en utilisant les technologies adaptés (React, 
+**La WebApp sera développée en interne (« from scratch »)** en utilisant les technologies adaptés (React, 
 Vue.Js, Angular pour le front-end, Java Spring, PHP Laravel / Symfony pour le back-end) en fonction de 
 l’écosystème de l’entreprise et de l’expertise des développeurs.
 
