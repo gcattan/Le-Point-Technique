@@ -1,3 +1,12 @@
+# Etude exploratoire pour la production de Médias interactifs
+_Name, Surname_
+
+_Le-Point-Technique_, _June/2022_
+
+__abstract__: TODO
+
+__keywords__: TODO 1, TODO 2
+
 # Choix préférés pour les outils et technologies
 
 Bien que les solutions puissent être des conceptions « from scratch », **les solutions préexistantes** seront 
