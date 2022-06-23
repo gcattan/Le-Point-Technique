@@ -113,7 +113,7 @@ la capture, le stitching et le montage des séquences.
 
 Le logiciel **Unity** (et sa plateforme) sera retenu comme outil de production de médias interactif. Ce logiciel 
 offre une gamme très large d’outils pour la création de média et couvre 100% des besoins définis. Notons 
-qu’un système de « plug-ins » téléchargeable via le **Unity Asset Store** permet d’enrichir les fonctionnalités 
+qu’un système de « plugins » téléchargeable via le **Unity Asset Store** permet d’enrichir les fonctionnalités 
 offertes par le logiciel de base.
 
 **Documentation complémentaire :**
