@@ -6,4 +6,4 @@
 
 3. [ColorPicker: Une librairie pour choisir une couleur sous Android](ColorPicker/ColorPicker.md)
 
-4. [Etude éxploratoire pour la production de médias interactifs](Prod%20Media%20Int%20Et%20Exp/Prod%20Media%20Int%20Et%20Exp.md)
+4. [Etude exploratoire pour la production de médias interactifs](Prod%20Media%20Int%20Et%20Exp/Prod%20Media%20Int%20Et%20Exp.md)
