@@ -9,7 +9,7 @@ __keywords__: Etude exploratoire, médias interactifs, Unity, AWS Elemental Medi
 
 ## Introduction
 
-Dans cette étude, nous nous intéressons aux différentes options architecturales pour l’implémentation d'un système informatique destiné a la production de médias interactifs, comme la production de vidéos 360 ou avec scénario.
+Dans cette étude, nous nous intéressons aux différentes options architecturales pour l'implémentation d'un système informatique destiné a la production de médias interactifs, comme la production de vidéos 360 ou avec scénario.
 
 ## Choix préférés pour les outils et technologies
 
@@ -51,7 +51,7 @@ H.265, H.264* … (*non-exhaustif*).
 Le protocole DASH embarque plusieurs fonctionnalités supplémentaires par rapport au HLS, notamment 
 la possibilité d’utiliser des DRM sur les médias transportés.
 
-Bien que l’implémentation de DASH soit relativement plus complexe, le fonctionnement général est 
+Bien que l'implémentation de DASH soit relativement plus complexe, le fonctionnement général est 
 relativement similaire. _(DASH ne sera pas approfondi dans cette section. Si nécessaire, des ressources 
 documentaires sont disponible en fin de section pour approfondir la compréhension de ces technologies)_
 
@@ -305,8 +305,8 @@ HTML5, Application mobiles, consoles de jeux, smart TV …)
 
 ### Implémentation de la stack technologique
 
-L’implémentation de la stack technologique proposée vise à exploiter au maximum des services déjà 
-disponibles pour faciliter l’implémentation et accélérer les livraisons. L’ensemble des composants 
+l'implémentation de la stack technologique proposée vise à exploiter au maximum des services déjà 
+disponibles pour faciliter l'implémentation et accélérer les livraisons. L’ensemble des composants 
 déployés devront être redondés afin de garantir la continuité de service en cas de défaillance ou de 
 maintenance sur tout ou partie des composants.
 

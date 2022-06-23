@@ -315,8 +315,8 @@ MoM
 NoSQL
 SQL
 app
-L’implémentation
-l’implémentation
+L'implémentation
+l'implémentation
 Implémentation
 stack
 NexPlayer
@@ -429,6 +429,5 @@ video
 Asset
 plugins
 l’avancé
-l’implémentation
 l’évolutivité
 am
