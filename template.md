@@ -22,6 +22,9 @@ I am joining table either as a figure or using [pandoc tables](https://pandoc.or
 
 Please check _Table 1_
 
+_Table 1: legend_
+
+<pre>
 +---------------+---------------+
 | Fruit         | Price         | 
 +===============+===============+
@@ -31,6 +34,7 @@ Please check _Table 1_
 | Oranges       | $2.10         |
 |               |               |
 +---------------+---------------+
+</pre>
 
 Here is an awesome list:
 

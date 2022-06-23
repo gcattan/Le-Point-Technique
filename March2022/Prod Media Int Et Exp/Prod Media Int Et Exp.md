@@ -206,6 +206,7 @@ et d’une documentation moins importante que la solution AWS.
 
 #### Avantages et inconvénients des deux options
 
+<pre>
 +------------------+----------------------------+------------------------------------------------------------------------------+---------------------------------------------------------------------------------+
 | **Option**       |      **Solution**          | **Avantages**                                                                | **Inconvénients**                                                               |
 +:=================+:===========================+:============================================================================:+:===============================================================================:+
@@ -220,6 +221,7 @@ et d’une documentation moins importante que la solution AWS.
 |                  |                            | - Auto-scalable                                                              | - Peut être intégré au workflow automatisé mais nécessite un travail important. |
 |                  |                            | - Intégration des frontaux de base.                                          |                                                                                 |
 +------------------+----------------------------+------------------------------------------------------------------------------+---------------------------------------------------------------------------------+
+</pre>
 
 #### Choix de la solution
 
@@ -280,6 +282,7 @@ HTML5, Application mobiles, consoles de jeux, smart TV …)
 
 ### Catalogue des briques de solution de référence
 
+<pre>
 +---------------+-----------------------+-----------------------------------+-----------------------------------+
 | **Id. SBB**   | **Référence aux ABB** | **Solution**                      | **Rôle**                          |
 +===============+=======================+===================================+===================================+
@@ -298,6 +301,7 @@ HTML5, Application mobiles, consoles de jeux, smart TV …)
 | **SBB-6**     | ABB-6                 | 1. Solution custom (Web App)      | Visualisation des médias          |
 |               |                       | 2. NextPlayer (Player vidéo)      |                                   |
 +---------------+-----------------------+-----------------------------------+-----------------------------------+
+</pre>
 
 ### Implémentation de la stack technologique
 
