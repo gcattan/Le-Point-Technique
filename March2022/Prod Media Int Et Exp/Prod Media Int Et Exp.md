@@ -7,7 +7,11 @@ __abstract__: TODO
 
 __keywords__: TODO 1, TODO 2
 
-# Choix préférés pour les outils et technologies
+## Introduction
+
+TODO
+
+## Choix préférés pour les outils et technologies
 
 Bien que les solutions puissent être des conceptions « from scratch », **les solutions préexistantes** seront 
 favorisées dès lorsqu’ils répondent aux besoins définis dans le cahier des charges et que la tarification est 
@@ -24,14 +28,14 @@ collaborateurs expérimentés seront aussi analysés pour le choix des solutions
 Le coût des licences et l’adéquation au budget du projet (non défini au moment de la rédaction de ce 
 document) seront pris en compte pour le choix final des solutions.
 
-# Technologies pour la diffusion des médias vidéo sur le web
+## Technologies pour la diffusion des médias vidéo sur le web
 
 Le streaming de médias vidéo (interactifs ou non) sur le web nécessite l’utilisation de formats adaptés afin 
 de garantir la meilleure qualité selon les performances de la connexion internet de l’utilisateur final.
 
 Les protocoles disposant d’un bitrate adaptatifs seront préférés afin de satisfaire à cette exigence.
 
-## Protocoles HLS et DASH
+### Protocoles HLS et DASH
 
 Les protocoles HLS et MPEG-DASH seront retenus comme technologie de diffusion pour le projet de média 
 interactif.
@@ -72,11 +76,13 @@ section différentes.
 >
 > _Figure 2: Segmentation d’un média en différentes qualités pour diffusion via HLS (source : Eleven Labs Blog)_
 
-**Documentation complémentaire :** 
+**Documentation complémentaire :**
+
 - https://www.wowza.com/blog/mpeg-dash-dynamic-adaptive-streaming-over-http
+
 - https://blog.eleven-labs.com/fr/video-live-dash-hls
 
-# Technologies pour l’authentification / l’autorisation
+## Technologies pour l’authentification / l’autorisation
 
 Afin de disposer d’une solution évolutive et pour permettre de simplifier l’ensemble des mécanismes 
 d’authentification et d’autorisation, les technologies OAuth2 et sa couche d’identité OIDC (*Open ID 
@@ -89,12 +95,14 @@ d’architecture, les mécanismes de fonctionnement de l’authentification / au
 les spécifications techniques.*
 
 **Documentation complémentaire : **
+
 - https://datatracker.ietf.org/doc/html/rfc6749
+
 - https://openid.net/connect/
 
-# Briques de solution de référence (SBB)
+## Briques de solution de référence (SBB)
 
-## Solution : Production des médias interactifs (SBB-1)
+### Solution : Production des médias interactifs (SBB-1)
 
 La production de médias interactifs nécessite l’utilisation d’outils complets et performants afin de couvrir 
 l’ensemble des besoins décrits dans le cahier des charges d’architecture (vidéo 360, vidéo interactives, 
@@ -109,11 +117,14 @@ qu’un système de « plug-ins » téléchargeable via le **Unity Asset Store**
 offertes par le logiciel de base.
 
 **Documentation complémentaire : **
+
 - https://unity.com/fr/solutions/film-animation-cinematics
+
 - https://unity.com/fr/solutions/360video
+
 - https://assetstore.unity.com/
 
-## Solution : Transcodage / Convertisseur média (SBB-2)
+### Solution : Transcodage / Convertisseur média (SBB-2)
 
 L’un des besoins décrits dans les briques d’architecture de référence consiste dans le transcodage des 
 médias produits (format de sortie de l’outil de production) au format compatible avec la diffusion sur le 
@@ -129,9 +140,10 @@ l’ensemble de chaîne et libérer les créateurs de contenu de ce travail.
 > _Figure 3:  Fonctionnement d'AWS Elemental Media Converter (Source : AWS)_
 
 **Documentation complémentaire : **
+
 - https://aws.amazon.com/fr/mediaconvert/
 
-## Solution : Stockage des médias (SBB-3)
+### Solution : Stockage des médias (SBB-3)
 
 Afin de permettre le stockage de l’ensemble des médias produits et en attente de diffusion (version drafts, 
 médias non publiés …) ainsi que les ressources nécessaires à la production (audio, vidéos brutes …), un 
@@ -145,9 +157,10 @@ Cette solution est totalement évolutive et garantit une adaptation parfaite aux
 l’entreprise. Le SLA extrêmement important garantit la disponibilité des données.
 
 **Documentation complémentaire :** 
+
 - https://aws.amazon.com/fr/s3/
 
-## Solution : Diffusion de média sur le web (SBB-4)
+### Solution : Diffusion de média sur le web (SBB-4)
 
 La diffusion sur de média sur le web à grande échelle nécessite de prendre en compte les besoins de haute 
 disponibilité, de régularité et de faible latence pour la distribution du contenu. Le service doit par ailleurs 
@@ -155,7 +168,7 @@ disposer de fonctionnalités de scalabilité automatique afin de s’adapter aux
 Plusieurs options peuvent être envisagées pour le choix de la brique de solution retenu pour 
 l’architecture.
 
-### Option 1 : Solution AWS Elemental MediaStore
+#### Option 1 : Solution AWS Elemental MediaStore
 
 **AWS Elemental Media Store** est un service fourni par la plateforme AWS et est spécialisé dans le stockage 
 et la distribution de vidéo. Il fournit un point de stockage et assure la diffusion des médias tout en 
@@ -166,9 +179,10 @@ l’architecture du projet. Notons que la tarification pour la plateforme peut t
 croissance de l’entreprise notamment pour le contenu non premium et faiblement monétisable.
 
 **Documentation complémentaire : **
+
 - https://aws.amazon.com/fr/mediastore/
 
-### Option 2 : Solution Unity Multiplay / Unity Build Server
+#### Option 2 : Solution Unity Multiplay / Unity Build Server
 
 La plateforme Unity embarque une solution alternative, **Unity Multiplay**. Cette solution fournit une 
 plateforme auto-scalable initialement prévue pour la diffusion de jeux vidéo mais pouvant parfaitement 
@@ -185,10 +199,12 @@ embarqué (Windows Server 2012, Windows Server 2019 ou Ubuntu 18.04) et dispose 
 et d’une documentation moins importante que la solution AWS.
 
 **Documentation complémentaire :**
+
 - https://unity.com/fr/products/multiplay
+
 - https://docs.unity.com/multiplay/shared/welcome-to-multiplay.html
 
-### Avantages et inconvénients des deux options
+#### Avantages et inconvénients des deux options
 
 +------------------+----------------------------+------------------------------------------------------------------------------+---------------------------------------------------------------------------------+
 | **Option**       |      **Solution**          | **Avantages**                                                                | **Inconvénients**                                                               |
@@ -205,7 +221,7 @@ et d’une documentation moins importante que la solution AWS.
 |                  |                            | - Intégration des frontaux de base.                                          |                                                                                 |
 +------------------+----------------------------+------------------------------------------------------------------------------+---------------------------------------------------------------------------------+
 
-### Choix de la solution
+#### Choix de la solution
 
 Les deux solutions présentées pour la diffusion de média peuvent être retenues pour la conception de 
 l’architecture. 
@@ -213,7 +229,7 @@ l’architecture.
 Au vu des enjeux du projet, il semble nécessaire de réaliser un **PoC** sur la solution Unity afin de garantir
 sa cohérence vis-à-vis du projet et permettre ainsi un ROI substantiel par rapport à la solution AWS.
 
-## Solution : Authentification / Autorisation (SBB-5)
+### Solution : Authentification / Autorisation (SBB-5)
 
 L’autorisation et l’authentification nécessite de faire appel à une solution IAM (Identity Access Manager) 
 compatible avec les standards OAuth2 et OIDC afin de disposer d’une couche « universelle » 
@@ -224,9 +240,10 @@ de facilement configurer les autres services (*S3, Media Converter, Media Store,
 prendre en compte les règles à appliquer.
 
 **Documentation complémentaire :** 
+
 - https://aws.amazon.com/fr/cognito/
 
-## Solution : Visualisation des médias (SBB-6)
+### Solution : Visualisation des médias (SBB-6)
 
 La visualisation des médias doit répondre à deux caractéristiques : Fournir une plateforme web pour la 
 présentation des médias (ex : SPA WebApp) et fournir les outils, notamment le player vidéo, compatibles
@@ -254,12 +271,14 @@ HTML5, Application mobiles, consoles de jeux, smart TV …)
 - Le player dispose d’une excellente implémentation dans les outils Unity.
 
 **Documentation complémentaire :**
+
 - https://nexplayersdk.com/
+
 - https://github.com/NexPlayer/NexPlayer_Unity_Plugin
 
-# Synthèse de l’étude de la stack technologique
+## Synthèse de l’étude de la stack technologique
 
-## Catalogue des briques de solution de référence
+### Catalogue des briques de solution de référence
 
 +---------------+-----------------------+-----------------------------------+-----------------------------------+
 | **Id. SBB**   | **Référence aux ABB** | **Solution**                      | **Rôle**                          |
@@ -280,7 +299,7 @@ HTML5, Application mobiles, consoles de jeux, smart TV …)
 |               |                       | 2. NextPlayer (Player vidéo)      |                                   |
 +---------------+-----------------------+-----------------------------------+-----------------------------------+
 
-## Implémentation de la stack technologique
+### Implémentation de la stack technologique
 
 L’implémentation de la stack technologique proposée vise à exploiter au maximum des services déjà 
 disponibles pour faciliter l’implémentation et accélérer les livraisons. L’ensemble des composants 
@@ -292,3 +311,7 @@ nécessaires pour compléter la solution (notamment la web app).
 
 Notons toutefois, ces aspects sortent de la définition de l’architecture et seront précisés lors de la 
 rédaction des spécifications techniques que chaque composants.
+
+## Références
+
+TODO
