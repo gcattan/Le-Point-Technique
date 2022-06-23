@@ -181,7 +181,20 @@ et d’une documentation moins importante que la solution AWS.
 
 ### Avantages et inconvénients des deux options
 
-[Tab1]
++------------------+----------------------------+------------------------------------------------------------------------------+---------------------------------------------------------------------------------+
+| **Option**       |      **Solution**          | **Avantages**                                                                | **Inconvénients**                                                               |
++:=================+:===========================+:============================================================================:+:===============================================================================:+
+| **1**            |  AWS Elemental Media Store | - Totalement intégré à l’écosystème AWS (Ressources et autres services)      | - Pas de personnalisation possible des services.                                |
+|                  |                            | - Auto-scalable                                                              | - Peut nécessiter l’ajout de frontaux (CDN)                                     |
+|                  |                            | - Très hautes performances                                                   | - Tarification sur le stockage et sur les flux de données entrant / sortant     |
+|                  |                            | - Disponible sous forme de service                                           |                                                                                 |
+|                  |                            | - Faible configuration (SaaS)                                                |                                                                                 |
++------------------+----------------------------+------------------------------------------------------------------------------+---------------------------------------------------------------------------------+
+| **2**            |  Unity Multiplay           | - Totalement personnalisable                                                 | - Configuration et intégration pouvant être complexe (IaaS)                     |
+|                  |                            | - Tarification avantageuse (uniquement sur les performance de la plateforme) | - Peu de ressources documentaires                                               |
+|                  |                            | - Auto-scalable                                                              | - Peut être intégré au workflow automatisé mais nécessite un travail important. |
+|                  |                            | - Intégration des frontaux de base.                                          |                                                                                 |
++------------------+----------------------------+------------------------------------------------------------------------------+---------------------------------------------------------------------------------+
 
 ### Choix de la solution
 
