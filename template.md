@@ -49,4 +49,5 @@ Here is an awesome list:
 
 Use the Chicago Manual of Style 17th Edition (full note), e.g.:
 
-‘Web API Fuzz Testing | GitLab’. Accessed 29 June 2022. https://docs.gitlab.com/ee/user/application_security/api_fuzzing/.
+‘Web API Fuzz Testing | GitLab’. Accessed 29 June 2022.
+[https://docs.gitlab.com/ee/user/application_security/api_fuzzing/](https://docs.gitlab.com/ee/user/application_security/api_fuzzing/).

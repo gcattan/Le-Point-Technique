@@ -392,27 +392,27 @@ Dans cette présentation, nous avons vu comment construire un pipeline d'intégr
 ## Références
 
 ### Liens présents dans la documentation
-‘The One DevOps Platform | GitLab’. Accessed 29 June 2022. https://about.gitlab.com/.
+‘The One DevOps Platform | GitLab’. Accessed 29 June 2022. [https://about.gitlab.com/](https://about.gitlab.com/).
 
-‘How to Prevent Crypto Mining Abuse on GitLab.Com SaaS | GitLab’. Accessed 29 June 2022. https://about.gitlab.com/blog/2021/05/17/prevent-crypto-mining-abuse/.
+‘How to Prevent Crypto Mining Abuse on GitLab.Com SaaS | GitLab’. Accessed 29 June 2022. [https://about.gitlab.com/blog/2021/05/17/prevent-crypto-mining-abuse/](https://about.gitlab.com/blog/2021/05/17/prevent-crypto-mining-abuse/).
 
-‘Installation | GitLab’. Accessed 29 June 2022. https://docs.gitlab.com/ee/install/.
+‘Installation | GitLab’. Accessed 29 June 2022. [https://docs.gitlab.com/ee/install/](https://docs.gitlab.com/ee/install/).
 
-‘Install GitLab Runner | GitLab’. Accessed 29 June 2022. https://docs.gitlab.com/runner/install/.
+‘Install GitLab Runner | GitLab’. Accessed 29 June 2022. [https://docs.gitlab.com/runner/install/](https://docs.gitlab.com/runner/install/).
 
-‘Registering Runners | GitLab’. Accessed 29 June 2022. https://docs.gitlab.com/runner/register/.
+‘Registering Runners | GitLab’. Accessed 29 June 2022. [https://docs.gitlab.com/runner/register/](https://docs.gitlab.com/runner/register/).
 
-‘Configuring GitLab Runner | GitLab’. Accessed 29 June 2022. https://docs.gitlab.com/runner/configuration/.
+‘Configuring GitLab Runner | GitLab’. Accessed 29 June 2022. [https://docs.gitlab.com/runner/configuration/](https://docs.gitlab.com/runner/configuration/).
 
-‘GitLab Runner Commands | GitLab’. Accessed 29 June 2022. https://docs.gitlab.com/runner/commands/.
+‘GitLab Runner Commands | GitLab’. Accessed 29 June 2022. [https://docs.gitlab.com/runner/commands/](https://docs.gitlab.com/runner/commands/).
 
-‘Maven – Introduction to the Build Lifecycle’. Accessed 29 June 2022. https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html.
+‘Maven – Introduction to the Build Lifecycle’. Accessed 29 June 2022. [https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html](https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html).
 
-Bertrand, Nicolas. MedHead. Accessed 29 June 2022. https://gitlab.com/cocowaterswing/ocr-p11-medhead-poc.
+Bertrand, Nicolas. MedHead. Accessed 29 June 2022. [https://gitlab.com/cocowaterswing/ocr-p11-medhead-poc](https://gitlab.com/cocowaterswing/ocr-p11-medhead-poc).
 
-‘OpenClassrooms’. Accessed 29 June 2022. https://openclassrooms.com/fr/.
+‘OpenClassrooms’. Accessed 29 June 2022. [https://openclassrooms.com/fr/](https://openclassrooms.com/fr/).
 
-‘Test Coverage Visualization | GitLab’. Accessed 29 June 2022. https://docs.gitlab.com/ee/ci/testing/test_coverage_visualization.html.
+‘Test Coverage Visualization | GitLab’. Accessed 29 June 2022. [https://docs.gitlab.com/ee/ci/testing/test_coverage_visualization.html](https://docs.gitlab.com/ee/ci/testing/test_coverage_visualization.html).
 
 
 ### Liens attachés à un paragraphe du document
