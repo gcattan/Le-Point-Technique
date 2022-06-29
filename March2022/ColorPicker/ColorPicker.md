@@ -44,6 +44,5 @@ Du côté code, utiliser ensuite la fonctionnalité de _view binding_ ou butterk
 Les méthodes `getColor` et `setColor(int)` permettront respectivement de récupérer et programmer la couleur du bouton.
 
 ## References
-[ColorPicker](https://github.com/LucasGitHubz/ColorPicker)
 
-
+Amelin, Lucas. ColorPicker. Java, 2022. https://github.com/LucasGitHubz/ColorPicker.
