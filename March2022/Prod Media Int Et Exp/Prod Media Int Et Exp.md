@@ -317,47 +317,32 @@ Notons toutefois, ces aspects sortent de la définition de l’architecture et s
 rédaction des spécifications techniques que chaque composants.
 
 ## Références
-Wowza Media Systems. ‘MPEG-DASH: Dynamic Adaptive Streaming Over HTTP Explained’, 18 April 2022.\
-https://www.wowza.com/blog/mpeg-dash-dynamic-adaptive-streaming-over-http.
+Wowza Media Systems. ‘MPEG-DASH: Dynamic Adaptive Streaming Over HTTP Explained’, 18 April 2022. https://www.wowza.com/blog/mpeg-dash-dynamic-adaptive-streaming-over-http.
 
-jbernard. ‘Les principaux formats de flux video live DASH et HLS’. Blog Eleven Labs, 19 July 2017.\
-https://blog.eleven-labs.com/fr/video-live-dash-hls/.
+jbernard. ‘Les principaux formats de flux video live DASH et HLS’. Blog Eleven Labs, 19 July 2017. https://blog.eleven-labs.com/fr/video-live-dash-hls/.
 
-Hardt, Dick. ‘The OAuth 2.0 Authorization Framework’. Request for Comments. Internet Engineering Task Force, October 2012.\
-https://doi.org/10.17487/RFC6749.
+Hardt, Dick. ‘The OAuth 2.0 Authorization Framework’. Request for Comments. Internet Engineering Task Force, October 2012. https://doi.org/10.17487/RFC6749.
 
-‘OpenID Connect | OpenID’, 1 August 2011.\
-http://openid.net/connect/.
+‘OpenID Connect | OpenID’, 1 August 2011. http://openid.net/connect/.
 
-Technologies, Unity. ‘Logiciel d’animation en 3D pour le cinéma et la télévision | Unity’. Accessed 29 June 2022.\
-https://unity.com/fr/solutions/film-animation-cinematics.
+Technologies, Unity. ‘Logiciel d’animation en 3D pour le cinéma et la télévision | Unity’. Accessed 29 June 2022. https://unity.com/fr/solutions/film-animation-cinematics.
 
-‘Créez Des Expériences Vidéo Immersives En 360° | Unity’. Accessed 29 June 2022.\
-https://unity.com/fr/solutions/360video.
+‘Créez Des Expériences Vidéo Immersives En 360° | Unity’. Accessed 29 June 2022. https://unity.com/fr/solutions/360video.
 
-‘Unity Asset Store - The Best Assets for Game Making’. Accessed 29 June 2022.\
-https://assetstore.unity.com/.
+‘Unity Asset Store - The Best Assets for Game Making’. Accessed 29 June 2022. https://assetstore.unity.com/.
 
-‘AWS Elemental MediaConvert’. Accessed 29 June 2022.\
-https://aws.amazon.com/fr/mediaconvert/.
+‘AWS Elemental MediaConvert’. Accessed 29 June 2022. https://aws.amazon.com/fr/mediaconvert/.
 
-Amazon Web Services, Inc. ‘AWS | Amazon S3 – Stockage de données en ligne dans le cloud’. Accessed 29 June 2022.\
-https://aws.amazon.com/fr/s3/.
+Amazon Web Services, Inc. ‘AWS | Amazon S3 – Stockage de données en ligne dans le cloud’. Accessed 29 June 2022. https://aws.amazon.com/fr/s3/.
 
-Amazon Web Services, Inc. ‘AWS Elemental MediaStore’. Accessed 29 June 2022.\
-https://aws.amazon.com/fr/mediastore/.
+Amazon Web Services, Inc. ‘AWS Elemental MediaStore’. Accessed 29 June 2022. https://aws.amazon.com/fr/mediastore/.
 
-‘Hébergement de Serveur de Jeu Multijoueur | Unity Multiplay’. Accessed 29 June 2022.\
-https://unity.com/fr/products/multiplay.
+‘Hébergement de Serveur de Jeu Multijoueur | Unity Multiplay’. Accessed 29 June 2022. https://unity.com/fr/products/multiplay.
 
-‘Welcome to Multiplay’. Accessed 29 June 2022.\
-https://docs.unity.com/multiplay/shared/welcome-to-multiplay.html.
+‘Welcome to Multiplay’. Accessed 29 June 2022. https://docs.unity.com/multiplay/shared/welcome-to-multiplay.html.
 
-Amazon Web Services, Inc. ‘AWS | Amazon Cognito - gestion des accès et synchronisation des données’. Accessed 29 June 2022.\
-https://aws.amazon.com/fr/cognito/.
+Amazon Web Services, Inc. ‘AWS | Amazon Cognito - gestion des accès et synchronisation des données’. Accessed 29 June 2022. https://aws.amazon.com/fr/cognito/.
 
-NexPlayer. ‘NexPlayer | The Premium Multiscreen Player SDK for Video Apps’. Accessed 29 June 2022.\
-https://nexplayersdk.com/.
+NexPlayer. ‘NexPlayer | The Premium Multiscreen Player SDK for Video Apps’. Accessed 29 June 2022. https://nexplayersdk.com/.
 
-Wade, Noah. NexPlayer_Unity_Plugin. 2017. Reprint, NexPlayer, 2017.\
-https://github.com/NexPlayer/NexPlayer_Unity_Plugin.
+Wade, Noah. NexPlayer_Unity_Plugin. 2017. Reprint, NexPlayer, 2017. https://github.com/NexPlayer/NexPlayer_Unity_Plugin.

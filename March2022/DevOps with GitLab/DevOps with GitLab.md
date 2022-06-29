@@ -392,89 +392,61 @@ Dans cette présentation, nous avons vu comment construire un pipeline d'intégr
 ## Références
 
 ### Liens présents dans la documentation
-‘The One DevOps Platform | GitLab’. Accessed 29 June 2022.\
-https://about.gitlab.com/.
+‘The One DevOps Platform | GitLab’. Accessed 29 June 2022. https://about.gitlab.com/.
 
-‘How to Prevent Crypto Mining Abuse on GitLab.Com SaaS | GitLab’. Accessed 29 June 2022.\
-https://about.gitlab.com/blog/2021/05/17/prevent-crypto-mining-abuse/.
+‘How to Prevent Crypto Mining Abuse on GitLab.Com SaaS | GitLab’. Accessed 29 June 2022. https://about.gitlab.com/blog/2021/05/17/prevent-crypto-mining-abuse/.
 
-‘Installation | GitLab’. Accessed 29 June 2022.\
-https://docs.gitlab.com/ee/install/.
+‘Installation | GitLab’. Accessed 29 June 2022. https://docs.gitlab.com/ee/install/.
 
-‘Install GitLab Runner | GitLab’. Accessed 29 June 2022.\
-https://docs.gitlab.com/runner/install/.
+‘Install GitLab Runner | GitLab’. Accessed 29 June 2022. https://docs.gitlab.com/runner/install/.
 
-‘Registering Runners | GitLab’. Accessed 29 June 2022.\
-https://docs.gitlab.com/runner/register/.
+‘Registering Runners | GitLab’. Accessed 29 June 2022. https://docs.gitlab.com/runner/register/.
 
-‘Configuring GitLab Runner | GitLab’. Accessed 29 June 2022.\
-https://docs.gitlab.com/runner/configuration/.
+‘Configuring GitLab Runner | GitLab’. Accessed 29 June 2022. https://docs.gitlab.com/runner/configuration/.
 
-‘GitLab Runner Commands | GitLab’. Accessed 29 June 2022.\
-https://docs.gitlab.com/runner/commands/.
+‘GitLab Runner Commands | GitLab’. Accessed 29 June 2022. https://docs.gitlab.com/runner/commands/.
 
-‘Maven – Introduction to the Build Lifecycle’. Accessed 29 June 2022.\
-https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html.
+‘Maven – Introduction to the Build Lifecycle’. Accessed 29 June 2022. https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html.
 
-Bertrand, Nicolas. MedHead. Accessed 29 June 2022.\
-https://gitlab.com/cocowaterswing/ocr-p11-medhead-poc.
+Bertrand, Nicolas. MedHead. Accessed 29 June 2022. https://gitlab.com/cocowaterswing/ocr-p11-medhead-poc.
 
-‘OpenClassrooms’. Accessed 29 June 2022.\
-https://openclassrooms.com/fr/.
+‘OpenClassrooms’. Accessed 29 June 2022. https://openclassrooms.com/fr/.
 
-‘Test Coverage Visualization | GitLab’. Accessed 29 June 2022.\
-https://docs.gitlab.com/ee/ci/testing/test_coverage_visualization.html.
+‘Test Coverage Visualization | GitLab’. Accessed 29 June 2022. https://docs.gitlab.com/ee/ci/testing/test_coverage_visualization.html.
 
 
 ### Liens attachés à un paragraphe du document
-‘Get Started with GitLab CI/CD | GitLab’. Accessed 29 June 2022.\
-https://docs.gitlab.com/ee/ci/quick_start/.
+‘Get Started with GitLab CI/CD | GitLab’. Accessed 29 June 2022. https://docs.gitlab.com/ee/ci/quick_start/.
 
-‘Job Artifacts | GitLab’. Accessed 29 June 2022.\
-https://docs.gitlab.com/ee/ci/pipelines/job_artifacts.html.
+‘Job Artifacts | GitLab’. Accessed 29 June 2022. https://docs.gitlab.com/ee/ci/pipelines/job_artifacts.html.
 
-‘The `.Gitlab-Ci.Yml` File | GitLab’. Accessed 29 June 2022.\
-https://docs.gitlab.com/ee/ci/yaml/gitlab_ci_yaml.html.
+‘The `.Gitlab-Ci.Yml` File | GitLab’. Accessed 29 June 2022. https://docs.gitlab.com/ee/ci/yaml/gitlab_ci_yaml.html.
 
-‘Maven Surefire Report Plugin – Surefire-Report:Report’. Accessed 29 June 2022.\
-https://maven.apache.org/surefire/maven-surefire-report-plugin/report-mojo.html.
+‘Maven Surefire Report Plugin – Surefire-Report:Report’. Accessed 29 June 2022. https://maven.apache.org/surefire/maven-surefire-report-plugin/report-mojo.html.
 
-‘JaCoCo - Maven Plug-In’. Accessed 29 June 2022.\
-https://www.jacoco.org/jacoco/trunk/doc/maven.html.
+‘JaCoCo - Maven Plug-In’. Accessed 29 June 2022. https://www.jacoco.org/jacoco/trunk/doc/maven.html.
 
-‘Code Quality | GitLab’. Accessed 29 June 2022.\
-https://docs.gitlab.com/ee/ci/testing/code_quality.html.
+‘Code Quality | GitLab’. Accessed 29 June 2022. https://docs.gitlab.com/ee/ci/testing/code_quality.html.
 
-Code Climate. ‘SonarJava’. Accessed 29 June 2022.\
-https://docs.codeclimate.com/docs/sonar-java.
+Code Climate. ‘SonarJava’. Accessed 29 June 2022. https://docs.codeclimate.com/docs/sonar-java.
 
-‘Use Docker to Build Docker Images | GitLab’. Accessed 29 June 2022.\
-https://docs.gitlab.com/ee/ci/docker/using_docker_build.html#use-the-docker-executor-with-the-docker-image-docker-in-docker.
+‘Use Docker to Build Docker Images | GitLab’. Accessed 29 June 2022. https://docs.gitlab.com/ee/ci/docker/using_docker_build.html#use-the-docker-executor-with-the-docker-image-docker-in-docker.
 
-‘Maven Packages in the Package Repository | GitLab’. Accessed 29 June 2022.\
-https://docs.gitlab.com/ee/user/packages/maven_repository/#create-maven-packages-with-gitlab-cicd-by-using-maven.
+‘Maven Packages in the Package Repository | GitLab’. Accessed 29 June 2022. https://docs.gitlab.com/ee/user/packages/maven_repository/#create-maven-packages-with-gitlab-cicd-by-using-maven.
 
-‘Apache Maven Deploy Plugin – Introduction’. Accessed 29 June 2022.\
-https://maven.apache.org/plugins/maven-deploy-plugin/.
+‘Apache Maven Deploy Plugin – Introduction’. Accessed 29 June 2022. https://maven.apache.org/plugins/maven-deploy-plugin/.
 
-‘Use Kaniko to Build Docker Images | GitLab’. Accessed 29 June 2022.\
-https://docs.gitlab.com/ee/ci/docker/using_kaniko.html.
+‘Use Kaniko to Build Docker Images | GitLab’. Accessed 29 June 2022. https://docs.gitlab.com/ee/ci/docker/using_kaniko.html.
 
 ### Vidéos
-Valentin Despa. Gitlab CI Pipeline Tutorial for Beginners, 2018.\
-https://www.youtube.com/watch?v=Jav4vbUrqII.
+Valentin Despa. Gitlab CI Pipeline Tutorial for Beginners, 2018. https://www.youtube.com/watch?v=Jav4vbUrqII.
 
-GitLab Unfiltered. 1. Switzerland GitLab Meetup: First Time GitLab & CI/CD Workshop with Michael Friedrich, 2021.\
-https://www.youtube.com/watch?v=kTNfi5z6Uvk.
+GitLab Unfiltered. 1. Switzerland GitLab Meetup: First Time GitLab & CI/CD Workshop with Michael Friedrich, 2021. https://www.youtube.com/watch?v=kTNfi5z6Uvk.
 
-GitLab Unfiltered. GitLab Virtual Meetup - Intro to GitLab CI Featuring Michael Friedrich, 2020.\
-https://www.youtube.com/watch?v=l5705U8s_nQ.
+GitLab Unfiltered. GitLab Virtual Meetup - Intro to GitLab CI Featuring Michael Friedrich, 2020. https://www.youtube.com/watch?v=l5705U8s_nQ.
 
-GitLab Unfiltered. Getting Started with GitLab CI/CD, 2020.\
-https://www.youtube.com/watch?v=sIegJaLy2ug.
+GitLab Unfiltered. Getting Started with GitLab CI/CD, 2020. https://www.youtube.com/watch?v=sIegJaLy2ug.
 
-GitLab Unfiltered. GitLab Code Quality: Speed Run, 2020.\
-https://www.youtube.com/watch?v=B32LxtJKo9M.
+GitLab Unfiltered. GitLab Code Quality: Speed Run, 2020. https://www.youtube.com/watch?v=B32LxtJKo9M.
 
-GDG Toulouse. Philippe Charrière - Se Former ‘En Douceur’ à GitLab, GitLab CI & CD Avec OpenFaas, 2018.\
-https://www.youtube.com/watch?v=xQOcv_Xg-BY.
+GDG Toulouse. Philippe Charrière - Se Former ‘En Douceur’ à GitLab, GitLab CI & CD Avec OpenFaas, 2018. https://www.youtube.com/watch?v=xQOcv_Xg-BY.
