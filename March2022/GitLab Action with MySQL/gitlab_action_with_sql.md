@@ -184,8 +184,11 @@ Ce document pourra être complété avec la mise en place d'outils de [sécurit�
 des tests de [fuzzing](https://docs.gitlab.com/ee/user/application_security/api_fuzzing/).
 
 ## References
-‘Secure Your Application | GitLab’. Accessed 29 June 2022. https://docs.gitlab.com/ee/user/application_security/.
+‘Secure Your Application | GitLab’. Accessed 29 June 2022.\
+https://docs.gitlab.com/ee/user/application_security/.
 
-‘Using External Secrets in CI | GitLab’. Accessed 29 June 2022. https://docs.gitlab.com/ee/ci/secrets/.
+‘Using External Secrets in CI | GitLab’. Accessed 29 June 2022.\
+https://docs.gitlab.com/ee/ci/secrets/.
 
-‘Web API Fuzz Testing | GitLab’. Accessed 29 June 2022. https://docs.gitlab.com/ee/user/application_security/api_fuzzing/.
+‘Web API Fuzz Testing | GitLab’. Accessed 29 June 2022.\
+https://docs.gitlab.com/ee/user/application_security/api_fuzzing/.

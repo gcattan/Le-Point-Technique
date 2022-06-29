@@ -45,4 +45,5 @@ Les méthodes `getColor` et `setColor(int)` permettront respectivement de récup
 
 ## References
 
-Amelin, Lucas. ColorPicker. Java, 2022. https://github.com/LucasGitHubz/ColorPicker.
+Amelin, Lucas. ColorPicker. Java, 2022.\
+https://github.com/LucasGitHubz/ColorPicker.
