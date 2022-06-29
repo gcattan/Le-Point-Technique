@@ -18,7 +18,29 @@ Please check _Figure 1_
 >
 > _Figure 1: legend_
 
+I am joining table either as a figure or using [pandoc tables](https://pandoc.org/MANUAL.html#tables).
 
+Please check _Table 1_
+
+_Table 1: legend_
+
+<pre>
++---------------+---------------+
+| Fruit         | Price         | 
++===============+===============+
+| Bananas       | $1.34         |
+|               |               |
++---------------+---------------+
+| Oranges       | $2.10         |
+|               |               |
++---------------+---------------+
+</pre>
+
+Here is an awesome list:
+
+- first item
+
+- second item
 
 ### Subsection II
 ## Section II
