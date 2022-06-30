@@ -7,3 +7,5 @@ Deux travaux centrés DevOps avec la mise en place d'une pipeline Ci/Cd sous Git
 Et une étude exploratoire pour la production de médias interactifs.
 
 Bonne lecture !
+
+Gregoire Cattan
