@@ -1,4 +1,4 @@
-from: markdown
+from: markdown+rebase_relative_paths
 # reader: may be used instead of from:
 to: pdf
 # writer: may be used instead of to:

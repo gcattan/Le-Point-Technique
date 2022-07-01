@@ -1,3 +1,5 @@
+\setcounter{figure}{0}
+
 # Etude exploratoire pour la production de Médias interactifs
 _Evan, David_
 
@@ -57,9 +59,10 @@ documentaires sont disponible en fin de section pour approfondir la compréhensi
 
 Le schéma ci-après (_Figure 1_) présente de façon simplifiée le fonctionnement d’un flux HLS :
 
-> ![figure 1](images/fig1.png)
->
-> _Figure 1: Vue synthétique d'un envoi réalisé avec HLS (source : Eleven Labs Blog)_
+> ![Vue synthétique d'un envoi réalisé avec HLS (source : Eleven Labs Blog).](images/fig1.png)
+> <pre>
+> Figure 1: Vue synthétique d'un envoi réalisé avec HLS (source : Eleven Labs Blog).
+> </pre>
 
 Comme indiqué précédemment, la découpe des fichiers source en segments de qualité différentes permet 
 l’adaptation du bitrate de la diffusion au fur et à mesure de l'avancé afin de garantir à l’utilisateur une 
@@ -72,9 +75,11 @@ construire la vidéo.
 La figure ci-après (_Figure 2_) montre le fonctionnement du principe de segmentation du fichier source en 
 section différentes.
 
-> ![figure 2](images/fig2.png)
->
-> _Figure 2: Segmentation d’un média en différentes qualités pour diffusion via HLS (source : Eleven Labs Blog)_
+> ![Segmentation d’un média en différentes qualités pour diffusion via HLS (source : Eleven Labs Blog).](images/fig2.png)
+> <pre>
+> Figure 2: Segmentation d’un média en différentes qualités pour diffusion via HLS (source : Eleven Labs Blog).
+> </pre>
+
 
 **Documentation complémentaire :**
 
@@ -135,9 +140,10 @@ outil couvre l’intégralité des besoins nécessaires au projet et s’adapte 
 à la minute convertie). Le workflow peut être automatisé et couplé avec AWS S3 pour automatiser 
 l’ensemble de chaîne et libérer les créateurs de contenu de ce travail.
 
-> ![figure 3](images/fig3.png)
->
-> _Figure 3:  Fonctionnement d'AWS Elemental Media Converter (Source : AWS)_
+> ![Fonctionnement d'AWS Elemental Media Converter (Source : AWS).](images/fig3.png)
+> <pre>
+> Figure 3:  Fonctionnement d'AWS Elemental Media Converter (Source : AWS).
+> </pre>
 
 **Documentation complémentaire :**
 
@@ -206,7 +212,7 @@ et d’une documentation moins importante que la solution AWS.
 
 #### Avantages et inconvénients des deux options
 
-<pre>
+<div><pre>
 +------------------+----------------------------+------------------------------------------------------------------------------+---------------------------------------------------------------------------------+
 | **Option**       |      **Solution**          | **Avantages**                                                                | **Inconvénients**                                                               |
 +:=================+:===========================+:============================================================================:+:===============================================================================:+
@@ -221,7 +227,7 @@ et d’une documentation moins importante que la solution AWS.
 |                  |                            | - Auto-scalable                                                              | - Peut être intégré au workflow automatisé mais nécessite un travail important. |
 |                  |                            | - Intégration des frontaux de base.                                          |                                                                                 |
 +------------------+----------------------------+------------------------------------------------------------------------------+---------------------------------------------------------------------------------+
-</pre>
+</div>
 
 #### Choix de la solution
 
@@ -282,7 +288,7 @@ HTML5, Application mobiles, consoles de jeux, smart TV …)
 
 ### Catalogue des briques de solution de référence
 
-<pre>
+<div><pre>
 +---------------+-----------------------+-----------------------------------+-----------------------------------+
 | **Id. SBB**   | **Référence aux ABB** | **Solution**                      | **Rôle**                          |
 +===============+=======================+===================================+===================================+
@@ -301,7 +307,7 @@ HTML5, Application mobiles, consoles de jeux, smart TV …)
 | **SBB-6**     | ABB-6                 | 1. Solution custom (Web App)      | Visualisation des médias          |
 |               |                       | 2. NextPlayer (Player vidéo)      |                                   |
 +---------------+-----------------------+-----------------------------------+-----------------------------------+
-</pre>
+</div>
 
 ### Implémentation de la stack technologique
 
@@ -317,33 +323,32 @@ Notons toutefois, ces aspects sortent de la définition de l’architecture et s
 rédaction des spécifications techniques que chaque composants.
 
 ## Références
+Wowza Media Systems. ‘MPEG-DASH: Dynamic Adaptive Streaming Over HTTP Explained’, 18 April 2022. [https://www.wowza.com/blog/mpeg-dash-dynamic-adaptive-streaming-over-http](https://www.wowza.com/blog/mpeg-dash-dynamic-adaptive-streaming-over-http).
 
-https://www.wowza.com/blog/mpeg-dash-dynamic-adaptive-streaming-over-http
+Bernard, Jérémy. ‘Les principaux formats de flux video live DASH et HLS’. Blog Eleven Labs, 19 July 2017. [https://blog.eleven-labs.com/fr/video-live-dash-hls/](https://blog.eleven-labs.com/fr/video-live-dash-hls/).
 
-https://blog.eleven-labs.com/fr/video-live-dash-hls
+Hardt, Dick. ‘The OAuth 2.0 Authorization Framework’. Request for Comments. Internet Engineering Task Force, October 2012. [https://doi.org/10.17487/RFC6749](https://doi.org/10.17487/RFC6749).
 
-https://datatracker.ietf.org/doc/html/rfc6749
+‘OpenID Connect | OpenID’, 1 August 2011. [http://openid.net/connect/](http://openid.net/connect/).
 
-https://openid.net/connect/
+Technologies, Unity. ‘Logiciel d’animation en 3D pour le cinéma et la télévision | Unity’. Accessed 29 June 2022. [https://unity.com/fr/solutions/film-animation-cinematics](https://unity.com/fr/solutions/film-animation-cinematics).
 
-https://unity.com/fr/solutions/film-animation-cinematics
+‘Créez Des Expériences Vidéo Immersives En 360° | Unity’. Accessed 29 June 2022. [https://unity.com/fr/solutions/360video](https://unity.com/fr/solutions/360video).
 
-https://unity.com/fr/solutions/360video
+‘Unity Asset Store - The Best Assets for Game Making’. Accessed 29 June 2022. [https://assetstore.unity.com/](https://assetstore.unity.com/).
 
-https://assetstore.unity.com/
+‘AWS Elemental MediaConvert’. Accessed 29 June 2022. [https://aws.amazon.com/fr/mediaconvert/](https://aws.amazon.com/fr/mediaconvert/).
 
-https://aws.amazon.com/fr/mediaconvert/
+Amazon Web Services, Inc. ‘AWS | Amazon S3 – Stockage de données en ligne dans le cloud’. Accessed 29 June 2022. [https://aws.amazon.com/fr/s3/](https://aws.amazon.com/fr/s3/).
 
-https://aws.amazon.com/fr/s3/
+Amazon Web Services, Inc. ‘AWS Elemental MediaStore’. Accessed 29 June 2022. [https://aws.amazon.com/fr/mediastore/](https://aws.amazon.com/fr/mediastore/).
 
-https://aws.amazon.com/fr/mediastore/
+‘Hébergement de Serveur de Jeu Multijoueur | Unity Multiplay’. Accessed 29 June 2022. [https://unity.com/fr/products/multiplay](https://unity.com/fr/products/multiplay).
 
-https://unity.com/fr/products/multiplay
+‘Welcome to Multiplay’. Accessed 29 June 2022. [https://docs.unity.com/multiplay/shared/welcome-to-multiplay.html](https://docs.unity.com/multiplay/shared/welcome-to-multiplay.html).
 
-https://docs.unity.com/multiplay/shared/welcome-to-multiplay.html
+Amazon Web Services, Inc. ‘AWS | Amazon Cognito - gestion des accès et synchronisation des données’. Accessed 29 June 2022. [https://aws.amazon.com/fr/cognito/](https://aws.amazon.com/fr/cognito/).
 
-https://aws.amazon.com/fr/cognito/
+NexPlayer. ‘NexPlayer | The Premium Multiscreen Player SDK for Video Apps’. Accessed 29 June 2022. [https://nexplayersdk.com/](https://nexplayersdk.com/).
 
-https://nexplayersdk.com/
-
-https://github.com/NexPlayer/NexPlayer_Unity_Plugin
+Wade, Noah. NexPlayer_Unity_Plugin. 2017. Reprint, NexPlayer, 2017. [https://github.com/NexPlayer/NexPlayer_Unity_Plugin](https://github.com/NexPlayer/NexPlayer_Unity_Plugin).

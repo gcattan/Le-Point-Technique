@@ -1,3 +1,5 @@
+\setcounter{figure}{0}
+
 # GitLab Action with MySQL on a Java Spring Application
 
 _Cansell, Maxime_
@@ -30,9 +32,10 @@ concerne la configuration de l’image de la base de données MySQL.
 
 A chaque push du code source des applications ou du fichier .gitlab-ci.yml sur le repository, le code de ce fichier .gitlab-ci.yml sera exécuté automatiquement.
 
-> ![image 1](images/image-1.png)
->
-> _Figure 1: Exemple d'action GitLab._
+> ![Exemple d'action GitLab.](images/image-1.png)
+> <pre>
+> Figure 1: Exemple d'action GitLab.
+> </pre>
 
 Prenons le temps d'analyser cette exemple ligne par ligne:
 
@@ -90,15 +93,17 @@ Nous devons tout d'abord ajouter (ligne 9) nos variables MySQL pour permettre la
 connexion à la base de données. Attention, il conviendra de mettre en place [External
 Secret GitLab](https://docs.gitlab.com/ee/ci/secrets/) pour sécuriser les variables de connexion qui sont visibles (_Figure 2_).
 
-> ![image 2](images/image-2.png)
->
-> _Figure 2: Configuration des variables MySQL_
+> ![Configuration des variables MySQL.](images/image-2.png)
+> <pre>
+> Figure 2: Configuration des variables MySQL.
+> </pre>
 
 Nous modifions ensuite le stage tests (_Figure 3_).
 
-> ![image 3](images/image-3.png)
->
-> _Figure 3: Screenshot des modifications sur le stage tests_
+> ![Screenshot des modifications sur le stage tests.](images/image-3.png)
+> <pre>
+> Figure 3: Screenshot des modifications sur le stage tests.
+> </pre>
 
 Nous allons utiliser un service nommé mariadb pour y créer notre base de
 données MySQL (ligne 31). Un service est lui même créé dans un conteneur docker à
@@ -119,9 +124,10 @@ Gitlab permet d’enregistrer des variables d’environnement qui seront réutil
 dans notre pipeline et donc par notre application en fonctionnement dans nos stages
 (voir _Figure 4_). Suivre : `seetings > Ci/CD > Variables` et `Expand`.
 
-> ![image 4](images/image-4.png)
->
-> _Figure 4: Capture d'écran des variables d'environnement sous Gitlab_
+> ![Capture d'écran des variables d'environnement sous GitLab.](images/image-4.png)
+> <pre>
+> Figure 4: Capture d'écran des variables d'environnement sous GitLab.
+> </pre>
 
 Ces variables peuvent écraser et remplacer les variables de notre application
 comme celles contenues dans le fichier de configuration Spring de notre application :
@@ -133,11 +139,12 @@ du fichier yml et minuscule underscore pour celles du fichier application.proper
 Pour que notre conteneur où s’exécute l’application et ses tests puissent
 communiquer avec le conteneur du service mariadb et sa base de donnée MySQL nous
 devons écraser la valeur de la propriété “spring.datasource.url” du fichier
-application.properties de notre application Spring :
+application.properties de notre application Spring (_Figure 5_).
 
-> ![image 5](images/image-5.png)
->
-> _Figure 5: Mise à jour des propriétés spring boot._
+> ![Mise à jour des propriétés spring boot.](images/image-5.png)
+> <pre>
+> Figure 5: Mise à jour des propriétés spring boot.
+> </pre>
 
 La variable se nommera donc “spring_datasource_url” et aura pour valeur,
 comme nous l’avons vu précédemment : “jdbc:mysql//mariadb:3306/hospitals”
@@ -156,26 +163,29 @@ peut passer par l’état “running” quand il est en cours d'exécution,
 “failed” quand elle à échoué (indépendant de la réussite des
 tests ou de leurs échecs) - _Figure 6_.
 
-> ![image 6](images/image-6.png)
->
-> _Figure 6: Statut de la pipeline._
+> ![Statut de la pipeline.](images/image-6.png)
+> <pre>
+> Figure 6: Statut de la pipeline.
+> </pre>
 
 La capture d’écran suivante (_Figure 7_) montre les logs de l'exécution du job stage tests qui
 s’est correctement déroulée.
 
-> ![image 7](images/image-7.png)
->
-> _Figure 7: Exemple de logs d'exécution._
+> ![Exemple de logs d'exécution.](images/image-7.png)
+> <pre>
+> Figure 7: Exemple de logs d'exécution.
+> </pre>
 
 ###  Artefacts créés lors du pipeline
 Nous disposons d’un rapport sauvegardé au format html disponible en suivant le
 chemin suivant : `<<appli>>/target/site/surefire-report.html`
 Nous pouvons également voir le statut de réussite ou d’échec des tests et leurs
-origines sur la `_Figure 8_` (cliquer sur le stage puis sur l’onglet test) :
+origines sur la _Figure 8_ (cliquer sur le stage puis sur l’onglet test) :
 
-> ![image 8](images/image-8.png)
->
-> _Figure 8: Screenshot de l'onglet `Pipelines`._
+> ![Screenshot de l'onglet `Pipelines`.](images/image-8.png)
+> <pre>
+> Figure 8: Screenshot de l'onglet `Pipelines`.
+> </pre>
 
 ## Conclusion
 Ce document nous a permis de mettre en place notre pipeline d’intégration continue
@@ -184,10 +194,8 @@ Ce document pourra être complété avec la mise en place d'outils de [sécurit�
 des tests de [fuzzing](https://docs.gitlab.com/ee/user/application_security/api_fuzzing/).
 
 ## References
-[DevOps with GitLab](https://github.com/gcattan/Le-Point-Technique/blob/master/March2022/DevOps%20with%20GitLab/DevOps%20with%20GitLab.md)
+‘Secure Your Application | GitLab’. Accessed 29 June 2022. [https://docs.gitlab.com/ee/user/application_security/](https://docs.gitlab.com/ee/user/application_security/).
 
-[GitLab - API Fuzzing](https://docs.gitlab.com/ee/user/application_security/api_fuzzing/)
+‘Using External Secrets in CI | GitLab’. Accessed 29 June 2022. [https://docs.gitlab.com/ee/ci/secrets/](https://docs.gitlab.com/ee/ci/secrets/).
 
-[GitLab - Application Security](https://docs.gitlab.com/ee/user/application_security/)
-
-[External Secret Gitlab](https://docs.gitlab.com/ee/ci/secrets/)
+‘Web API Fuzz Testing | GitLab’. Accessed 29 June 2022. [https://docs.gitlab.com/ee/user/application_security/api_fuzzing/](https://docs.gitlab.com/ee/user/application_security/api_fuzzing/).
