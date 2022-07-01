@@ -60,7 +60,7 @@ documentaires sont disponible en fin de section pour approfondir la compréhensi
 Le schéma ci-après (_Figure 1_) présente de façon simplifiée le fonctionnement d’un flux HLS :
 
 > ![Vue synthétique d'un envoi réalisé avec HLS (source : Eleven Labs Blog).](images/fig1.png)
->  <pre>
+> <pre>
 > Figure 1: Vue synthétique d'un envoi réalisé avec HLS (source : Eleven Labs Blog).
 > </pre>
 
@@ -212,7 +212,7 @@ et d’une documentation moins importante que la solution AWS.
 
 #### Avantages et inconvénients des deux options
 
-<pre>
+<div>
 +------------------+----------------------------+------------------------------------------------------------------------------+---------------------------------------------------------------------------------+
 | **Option**       |      **Solution**          | **Avantages**                                                                | **Inconvénients**                                                               |
 +:=================+:===========================+:============================================================================:+:===============================================================================:+
@@ -227,7 +227,7 @@ et d’une documentation moins importante que la solution AWS.
 |                  |                            | - Auto-scalable                                                              | - Peut être intégré au workflow automatisé mais nécessite un travail important. |
 |                  |                            | - Intégration des frontaux de base.                                          |                                                                                 |
 +------------------+----------------------------+------------------------------------------------------------------------------+---------------------------------------------------------------------------------+
-</pre>
+</div>
 
 #### Choix de la solution
 
@@ -288,7 +288,7 @@ HTML5, Application mobiles, consoles de jeux, smart TV …)
 
 ### Catalogue des briques de solution de référence
 
-<pre>
+<div>
 +---------------+-----------------------+-----------------------------------+-----------------------------------+
 | **Id. SBB**   | **Référence aux ABB** | **Solution**                      | **Rôle**                          |
 +===============+=======================+===================================+===================================+
@@ -307,7 +307,7 @@ HTML5, Application mobiles, consoles de jeux, smart TV …)
 | **SBB-6**     | ABB-6                 | 1. Solution custom (Web App)      | Visualisation des médias          |
 |               |                       | 2. NextPlayer (Player vidéo)      |                                   |
 +---------------+-----------------------+-----------------------------------+-----------------------------------+
-</pre>
+</div>
 
 ### Implémentation de la stack technologique
 

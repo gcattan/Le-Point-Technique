@@ -27,7 +27,7 @@ Please check _Table 1_
 
 _Table 1: legend_
 
-<pre>
+<div>
 +---------------+---------------+
 | Fruit         | Price         | 
 +===============+===============+
@@ -37,7 +37,7 @@ _Table 1: legend_
 | Oranges       | $2.10         |
 |               |               |
 +---------------+---------------+
-</pre>
+</div>
 
 Here is an awesome list:
 
