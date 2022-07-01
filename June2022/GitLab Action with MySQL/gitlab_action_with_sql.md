@@ -12,7 +12,7 @@ __keywords__: GitLab, DevOps, MySQL, Java, Spring
 
 ## Introduction 
 Ce document décrit les étapes de configuration d'une action GitLab avec une base de données MySQL dans une application
-Java utilisant le framework Spring. Il s'inspire en partie du tutoriel [DevOps with GitLab](https://github.com/gcattan/Le-Point-Technique/blob/master/March2022/DevOps%20with%20GitLab/DevOps%20with%20GitLab.md).
+Java utilisant le framework Spring. Il s'inspire en partie du tutoriel [DevOps with GitLab](https://github.com/gcattan/Le-Point-Technique/blob/master/June2022/DevOps%20with%20GitLab/DevOps%20with%20GitLab.md).
 Ce document comprend deux sections: création du pipeline CI et conclusion.
 La création du pipeline CI contient cinq sous-sections : configuration du pipeline, Instanciation du service MySQL, enregistrement des variables d'environnement
 avec GitLab, exécution de la pipeline et présentation des artifacts de builds. 
