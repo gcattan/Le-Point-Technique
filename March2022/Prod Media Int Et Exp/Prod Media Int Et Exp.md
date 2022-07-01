@@ -1,3 +1,5 @@
+\setcounter{figure}{0}
+
 # Etude exploratoire pour la production de Médias interactifs
 _Evan, David_
 
@@ -57,9 +59,10 @@ documentaires sont disponible en fin de section pour approfondir la compréhensi
 
 Le schéma ci-après (_Figure 1_) présente de façon simplifiée le fonctionnement d’un flux HLS :
 
-> ![figure 1](images/fig1.png)
->
-> _Figure 1: Vue synthétique d'un envoi réalisé avec HLS (source : Eleven Labs Blog)_
+> ![Vue synthétique d'un envoi réalisé avec HLS (source : Eleven Labs Blog).](images/fig1.png)
+>  <pre>
+> Figure 1: Vue synthétique d'un envoi réalisé avec HLS (source : Eleven Labs Blog).
+> </pre>
 
 Comme indiqué précédemment, la découpe des fichiers source en segments de qualité différentes permet 
 l’adaptation du bitrate de la diffusion au fur et à mesure de l'avancé afin de garantir à l’utilisateur une 
@@ -72,9 +75,11 @@ construire la vidéo.
 La figure ci-après (_Figure 2_) montre le fonctionnement du principe de segmentation du fichier source en 
 section différentes.
 
-> ![figure 2](images/fig2.png)
->
-> _Figure 2: Segmentation d’un média en différentes qualités pour diffusion via HLS (source : Eleven Labs Blog)_
+> ![Segmentation d’un média en différentes qualités pour diffusion via HLS (source : Eleven Labs Blog).](images/fig2.png)
+> <pre>
+> Figure 2: Segmentation d’un média en différentes qualités pour diffusion via HLS (source : Eleven Labs Blog).
+> </pre>
+
 
 **Documentation complémentaire :**
 
@@ -135,9 +140,10 @@ outil couvre l’intégralité des besoins nécessaires au projet et s’adapte 
 à la minute convertie). Le workflow peut être automatisé et couplé avec AWS S3 pour automatiser 
 l’ensemble de chaîne et libérer les créateurs de contenu de ce travail.
 
-> ![figure 3](images/fig3.png)
->
-> _Figure 3:  Fonctionnement d'AWS Elemental Media Converter (Source : AWS)_
+> ![Fonctionnement d'AWS Elemental Media Converter (Source : AWS).](images/fig3.png)
+> <pre>
+> Figure 3:  Fonctionnement d'AWS Elemental Media Converter (Source : AWS).
+> </pre>
 
 **Documentation complémentaire :**
 

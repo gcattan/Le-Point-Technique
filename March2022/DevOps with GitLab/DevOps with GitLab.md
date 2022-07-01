@@ -1,3 +1,5 @@
+\setcounter{figure}{0}
+
 # Intégration continue avec GitLab
 _Nicolas, BERTRAND_
 
@@ -37,15 +39,17 @@ Je ne vais pas expliquer comment installer GitLab dans cette présentation car v
 ### Specific Runners
 Par défaut, le pipeline de GitLab utilise les shared runners pour exécuter les jobs. Vous trouverez ces informations en naviguant dans le menu _Settings_ de votre projet, puis _CI/CD_, et enfin _Runners_ (voir _Figure 1_ ci-dessous).
 
-> ![image](images/figure1.png)
->
-> _Figure 1: Les runners du projet_
+> ![Les runners du projet.](images/figure1.png)
+> <pre>
+> Figure 1: Les runners du projet.
+> </pre>
 
 À gauche, nous pouvons voir la colonne _Specific runners_, dans laquelle nous trouvons des liens vers la procédure d'installation suivant différents environnements (voir _Figure 2_ ci-dessous).
 
-> ![image](images/figure2.png)
->
-> _Figure 2: Installer un runner spécifique_
+> ![Installer un runner spécifique.](images/figure2.png)
+> <pre>
+> Figure 2: Installer un runner spécifique.
+> </pre>
 
 Une fois installé en local, nous devons enregistrer le runner pour notre projet (voir [Registering runners](https://docs.gitlab.com/runner/register/index.html#example)). Nous pouvons réaliser cette tâche en mode interactif ou one-line. Voici les différentes étapes communes à tous les environnements en mode interactif :
 
@@ -59,9 +63,10 @@ Une fois installé en local, nous devons enregistrer le runner pour notre projet
 
 Après avoir désactivé l'option shared runners de la page de configuration des runners de notre projet nous devrions voir le runner spécifique de notre machine disponible et actif pour exécuter les jobs de notre pipeline (voir _Figure 3_ ci-dessous).
 
-> ![image](images/figure3.png)
->
-> _Figure 3: Notre runner spécifique est disponible_
+> ![Notre runner spécifique est disponible.](images/figure3.png)
+> <pre>
+> Figure 3: Notre runner spécifique est disponible.
+> </pre>
 
 L'action d'enregistrer un runner spécifique pour notre projet crée un fichier de configuration local appelé _config.toml_ sur notre machine (dans le répertoire /etc/gitlab-runner pour un environnement linux). C'est dans ce fichier que l'on retrouve les informations transmises lors de l'enregistrement de notre runner. Vous trouverez ci-dessous le fichier config.toml de ma configuration qui contient un peu plus d'option que celles générées par défaut, en particulier pour le paramètre volumes des options runners.docker. Je vous laisse découvrir la documentation [Configuring GitLab Runner](https://docs.gitlab.com/runner/configuration/) et [GitLab Runner commands](https://docs.gitlab.com/runner/commands/) pour approfondir les informations délivrées dans cette parenthèse.
 
@@ -97,26 +102,30 @@ check_interval = 0
 ## Création d'un nouveau projet
 Une fois les étapes d'inscription et d'installation franchies, nous pouvons créer un nouveau projet (voir _Figure 4_ ci-dessous). Remplissez les champs avec les informations de votre choix.
 
-> ![image](images/figure4.png)
->
-> _Figure 4: Page de création d'un nouveau projet_
+> ![Page de création d'un nouveau projet.](images/figure4.png)
+> <pre>
+> Figure 4: Page de création d'un nouveau projet.
+> </pre>
 
 GitLab crée un repository vide  (voir _Figure 5_ ci-dessous) et nous indique les commandes git à exécuter  (voir _Figure 6_ ci-dessous) afin de poursuivre la création du projet.
 
-> ![image](images/figure5.png)
->
-> _Figure 5: Page d'accueil du nouveau projet vide'_
+> ![Page d'accueil du nouveau projet vide.](images/figure5.png)
+> <pre>
+> Figure 5: Page d'accueil du nouveau projet vide.
+> </pre>
 
-> ![image](images/figure6.png)
->
-> _Figure 6: Commandes git à exécuter_
+> ![Commandes git à exécuter.](images/figure6.png)
+> <pre>
+> Figure 6: Commandes git à exécuter.
+> </pre>
 
 ## Création du pipeline
 Nous allons maintenant construire le pipeline et mettre en place les différents jobs. Pour continuer cette présentation, je vais utiliser le projet accessible à cette adresse [MedHead](https://gitlab.com/cocowaterswing/ocr-p11-medhead-poc) (voir _Figure 7_ ci-dessous). Tous les extraits de code et figures qui vont suivre sont tirés de ce projet, réalisé dans le cadre d'une formation qualifiante de la plateforme [OpenClassrooms](https://openclassrooms.com/fr/). Il s'agit de plusieurs applications Spring Boot, qui utilisent l'outil Maven et le langage Java.
 
-> ![image](images/figure7.png)
->
-> _Figure 7: Repository du projet MedHead_
+> ![Repository du projet MedHead.](images/figure7.png)
+> <pre>
+> Figure 7: Repository du projet MedHead.
+> </pre>
 
 ### .gitlab-ci.yml, exemple simple
 Afin de paramétrer un pipeline sur la plateforme GitLab, nous devons commencer par créer un fichier .gitlab-ci.yml à la racine de notre repository. Ce fichier est organisé autour de deux notions importantes, les _stages_ et les jobs. Les stages indiquent le nom et l'ordre d'exécution des jobs, qui sont eux-mêmes attachés à un stage. L'extrait de code ci-dessous montre une écriture minimale du fichier.
@@ -140,9 +149,10 @@ test-job:
 
 Maintenant que le fichier est créé nous pouvons effectuer un commit, cette action va démarrer l'exécution automatique du pipeline, que nous pouvons suivre dans l'onglet _Pipelines_ de l'interface (voir _Figure 8_ ci-dessous). Le pipeline peut avoir différents états, _running_ quand il est en cours d'exécution puis, _passed_ ou _failed_, qui indiquent respectivement que l'exécution s'est déroulée correctement ou, au contraire, qu'elle est stoppée car des erreurs ont été trouvées.
 
-> ![image](images/figure8.png)
->
-> _Figure 8: Exécution du pipeline_
+> ![Exécution du pipeline.](images/figure8.png)
+> <pre>
+> Figure 8: Exécution du pipeline.
+> </pre>
 
 ### .gitlab-ci.yml, build et tests unitaires
 
@@ -184,19 +194,22 @@ Dans cet extrait de code, le mot clé _image_ indique quelle image docker doit �
 
 Une fois le job _build-ms-emergency_ traité par le pipeline, nous pouvons visualiser le résultat du build en naviguant dans l'onglet _Jobs_ et en le sélectionnant dans la liste (voir _Figure 9_ ci-dessous).
 
-> ![image](images/figure9.png)
->
-> _Figure 9: Visualisation du résultat du build_
+> ![Visualisation du résultat du build.](images/figure9.png)
+> <pre>
+> Figure 9: Visualisation du résultat du build.
+> </pre>
 
 Le pipeline poursuit son exécution avec le job nommé _unit-test-ms-emergency_. Ce job va nous permettre d'exécuter les tests unitaires développés pour l'application _emergency_. En complément, nous allons générer un rapport que nous pourrons sauvegarder grâce à l'utilisation du mot clé _artifacts_. Nous spécifierons la fréquence de création de ce rapport avec _when_ et le sauvegarderons, dans un format html avec _paths_ pour le consulter ou le télécharger ultérieurement (voir _Figure 10_ ci-dessous), ainsi que dans un format xml avec _reports:junit_ pour qu'il soit intégré dans l'interface utilisateur de GitLab (voir _Figure 11_ ci-dessous).
 
-> ![image](images/figure10.png)
->
-> _Figure 10: Télécharger ou visualiser un rapport d'exécution des tests unitaires_
+> ![Télécharger ou visualiser un rapport d'exécution des tests unitaires](images/figure10.png)
+> <pre>
+> Figure 10: Télécharger ou visualiser un rapport d'exécution des tests unitaires
+> </pre>
 
-> ![image](images/figure11.png)
->
-> _Figure 11: Intégration du rapport d'exécution des tests unitaires dans GitLab_
+> ![Intégration du rapport d'exécution des tests unitaires dans GitLab.](images/figure11.png)
+> <pre>
+> Figure 11: Intégration du rapport d'exécution des tests unitaires dans GitLab.
+> </pre>
 
 ### .gitlab-ci.yml, Code Coverage
 
@@ -230,9 +243,10 @@ coverage-ms-emergency:
       - emergency/target/site/jacoco/
 ```
 
-> ![image](images/figure12.png)
->
-> _Figure 12: Rapport html généré par JaCoCo_
+> ![Rapport html généré par JaCoCo.](images/figure12.png)
+> <pre>
+> Figure 12: Rapport html généré par JaCoCo.
+> </pre>
 
 ### .gitlab-ci.yml, Code Quality
 
@@ -292,9 +306,10 @@ exclude_patterns:
   - "**/test/"
 ```
 
-> ![image](images/figure13.png)
->
-> _Figure 13: Rapport HTML généré par Code Climate_
+> ![Rapport HTML généré par Code Climate.](images/figure13.png)
+> <pre>
+> Figure 13: Rapport HTML généré par Code Climate.
+> </pre>
 
 ### .gitlab-ci.yml, Package
 
@@ -333,9 +348,10 @@ package-ms-emergency:
       - emergency/target/*.jar
 ```
 
-> ![image](images/figure14.png)
->
-> _Figure 14: Visualisation du Package Registry de GitLab_
+> ![Visualisation du Package Registry de GitLab.](images/figure14.png)
+> <pre>
+> Figure 14: Visualisation du Package Registry de GitLab.
+> </pre>
 
 ### .gitlab-ci.yml, Docker
 
@@ -382,9 +398,10 @@ dockerize-ms-emergency:
       --destination "${CI_REGISTRY_IMAGE}/emergency:${CI_COMMIT_TAG}"
 ```
 
-> ![image](images/figure15.png)
->
-> _Figure 15: Visualisation du Container Registry de GitLab_
+> ![Visualisation du Container Registry de GitLab.](images/figure15.png)
+> <pre>
+> Figure 15: Visualisation du Container Registry de GitLab.
+> </pre>
 
 ## Conclusion
 Dans cette présentation, nous avons vu comment construire un pipeline d'intégration continue avec GitLab. Les différentes étapes du pipeline nous permettent dorénavant de récupérer des rapports sur l'exécution des tests unitaires, sur la couverture du code par les tests, sur la qualité du code source de notre projet et finalement, non seulement créer, mais aussi conteneuriser nos applications. Cette configuration peut évidemment être améliorée. Elle constitue une base de travail à laquelle nous pouvons par exemple ajouter des tests d'intégration mais aussi une étape de vérification des vulnérabilités de nos conteneurs pour ensuite compléter d'autres aspects DevOps, comme la mise en production automatisée de nos applications.
