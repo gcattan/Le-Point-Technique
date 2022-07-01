@@ -23,7 +23,8 @@ Please check _Figure 1_
 
 I am joining table either as a figure or using [pandoc tables](https://pandoc.org/MANUAL.html#tables).
 
-Please check _Table 1_
+Please check _Table 1_. Note the hack with the lack of closing `</pre>` tag,
+enforcing tables to be rendered as text in markdown (and in the same time not be ignored by pandoc).
 
 _Table 1: legend_
 
