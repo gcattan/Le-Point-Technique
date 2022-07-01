@@ -27,7 +27,7 @@ Please check _Table 1_
 
 _Table 1: legend_
 
-<div>
+<div><pre>
 +---------------+---------------+
 | Fruit         | Price         | 
 +===============+===============+
