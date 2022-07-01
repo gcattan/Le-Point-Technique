@@ -6,7 +6,7 @@ on:
       - labeled
 
 env:
-  FOLDER: March2022
+  FOLDER: June2022
 
 jobs:
   publish:
