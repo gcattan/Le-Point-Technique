@@ -325,7 +325,7 @@ rédaction des spécifications techniques que chaque composants.
 ## Références
 Wowza Media Systems. ‘MPEG-DASH: Dynamic Adaptive Streaming Over HTTP Explained’, 18 April 2022. [https://www.wowza.com/blog/mpeg-dash-dynamic-adaptive-streaming-over-http](https://www.wowza.com/blog/mpeg-dash-dynamic-adaptive-streaming-over-http).
 
-jbernard. ‘Les principaux formats de flux video live DASH et HLS’. Blog Eleven Labs, 19 July 2017. [https://blog.eleven-labs.com/fr/video-live-dash-hls/](https://blog.eleven-labs.com/fr/video-live-dash-hls/).
+Bernard, Jérémy. ‘Les principaux formats de flux video live DASH et HLS’. Blog Eleven Labs, 19 July 2017. [https://blog.eleven-labs.com/fr/video-live-dash-hls/](https://blog.eleven-labs.com/fr/video-live-dash-hls/).
 
 Hardt, Dick. ‘The OAuth 2.0 Authorization Framework’. Request for Comments. Internet Engineering Task Force, October 2012. [https://doi.org/10.17487/RFC6749](https://doi.org/10.17487/RFC6749).
 
