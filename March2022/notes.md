@@ -8,4 +8,4 @@ Et une étude exploratoire pour la production de médias interactifs.
 
 Bonne lecture !
 
-Gregoire Cattan
+Grégoire Cattan
