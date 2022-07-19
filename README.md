@@ -16,3 +16,4 @@ Montpellier, France
 # List of publication
 
 [June 2022](June2022/June2022.pdf)
+- _N. Bertrand_, Intégration continue avec GitLab, [DOI](https://doi.org/10.5281/zenodo.6788647)
