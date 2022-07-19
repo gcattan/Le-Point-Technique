@@ -539,3 +539,5 @@ published
 will
 work
 year
+ISSN
+Montpellier
