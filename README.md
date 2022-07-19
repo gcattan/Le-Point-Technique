@@ -5,6 +5,9 @@
 Tutorial and technical demos for the purpose of education.
 Sum of the work will be published once a year on June.
 
+**ISSN** 2826-5726 </br>
+Montpellier, France
+
 # How to submit
 - Fork this repository into your own namespace
 - Write your tutorial on a markdown format. You can follow `template.md`. The file must be located into the `June2023` folder. Commit your file into your own repository.
