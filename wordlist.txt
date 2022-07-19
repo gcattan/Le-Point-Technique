@@ -541,3 +541,4 @@ work
 year
 ISSN
 Montpellier
+DOI
