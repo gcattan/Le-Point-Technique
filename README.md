@@ -13,7 +13,7 @@ Montpellier, France
 - Write your tutorial on a markdown format. You can follow `template.md`. The file must be located into the `June2023` folder. Commit your file into your own repository.
 - Open a pull request to merge your branch against `gcattan/Le-Point-Technique/master`
 
-# List of publication
+# List of publications
 
 [June 2022](June2022/June2022.pdf)
 - _N. Bertrand_, Intégration continue avec GitLab, [DOI](https://doi.org/10.5281/zenodo.6788647)
