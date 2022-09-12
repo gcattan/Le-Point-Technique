@@ -1,8 +1,6 @@
-# Set update schedule for GitHub Actions
-
+on: push
 version: 2
 updates:
-
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
