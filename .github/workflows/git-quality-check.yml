@@ -23,7 +23,7 @@ jobs:
       run: |
         test "${{ steps.git-quality-check.outputs.score }}" != ""
     - name: Create badge
-      uses: RubbaBoy/BYOB@v1.2.1
+      uses: RubbaBoy/BYOB@v1.3.0
       with:
         NAME: score
         LABEL: 'Git Quality Score'
