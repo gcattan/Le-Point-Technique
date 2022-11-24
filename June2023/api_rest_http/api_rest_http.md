@@ -80,14 +80,67 @@ TODO
 </div>
 
 ## Convention de création pour les API
+Afin de maintenir une cohérence forte entre tous les services, certains besoins doivent utiliser une syntaxe 
+commune décrite ci-dessous. 
 
 ### Règles communes
+Le résultat de la requête devra toujours être retourné dans le champ `data` d’un objet JSON. Les 
+autres attributs peuvent servir à ajouter des métadonnées à la requête.
 
 ### API Paginées
+Les API paginées acceptent toujours deux paramètres optionnels :
+
+- page - Numéro de la page à retourner (défaut : 1)
+
+- size - Nombre de résultats par page à retourner (défaut : dépend de l’API, généralement 20)
+Il doit être possible de manipuler ces paramètres pour obtenir les pages suivantes ou augmenter le 
+nombre de résultat dans une seule page.
 
 ### API de recherche
+Dans le cas d’une API permettant d’effectuer une recherche (Recherche exclusive) sur une ressource :
+
+- Il doit être possible, en spécifiant des valeurs en `query params`, de filtrer les résultats 
+uniquement sur un critère précis de la ressource.
+ _Exemple_ : `users/?email=john.doe@contoso.com` - Liste des utilisateurs dont le nom 
+est égal à la valeur indiquée.
+
+- Les arguments de recherches de type string peuvent être préfixés/suffixés d'un `*` pour rendre la 
+recherche non-limitative.
+ _Exemple_ : `users/?username=Sandbob*` - Tous les utilisateurs dont le nom commence par 
+"Sandbob".
+
+- Une logique similaire existe pour les champs de type date, avec les préfixes : `<` et `>`.
+ _Exemple_ : `users/?createdAt=>2020-01-15` - Tous les utilisateurs créés après le 
+15/01/2015.
+
+Il est aussi possible de créer des APIs permettant de sélectionner un ensemble de ressources, 
+correspondant aux différentes valeurs des éléments indiqués dans les query params de la requête HTTP 
+(Recherche inclusive). 
+
+- Une syntaxe basée sur des crochets (`[ ]`) permet de spécifier la liste des différentes valeurs 
+séparées par des virgules (,).
+ _Exemple_ : `contracts/?id=[1124521,1124550,2102450]` - Obtient une liste des 
+contrats indiqués.
+
+- Une syntaxe supplémentaire peut être implémentée, permettant une sélection sur un range de 
+valeurs, en utilisant le séparateur `...`
+ _Exemple_ : `users/?id=[1…5]` (Les utilisateurs dont l'id est contenu entre 1 et 5.
 
 ### Authenticated API
+Certains services API doivent disposer de end-points adaptant leur retour en fonction du contexte 
+d’identité véhiculé à travers le jeton d’authentification. Dans ce scénario, les API doivent répondre aux 
+règles suivantes :
+
+- L’url contient toujours, juste après le nom du service API et de sa version, le nom de l’identité 
+utilisée.
+ _Exemple_ : `/user/contracts` - Les contrats de l’utilisateur xxx. 
+
+- Le nom de l’identité doit être au singulier.
+
+- Une authentification de type `Authorization Code` ou `Resource Owner Password Credential` est requise.
+
+- Une erreur `401` (`Unauthorized`) doit être levée si le jeton ne contient pas d’identité ou que 
+celle-ci ne peut pas être vérifiée via le serveur d’autorisation. 
 
 ## Données manipulées par les services
 
