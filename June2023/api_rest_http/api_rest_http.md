@@ -364,24 +364,22 @@ spécifiques à cette fonction) sera fournie et accessible au même endroit que 
 
 ## References
 
-https://medium.com/better-programming/string-case-styles-camel-pascal-snake-and-kebab-case-981407998841
+Divine, Patrick. “String Case Styles: Camel, Pascal, Snake, and Kebab Case.” Medium, July 19, 2019. https://betterprogramming.pub/string-case-styles-camel-pascal-snake-and-kebab-case-981407998841.
 
-https://tools.ietf.org/html/rfc7231#section-4.3
+Fielding, Roy T., and Julian Reschke. “Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content.” Request for Comments. Internet Engineering Task Force, June 2014. https://doi.org/10.17487/RFC7231.
 
-https://tools.ietf.org/html/rfc7231#section-6
+Newman, Chris, and Graham Klyne. “Date and Time on the Internet: Timestamps.” Request for Comments. Internet Engineering Task Force, July 2002. https://doi.org/10.17487/RFC3339.
 
-https://tools.ietf.org/html/rfc3339
+“Transaction informatique.” In Wikipédia, December 20, 2021. https://fr.wikipedia.org/w/index.php?title=Transaction_informatique&oldid=189066265.
 
-https://fr.wikipedia.org/wiki/Transaction_informatique
+Nottingham, Mark, and Erik Wilde. “Problem Details for HTTP APIs.” Request for Comments. Internet Engineering Task Force, March 2016. https://doi.org/10.17487/RFC7807.
 
-https://tools.ietf.org/html/rfc7807
+Gerhards, Rainer. “The Syslog Protocol.” Request for Comments. Internet Engineering Task Force, March 2009. https://doi.org/10.17487/RFC5424.
 
-https://www.rfc-editor.org/rfc/rfc5424.html#section-6.2.1
+J. Bernard. “Les principaux formats de flux video live DASH et HLS.” Blog Eleven Labs, July 19, 2017. https://blog.eleven-labs.com/fr/video-live-dash-hls/.
 
-https://keepachangelog.com/en/1.1.0/
+Preston-Werner, Tom. “Semantic Versioning 2.0.0.” Semantic Versioning. Accessed November 27, 2022. https://semver.org/spec/v2.0.0.html.
 
-https://semver.org/spec/v2.0.0.html
+“CHANGELOG.Md.” Accessed November 27, 2022. https://changelog.md/.
 
-http://changelog.md/
-
-https://swagger.io/docs/specification/about/
+“About Swagger Specification | Documentation | Swagger.” Accessed November 27, 2022. https://swagger.io/docs/specification/about/.
