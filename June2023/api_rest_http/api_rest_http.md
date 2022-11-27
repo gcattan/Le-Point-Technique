@@ -217,7 +217,73 @@ persistantes.
 
 ### Normalisation de la sortie d’erreur (API Problem)
 
+Toutes les erreurs API, qu’elles soient techniques ou fonctionnelles, devront être formatées selon les 
+spécifications de la [RFC 7807](https://tools.ietf.org/html/rfc7807).
+
+Ainsi, une erreur sera toujours conforme, à minima, au format suivant :
+
+```
+{
+    "title": "string",
+    "type": "string",
+    "status": int
+}
+```
+
+Où :
+
+- `title` : contiendra le nom de l’erreur dans un format lisible par un être humain. (Généralement 
+en anglais)
+
+- `type` : contiendra l’identifiant du type de l’erreur. Deux erreurs ayant la même cause renverront 
+__toujours__ un type similaire. Le type peut être utilisé pour permettre d’adapter le retour à afficher 
+à l’utilisateur.
+
+- `status` : Contiendra le code HTTP de l’erreur. Sauf mention contraire, ce code sera __toujours__
+identique à celui de la réponse `HTTP`.
+
+Par ailleurs, les règles suivantes s’appliquent : 
+
+- Les requêtes invalides se traduiront toujours par l’envoi d’une réponse `400 Bad Request` et 
+d’un type d’erreur : `validation-error`.
+
+- Les requêtes vers des ressources manquantes se traduiront toujours par l’envoi d’une réponse 
+`404 Not Found` et d’un type d’erreur : `resource-not-found`. 
+
+- Si une erreur technique survient durant le traitement, la réponse sera toujours une `500 Internal Error` et le type d’erreur : `internal-error`.
+
+	- Aucun détail de l’erreur ne devrait être visible en production.
+
+	- L’erreur doit être loguée.
+
 ## Stockage des erreurs (logs)
+
+Les règles suivantes s’appliquent lorsqu’une erreur survient au sein d’un service API :
+
+- Une solution de log centralisée (ex : `Graylog`) doit être utilisé pour inscrire tous les logs de 
+l’application.
+
+	- Cependant, une application peut disposer __en complément__ (duplication) d'un mécanisme 
+de log interne.
+
+- Tous les services API doivent pouvoir activer un mode `debug` (via fichier d’environnement) 
+permettant de loguer toutes les requêtes atteignant le service.
+
+- Les données sensibles devront être anonymisées (exemple : Mot de passe).
+
+- Toute erreur doit être identifiée et doit être traitée sous forme d’exception. Ces exceptions 
+devront toutes être transmises au gestionnaire de log.
+
+- Une requête en erreur doit être, __à minima__, être composée de logs permettant de retrouver :
+
+- Une identification de la cause (détail de l’erreur, cause de l’erreur, fichier, n° de ligne …) 
+
+- Des informations sur la requête ayant générée l’erreur (Données d’entrée, fonction appelée etc…)
+
+- Les logs d’erreurs doivent être conservés au moins __30__ jours.
+
+Les codes erreurs utilisés pour identifier le niveau de criticité devront être conforme aux 
+recommandations de la [section 6.2 de la RFC Syslog Protocol](https://www.rfc-editor.org/rfc/rfc5424.html#section-6.2.1) (_Table 4_)
 
 _Table 4: Liste des codes erreurs - Syslog Protocol_
 
@@ -246,20 +312,55 @@ _Table 4: Liste des codes erreurs - Syslog Protocol_
 ## Version des API
 
 ### Version d’une API
+Chaque service API est __obligatoirement__ préfixé d’un numéro de version. Un même service API peut exister 
+sous plusieurs versions.
 
-### Teneu d'un CHANGELOG
+__Un changement de version peut avoir lieu__ :
+
+- Lors d’une modification du format d’E/S d’un ou plusieurs end-points constituant un service API.
+
+- Lors de modification profonde des fonctionnalités associées à un ou plusieurs end-points d’un 
+service API, et dont la modification peut avoir un impact sur les applicatifs consommateurs.
+
+Toutes les autres mises à jour (amélioration de performance, correctif de sécurité …) d’un service API qui 
+n’ont pas d’impact sur les éléments décrit ci-dessus doivent être appliquées de manière transparente sur 
+l’API sans changement de version.
+
+### Tenue d'un CHANGELOG
+La mise en place d’un __manifeste d’historique de version est obligatoire__.
+
+- Utilisation du format [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) & utilisation du [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+- Ce manifeste doit être présent à la racine du dépôt `Git` sous la forme d’un fichier [CHANGELOG.md](http://changelog.md/)
+(Fichier reconnu par `Gitlab`)
 
 ## Documentation API
+Pour chaque service, il est nécessaire de fournir :
 
-## Introduction
+__Une spécification complète de l’API__ au format [Open API 3.0](https://swagger.io/docs/specification/about/) (Swagger), qui doit inclure à minima :
 
-```
-{
-    "title": "string",
-    "type": "string",
-    "status": int
-}
-```
+- Pour chaque `end-point` :
+
+	- Une description claire de son rôle. Cette description doit indiquer si des filtrages implicites 
+sont appliqués sur la ressource retournée. 
+
+	- Une description des paramètres de recherches s’ils existent.
+	
+	- La liste complète des réponses (erreurs / succès) qui peuvent être retournées par la 
+fonction.
+	
+	- Pour chaque réponse, un exemple de valeurs retournées et/ou le `model` associé.
+
+- Pour chaque `model` :
+
+	- Une description générale du model.
+
+	- Une description de la signification de chaque champ. Cette description est __obligatoire__
+même si le nom du champ semble être suffisamment explicite. 
+
+__Si nécessaire__, une documentation contextuelle supplémentaire (par exemple : Liste des règles métiers 
+spécifiques à cette fonction) sera fournie et accessible au même endroit que la documentation __Swagger__.
+
 
 ## References
 
