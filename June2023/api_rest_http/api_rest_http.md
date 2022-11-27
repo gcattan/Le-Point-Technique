@@ -367,3 +367,21 @@ spécifiques à cette fonction) sera fournie et accessible au même endroit que 
 https://medium.com/better-programming/string-case-styles-camel-pascal-snake-and-kebab-case-981407998841
 
 https://tools.ietf.org/html/rfc7231#section-4.3
+
+https://tools.ietf.org/html/rfc7231#section-6
+
+https://tools.ietf.org/html/rfc3339
+
+https://fr.wikipedia.org/wiki/Transaction_informatique
+
+https://tools.ietf.org/html/rfc7807
+
+https://www.rfc-editor.org/rfc/rfc5424.html#section-6.2.1
+
+https://keepachangelog.com/en/1.1.0/
+
+https://semver.org/spec/v2.0.0.html
+
+http://changelog.md/
+
+https://swagger.io/docs/specification/about/
