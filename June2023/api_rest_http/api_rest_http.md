@@ -175,7 +175,7 @@ _Table 3: Format d'échanges des données au sein des APIs_
 +----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------+
 | Type de donnees      | Format attendu                                                                                                                                            | Stockage BDD                  |
 +======================+===========================================================================================================================================================+===============================+
-| Dates & heures       | Date conforme à la RFC 3339. _Exemple_ : `2005-08-15T15:52:01+01:00`                                                                                      | `DATETIME`                    |
+| Dates & heures       | Date conforme à la [RFC 3339](https://tools.ietf.org/html/rfc3339). _Exemple_ : `2005-08-15T15:52:01+01:00`                                                                                      | `DATETIME`                    |
 +----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------+
 | Chaîne de caractères | Les `strings` doivent toujours être : - Débarrassées des espaces blancs inutiles (trim) - Utiliser le `null` si elles sont vides, sauf contrainte métier. | Variable (`VARCHAR`, `TEXT`…) |
 +----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------+
@@ -190,8 +190,28 @@ _Table 3: Format d'échanges des données au sein des APIs_
 ### Gestion des Entrées/Sorties
 
 #### Contrôles d’intégrité des données
+Pour chaque API, les données d’entrée / sortie doivent être contrôlées sur deux aspects :
+
+- Présence ou non de la donnée. 
+
+- Respect du format attendu selon les contraintes de la base de données et selon les règles métiers.
 
 #### Manipulation des données par les services API
+Lors de la manipulation des données dans les services API (connexions aux bases de données …), les 
+règles suivantes devraient être respecter : 
+
+- Chaque service est propriétaire de ses données. Il est le seul à pouvoir les consommer. 
+ Quelques exceptions peuvent exister pour les données métiers transverses.
+
+- L’utilisation d’un ORM doit être privilégiée pour manipuler les données. 
+
+- Les [transactions](https://fr.wikipedia.org/wiki/Transaction_informatique) doivent être utilisées chaque fois que nécessaire.
+
+- Les requêtes sollicitant régulièrement la base de données devraient utiliser des connexions 
+persistantes.
+
+- Les chaînes de connexion devraient spécifier selon le modèle l’option de lecture / écriture.
+
 
 ## Gestion des erreurs
 
