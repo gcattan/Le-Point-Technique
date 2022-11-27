@@ -124,21 +124,21 @@ recherche non-limitative.
 "Sandbob".
 
 - Une logique similaire existe pour les champs de type date, avec les préfixes : `<` et `>`.
- _Exemple_ : `users/?createdAt=>2020-01-15` - Tous les utilisateurs créés après le 
+ _Exemple_ : `users/?createdAt>=2020-01-15` - Tous les utilisateurs créés après le 
 15/01/2015.
 
 Il est aussi possible de créer des APIs permettant de sélectionner un ensemble de ressources, 
 correspondant aux différentes valeurs des éléments indiqués dans les query params de la requête HTTP 
 (Recherche inclusive). 
 
-- Une syntaxe basée sur des crochets (`[ ]`) permet de spécifier la liste des différentes valeurs 
+- Une syntaxe basée sur des crochets (`[]`) permet de spécifier la liste des différentes valeurs 
 séparées par des virgules (,).
  _Exemple_ : `contracts/?id=[1124521,1124550,2102450]` - Obtient une liste des 
 contrats indiqués.
 
 - Une syntaxe supplémentaire peut être implémentée, permettant une sélection sur un range de 
-valeurs, en utilisant le séparateur `...`
- _Exemple_ : `users/?id=[1…5]` (Les utilisateurs dont l'id est contenu entre 1 et 5.
+valeurs, en utilisant le séparateur "`..`".
+_Exemple_ : `users/?id=[1..5]` (Les utilisateurs dont l'id est contenu entre 1 et 5).
 
 ### Authenticated API
 Certains services API doivent disposer de end-points adaptant leur retour en fonction du contexte 
@@ -158,6 +158,17 @@ celle-ci ne peut pas être vérifiée via le serveur d’autorisation.
 
 ## Données manipulées par les services
 
+### Format d'échange
+
+Les règles suivantes s’appliquent concernant les données des services API :
+
+- Les services API doivent être conçus pour accepter des données d’entrée au format 
+`application/json`. 
+
+- Les données retournées par les services API doivent être au format `application/json`.
+
+Par ailleurs, les formats suivants doivent être toujours respectés (en entrée comme en sortie) (_Table 3_).
+
 _Table 3: Format d'échanges des données au sein des APIs_
 
 <div><pre>
@@ -175,8 +186,6 @@ _Table 3: Format d'échanges des données au sein des APIs_
 | Mot de passe         | Les mots de passe doivent être hachés en utilisant l’algorithme `SHA256`                                                                                  | Variable (`VARCHAR`, `TEXT`…) |
 +----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------+
 </div>
-
-### Format d'échange
 
 ### Gestion des Entrées/Sorties
 
