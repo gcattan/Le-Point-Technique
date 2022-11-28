@@ -138,14 +138,14 @@ contrats indiqués.
 
 - Une syntaxe supplémentaire peut être implémentée, permettant une sélection sur un range de 
 valeurs, en utilisant le séparateur "`..`".
-_Exemple_ : `users/?id=[1..5]` (Les utilisateurs dont l'id est contenu entre 1 et 5).
+_Exemple_ : `users/?id=[1..5]` (Les utilisateurs dont l'identifiant est contenu entre 1 et 5).
 
 ### Authenticated API
 Certains services API doivent disposer de end-points adaptant leur retour en fonction du contexte 
 d’identité véhiculé à travers le jeton d’authentification. Dans ce scénario, les API doivent répondre aux 
 règles suivantes :
 
-- L’url contient toujours, juste après le nom du service API et de sa version, le nom de l’identité 
+- l'URL contient toujours, juste après le nom du service API et de sa version, le nom de l’identité 
 utilisée.
  _Exemple_ : `/user/contracts` - Les contrats de l’utilisateur xxx. 
 
@@ -317,7 +317,7 @@ sous plusieurs versions.
 
 __Un changement de version peut avoir lieu__ :
 
-- Lors d’une modification du format d’E/S d’un ou plusieurs end-points constituant un service API.
+- Lors d’une modification du format d'entrées/sorties d’un ou plusieurs end-points constituant un service API.
 
 - Lors de modification profonde des fonctionnalités associées à un ou plusieurs end-points d’un 
 service API, et dont la modification peut avoir un impact sur les applicatifs consommateurs.
