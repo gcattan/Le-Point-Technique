@@ -553,7 +553,6 @@ November
 identifiants
 param
 URLs
-l’API
 nommage
 Kebab
 APIs
@@ -625,3 +624,4 @@ changelog.md
 Specification
 specification
 swagger.io
+l'API
