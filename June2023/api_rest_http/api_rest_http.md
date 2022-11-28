@@ -115,26 +115,24 @@ Dans le cas d’une API permettant d’effectuer une recherche (Recherche exclus
 
 - Il doit être possible, en spécifiant des valeurs en `query params`, de filtrer les résultats 
 uniquement sur un critère précis de la ressource.
- _Exemple_ : `users/?email=john.doe@contoso.com` - Liste des utilisateurs dont le nom 
+_Exemple_ : `users/?email=john.doe@contoso.com` - Liste des utilisateurs dont le nom 
 est égal à la valeur indiquée.
 
 - Les arguments de recherches de type string peuvent être préfixés/suffixés d'un `*` pour rendre la 
 recherche non-limitative.
- _Exemple_ : `users/?username=Sandbob*` - Tous les utilisateurs dont le nom commence par 
+_Exemple_ : `users/?username=Sandbob*` - Tous les utilisateurs dont le nom commence par 
 "Sandbob".
 
 - Une logique similaire existe pour les champs de type date, avec les préfixes : `<` et `>`.
- _Exemple_ : `users/?createdAt>=2020-01-15` - Tous les utilisateurs créés après le 
+_Exemple_ : `users/?createdAt>=2020-01-15` - Tous les utilisateurs créés après le 
 15/01/2015.
 
 Il est aussi possible de créer des APIs permettant de sélectionner un ensemble de ressources, 
 correspondant aux différentes valeurs des éléments indiqués dans les query params de la requête HTTP 
 (Recherche inclusive). 
 
-- Une syntaxe basée sur des crochets (`[]`) permet de spécifier la liste des différentes valeurs 
-séparées par des virgules (,).
- _Exemple_ : `contracts/?id=[1124521,1124550,2102450]` - Obtient une liste des 
-contrats indiqués.
+- Une syntaxe basée sur des crochets (`[]`) permet de spécifier la liste des différentes valeurs séparées par des virgules (`,`).
+_Exemple_ : `contracts/?id=[1124521,1124550,2102450]` - Obtient une liste des contrats indiqués.
 
 - Une syntaxe supplémentaire peut être implémentée, permettant une sélection sur un range de 
 valeurs, en utilisant le séparateur "`..`".
@@ -147,7 +145,7 @@ règles suivantes :
 
 - l'URL contient toujours, juste après le nom du service API et de sa version, le nom de l’identité 
 utilisée.
- _Exemple_ : `/user/contracts` - Les contrats de l’utilisateur xxx. 
+_Exemple_ : `/user/contracts` - Les contrats de l’utilisateur xxx. 
 
 - Le nom de l’identité doit être au singulier.
 
@@ -169,13 +167,13 @@ Les règles suivantes s’appliquent concernant les données des services API :
 
 Par ailleurs, les formats suivants doivent être toujours respectés (en entrée comme en sortie) (_Table 3_).
 
-_Table 3: Format d'échanges des données au sein des APIs_
+_Table 3: Format d'échanges des données au sein des APIs._ *[https://tools.ietf.org/html/rfc3339](https://tools.ietf.org/html/rfc3339)
 
 <div><pre>
 +----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------+
 | Type de donnees      | Format attendu                                                                                                                                            | Stockage BDD                  |
 +======================+===========================================================================================================================================================+===============================+
-| Dates & heures       | Date conforme à la [RFC 3339](https://tools.ietf.org/html/rfc3339). _Exemple_ : `2005-08-15T15:52:01+01:00`                                                                                      | `DATETIME`                    |
+| Dates & heures       | Date conforme à la RFC 3339*. _Exemple_ : `2005-08-15T15:52:01+01:00`                                                                                      | `DATETIME`                    |
 +----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------+
 | Chaîne de caractères | Les `strings` doivent toujours être : - Débarrassées des espaces blancs inutiles (trim) - Utiliser le `null` si elles sont vides, sauf contrainte métier. | Variable (`VARCHAR`, `TEXT`…) |
 +----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------+
@@ -200,8 +198,7 @@ Pour chaque API, les données d’entrée / sortie doivent être contrôlées su
 Lors de la manipulation des données dans les services API (connexions aux bases de données …), les 
 règles suivantes devraient être respecter : 
 
-- Chaque service est propriétaire de ses données. Il est le seul à pouvoir les consommer. 
- Quelques exceptions peuvent exister pour les données métiers transverses.
+- Chaque service est propriétaire de ses données. Il est le seul à pouvoir les consommer. Quelques exceptions peuvent exister pour les données métiers transverses.
 
 - L’utilisation d’un ORM doit être privilégiée pour manipuler les données. 
 
@@ -260,11 +257,9 @@ d’un type d’erreur : `validation-error`.
 
 Les règles suivantes s’appliquent lorsqu’une erreur survient au sein d’un service API :
 
-- Une solution de log centralisée (ex : `Graylog`) doit être utilisé pour inscrire tous les logs de 
-l’application.
+- Une solution de log centralisée (ex : `Graylog`) doit être utilisé pour inscrire tous les logs de l’application.
 
-	- Cependant, une application peut disposer __en complément__ (duplication) d'un mécanisme 
-de log interne.
+    - Cependant, une application peut disposer __en complément__ (duplication) d'un mécanisme de log interne.
 
 - Tous les services API doivent pouvoir activer un mode `debug` (via fichier d’environnement) 
 permettant de loguer toutes les requêtes atteignant le service.
@@ -341,13 +336,11 @@ __Une spécification complète de l’API__ au format [Open API 3.0](https://swa
 
 - Pour chaque `end-point` :
 
-	- Une description claire de son rôle. Cette description doit indiquer si des filtrages implicites 
-sont appliqués sur la ressource retournée. 
+	- Une description claire de son rôle. Cette description doit indiquer si des filtrages implicites sont appliqués sur la ressource retournée. 
 
 	- Une description des paramètres de recherches s’ils existent.
 	
-	- La liste complète des réponses (erreurs / succès) qui peuvent être retournées par la 
-fonction.
+	- La liste complète des réponses (erreurs / succès) qui peuvent être retournées par la fonction.
 	
 	- Pour chaque réponse, un exemple de valeurs retournées et/ou le `model` associé.
 
@@ -364,22 +357,22 @@ spécifiques à cette fonction) sera fournie et accessible au même endroit que 
 
 ## References
 
-Divine, Patrick. “String Case Styles: Camel, Pascal, Snake, and Kebab Case.” Medium, July 19, 2019. https://betterprogramming.pub/string-case-styles-camel-pascal-snake-and-kebab-case-981407998841.
+Divine, Patrick. “String Case Styles: Camel, Pascal, Snake, and Kebab Case.” Medium, July 19, 2019. [https://betterprogramming.pub/string-case-styles-camel-pascal-snake-and-kebab-case-981407998841](https://betterprogramming.pub/string-case-styles-camel-pascal-snake-and-kebab-case-981407998841).
 
-Fielding, Roy T., and Julian Reschke. “Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content.” Request for Comments. Internet Engineering Task Force, June 2014. https://doi.org/10.17487/RFC7231.
+Fielding, Roy T., and Julian Reschke. “Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content.” Request for Comments. Internet Engineering Task Force, June 2014. [https://doi.org/10.17487/RFC7231](https://doi.org/10.17487/RFC7231).
 
-Newman, Chris, and Graham Klyne. “Date and Time on the Internet: Timestamps.” Request for Comments. Internet Engineering Task Force, July 2002. https://doi.org/10.17487/RFC3339.
+Newman, Chris, and Graham Klyne. “Date and Time on the Internet: Timestamps.” Request for Comments. Internet Engineering Task Force, July 2002. [https://doi.org/10.17487/RFC3339](https://doi.org/10.17487/RFC3339).
 
-“Transaction informatique.” In Wikipédia, December 20, 2021. https://fr.wikipedia.org/w/index.php?title=Transaction_informatique&oldid=189066265.
+“Transaction informatique.” In Wikipédia, December 20, 2021. [https://fr.wikipedia.org/w/index.php?title=Transaction_informatique&oldid=189066265](https://fr.wikipedia.org/w/index.php?title=Transaction_informatique&oldid=189066265).
 
-Nottingham, Mark, and Erik Wilde. “Problem Details for HTTP APIs.” Request for Comments. Internet Engineering Task Force, March 2016. https://doi.org/10.17487/RFC7807.
+Nottingham, Mark, and Erik Wilde. “Problem Details for HTTP APIs.” Request for Comments. Internet Engineering Task Force, March 2016. [https://doi.org/10.17487/RFC7807](https://doi.org/10.17487/RFC7807).
 
-Gerhards, Rainer. “The Syslog Protocol.” Request for Comments. Internet Engineering Task Force, March 2009. https://doi.org/10.17487/RFC5424.
+Gerhards, Rainer. “The Syslog Protocol.” Request for Comments. Internet Engineering Task Force, March 2009. [https://doi.org/10.17487/RFC5424](https://doi.org/10.17487/RFC5424).
 
-J. Bernard. “Les principaux formats de flux video live DASH et HLS.” Blog Eleven Labs, July 19, 2017. https://blog.eleven-labs.com/fr/video-live-dash-hls/.
+J. Bernard. “Les principaux formats de flux video live DASH et HLS.” Blog Eleven Labs, July 19, 2017. [https://blog.eleven-labs.com/fr/video-live-dash-hls/](https://blog.eleven-labs.com/fr/video-live-dash-hls/).
 
-Preston-Werner, Tom. “Semantic Versioning 2.0.0.” Semantic Versioning. Accessed November 27, 2022. https://semver.org/spec/v2.0.0.html.
+Preston-Werner, Tom. “Semantic Versioning 2.0.0.” Semantic Versioning. Accessed November 27, 2022. [https://semver.org/spec/v2.0.0.html](https://semver.org/spec/v2.0.0.html).
 
-“CHANGELOG.Md.” Accessed November 27, 2022. https://changelog.md/.
+“CHANGELOG.Md.” Accessed November 27, 2022. [https://changelog.md/](https://changelog.md/).
 
-“About Swagger Specification | Documentation | Swagger.” Accessed November 27, 2022. https://swagger.io/docs/specification/about/.
+“About Swagger Specification | Documentation | Swagger.” Accessed November 27, 2022. [https://swagger.io/docs/specification/about/](https://swagger.io/docs/specification/about/).
