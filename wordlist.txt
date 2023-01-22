@@ -649,3 +649,5 @@ bff-backend-frontend-pattern-microservices-arpit-bhayani
 www.linkedin.com
 backend
 frontend
+p.ex
+BFFs
