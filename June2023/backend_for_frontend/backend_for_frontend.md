@@ -20,7 +20,7 @@ __keywords__: Backend For Frontend (BFF), Pattern, Software Architecture
 - La maintenance corrective spécifiques pour chaque BFF/interfaces.
 - L’isolation de chaque interface et leur BFF associé
 - Les developpeurs frontend peuvent faire évoluer les requêtes suivants leur convenance.
-- Le bakend quant à lui fourni une API qui est indépendante des interfaces.
+- Le backend quant à lui fourni une API qui est indépendante des interfaces.
 - Certaines données sensibles peuvent être cachées à des clients spécifiques. 
 
 ## Inconvénients 
@@ -39,9 +39,9 @@ La _Figure 1_ contient un schéma générique d'une implémentation BFF.
 > Figure 1: Schéma générique d'un BFF.
 > </pre>
 
-Afin de pallier du mieux possible aux inconvénients vus plus haut, une alternative est la creation d'un BFF unique par interface et pour plusieurs entrées (p.ex. site Web et l’application mobile), notamment via l’utilisation de la solution [GraphSQL](https://blog.octo.com/graphql-et-pourquoi-faire/), qui permet de n’avoir qu’une seule couche BFF pour des entrées multiples.
+Afin de pallier du mieux possible aux inconvénients vus plus haut, une alternative est la creation d'un BFF unique par interface et pour plusieurs entrées (p.ex. site Web et l’application mobile), notamment via l’utilisation de la solution [GraphQL](https://blog.octo.com/graphql-et-pourquoi-faire/), qui permet de n’avoir qu’une seule couche BFF pour des entrées multiples.
 
-Une seule interface connectée à un unique BFF, et accessible via plusieurs entrées ou terminaux (fixe et mobile), permettrait (en plus des avantages deja su-mentionnes):
+Une seule interface connectée à un unique BFF, et accessible via plusieurs entrées ou terminaux (fixe et mobile), permettrait (en plus des avantages déjà susmentionné):
 - de limiter la duplication de code, de la standardiser notamment avec du [HTML 5](https://www.w3schools.com/html/) ;
 - de limiter la latence, limitant le nombre d’interfaces et donc de BFFs ;
 - de faciliter la maintenance, pour les mêmes raisons susmentionnées, et de fait d’alléger la charge de travail des développeurs frontend.

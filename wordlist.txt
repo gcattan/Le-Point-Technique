@@ -639,3 +639,13 @@ LeFrançois
 BFF
 desdites
 Bhayani
+Trollé
+frontend
+les-indispensables-dun-projet-frontend-un-backend-for-frontend-une-api-sur-mesure
+sur-mesure
+LinkedIn
+Microservices
+bff-backend-frontend-pattern-microservices-arpit-bhayani
+www.linkedin.com
+backend
+frontend
