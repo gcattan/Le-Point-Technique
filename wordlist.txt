@@ -626,3 +626,10 @@ specification
 swagger.io
 l'API
 tools.ietf.org
+Aug
+Calamier
+GraphQL
+OCTO
+Talks
+blog.octo.com
+graphql-et-pourquoi-faire
