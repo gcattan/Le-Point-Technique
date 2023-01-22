@@ -633,3 +633,9 @@ OCTO
 Talks
 blog.octo.com
 graphql-et-pourquoi-faire
+Backend
+Frontend
+LeFrançois
+BFF
+desdites
+Bhayani
