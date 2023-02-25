@@ -18,7 +18,7 @@ __keywords__: Backend For Frontend (BFF), Pattern, Software Architecture
 	- Tandis que les développeurs frontend pourront spécifier leurs besoins de données en fonction des interfaces.
 - Optimisation des requêtes selon les besoins.
 - La maintenance corrective spécifiques pour chaque BFF/interfaces.
-- L’isolation de chaque interface et leur BFF associé
+- L’isolation de chaque interface et leur BFF associé.
 - Les développeurs frontend peuvent faire évoluer les requêtes suivants leur convenance.
 - Le backend quant à lui fourni une API qui est indépendante des interfaces.
 - Certaines données sensibles peuvent être cachées à des clients spécifiques. 
