@@ -37,7 +37,7 @@ jobs:
           name: ${{ steps.set-env.outputs.name }}
           path: ${{ steps.set-env.outputs.path }}
       - name: Pull request artifacts
-        uses: gavv/pull-request-artifacts@v1.0.0
+        uses: gavv/pull-request-artifacts@v1.1.0
         with:
           commit: ${{ github.event.pull_request.head.sha }}
           repo-token: ${{ secrets.GITHUB_TOKEN }}
