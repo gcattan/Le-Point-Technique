@@ -17,18 +17,18 @@ __keywords__: LLM, Prompting, Fine-tuning
 Common applications of LLM can be separated in two domains: dialog and natural language processsing (NLP) tasks.
 
 In terms of dialog, applications regroup:
-* task-oriented dialog
-* conversational question answering
-* open domain dialog
+- task-oriented dialog
+- conversational question answering
+- open domain dialog
 
 In terms of NLP tasks, applications regroup:
-* sentence classification
-* named entity recognition
-* summarization
-* masked language modeling
-* many more ...
+- sentence classification
+- named entity recognition
+- summarization
+- masked language modeling
+- many more ...
 
-Popular LLM are ChatGPT (OpenAI), LLaMa (Meta) or again Hugging Chat (Hugging Face).
+Popular LLM are ChatGPT (OpenAI, San Francisco, the US), LLaMa (Meta, Menlo Park, the US) or again Hugging Chat (Hugging Face, New York City, the US).
 You can find an exhaustive list of LLMs [here](https://github.com/toncho11/ML_examples/wiki/List-of-Large-Language-Models-and-APIs)
 
 ## What are the types of language modelling?
@@ -44,6 +44,7 @@ Comparison of the number of parameters in both types of models:
 - GPT-like models which have several billion parameters (AR)
 
 ## What is PLM?
+
 "PLM" stands for pre-trained language models, as compared to from-scratch model.
 We will review here some technics to use these pre-trained models.
 
@@ -90,9 +91,11 @@ Few-Shot learning (LSL) is where we prompt the model with a few examples so that
 
 
 ### What is RLHF training?
+
 At a high-level, reinforcement learning with human feedback (RLHF) is a technique for training large language models that has been critical to OpenAI's ChatGPT and InstructGPT models, Anthropic's Claude, and more. RLHF enables training LLMs to understand instructions and generate helpful responses.
 
 ### What is federated learning?
+
 Under federated learning, multiple people remotely share their data to collaboratively train a single deep learning model, improving on it iteratively, like a team presentation or report. Each party downloads the model from a datacenter in the cloud, usually a pre-trained [foundation model](https://research.ibm.com/blog/what-are-foundation-models). They train it on their private data, then summarize and encrypt the model’s new configuration. The model updates are sent back to the cloud, decrypted, averaged, and integrated into the centralized model. Iteration after iteration, the collaborative training continues until the model is fully trained.
 
 ### Classification of LLMs
@@ -102,10 +105,15 @@ LLM can be regrouped in two categories:
 - Grounded - is the linking of concepts to context and within NLP context is often a knowledge base, images or conversation
 
 - Instruct GPT - is a powerful tool that allows users to fine-tune the language generation capabilities of the GPT (Generative Pre-trained Transformer) model. Developed by OpenAI, Instruct GPT allows users to train the model on specific tasks and generate text that is tailored to their specific needs.
+	- Example:
 
-Example:
+	```
+	Correct spelling and grammar from the following text.
+	I do not wan to go
+	```
 
-```
-Correct spelling and grammar from the following text.
-I do not wan to go
-```
+## References
+
+A. Andreev, ‘List of Large Language Models and APIs’. [https://github.com/toncho11/ML_examples/wiki/List-of-Large-Language-Models-and-APIs](https://github.com/toncho11/ML_examples/wiki/List-of-Large-Language-Models-and-APIs).
+
+‘What are foundation models? | IBM Research Blog’. [https://research.ibm.com/blog/what-are-foundation-models](https://research.ibm.com/blog/what-are-foundation-models).
