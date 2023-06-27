@@ -29,7 +29,7 @@ In terms of NLP tasks, applications regroup:
 - many more ...
 
 Popular LLM are ChatGPT (OpenAI, San Francisco, the US), LLaMa (Meta, Menlo Park, the US) or again Hugging Chat (Hugging Face, New York City, the US).
-You can find an exhaustive list of LLMs [here](https://github.com/toncho11/ML_examples/wiki/List-of-Large-Language-Models-and-APIs)
+You can find a list of LLMs [here](https://github.com/toncho11/ML_examples/wiki/List-of-Large-Language-Models-and-APIs).
 
 ## What are the types of language modelling?
 
@@ -40,8 +40,8 @@ You can find an exhaustive list of LLMs [here](https://github.com/toncho11/ML_ex
 - An example of auto-regressive model is GPT. These models are uni-directional (one directional) and they are trained to predict the next word without seeing the succeeding ones. This is because these auto-regressive models are specifically designed for better language generation, which makes it necessary for the model to be pre-trained in a uni-directional manner.
 
 Comparison of the number of parameters in both types of models:
-- BERT with a few hundred million parameters (MLM)
-- GPT-like models which have several billion parameters (AR)
+- BERT with a few hundred million parameters (MLM).
+- GPT-like models which have several billion parameters (AR).
 
 ## What is PLM?
 
@@ -79,7 +79,7 @@ Description: Answer the question "What is your name?"
 And the output is:
 `My name is Peter.`
 
-Note how the first 3 lines are the context stuffing and the last line is the instruction.
+Note how the first three lines are used to provide a context and the last line is the instruction.
 
 ### What is in-context learning (few-shot learning)?
 
