@@ -10,6 +10,7 @@ input-files:
 - notes.md
 - api_rest_http/api_rest_http.md
 - backend_for_frontend/backend_for_frontend.md
+- notes_llm/notes_llm.md
 - ../ours.md
 
 # or you may use input-file: with a single value
