@@ -87,7 +87,7 @@ In-context or few-shot learning (FSL) through prompt design is the process of fi
 
 Few-Shot Learning (FSL) is a Machine Learning framework that enables a pre-trained model to generalize over new categories of data (that the pre-trained model has not seen during training) using only a few labeled samples per class.
 
-Few-Shot learning (LSL) is where we prompt the model with a few examples so that it picks up on the pattern and style we’re going for.
+Few-Shot learning (LSL) is where we prompt the model with a few examples so that it picks up on the pattern and style we are going for.
 
 
 ### What is RLHF training?
@@ -96,7 +96,7 @@ At a high-level, reinforcement learning with human feedback (RLHF) is a techniqu
 
 ### What is federated learning?
 
-Under federated learning, multiple people remotely share their data to collaboratively train a single deep learning model, improving on it iteratively, like a team presentation or report. Each party downloads the model from a datacenter in the cloud, usually a pre-trained [foundation model](https://research.ibm.com/blog/what-are-foundation-models). They train it on their private data, then summarize and encrypt the model’s new configuration. The model updates are sent back to the cloud, decrypted, averaged, and integrated into the centralized model. Iteration after iteration, the collaborative training continues until the model is fully trained.
+Under federated learning, multiple people remotely share their data to collaboratively train a single deep learning model, improving on it iteratively, like a team presentation or report. Each party downloads the model from a datacenter in the cloud, usually a pre-trained [foundation model](https://research.ibm.com/blog/what-are-foundation-models). They train it on their private data, then summarize and encrypt the model new configuration. The model updates are sent back to the cloud, decrypted, averaged, and integrated into the centralized model. Iteration after iteration, the collaborative training continues until the model is fully trained.
 
 ### Classification of LLMs
 
