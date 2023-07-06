@@ -6,7 +6,7 @@ Ces travaux sont généralement sous la forme de tutoriels ou de notices explica
 Ce premier numéro contient trois travaux.
 
 Un article sur les bonnes pratiques à respecter avec les API REST.
-Une notice explicative sur le pattern d'architecture backend-for-frontend.
+Une notice explicative sur le pattern d'architecture Backend For Frontend.
 Et pour finir, une notice explicative sur les Large Language Models (LLM).
 
 Bonne lecture !
