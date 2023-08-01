@@ -22,3 +22,8 @@ Montpellier, France
 - _M. Cansell_, GitLab Action with MySQL on a Java Spring Application, [DOI](https://doi.org/10.5281/zenodo.6791121)
 - _L. Amelin, M. Abdelouahad_, ColorPicker: Une librairie pour choisir une couleur sous Android, [DOI](https://doi.org/10.5281/zenodo.6791113)
 - _D. Evan_, Etude exploratoire pour la production de Médias interactifs, [DOI](https://doi.org/10.5281/zenodo.6791131)
+
+[June 2023](June2023/June2023.pdf)
+- _D. Evan_, Architecture: API REST & HTTP, [DOI](https://zenodo.org/record/8121638)
+- _M. LeFrançois_, Backend For Frontend : Notes, [DOI](https://zenodo.org/record/8121651)
+- _A. Andreev_, Notes on Large Language Models, [DOI](https://doi.org/10.5281/zenodo.6791113)
