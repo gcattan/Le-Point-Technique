@@ -26,4 +26,4 @@ Montpellier, France
 [June 2023](June2023/June2023.pdf)
 - _D. Evan_, Architecture: API REST & HTTP, [DOI](https://zenodo.org/record/8121638)
 - _M. LeFrançois_, Backend For Frontend : Notes, [DOI](https://zenodo.org/record/8121651)
-- _A. Andreev_, Notes on Large Language Models, [DOI](https://doi.org/10.5281/zenodo.6791113)
+- _A. Andreev_, Notes on Large Language Models, [Article](https://github.com/gcattan/Le-Point-Technique/blob/master/June2023/notes_llm/article.pdf)
