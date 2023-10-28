@@ -1,6 +1,5 @@
 # Editorial
 
-[TODO]
 
 Grégoire Cattan
 
