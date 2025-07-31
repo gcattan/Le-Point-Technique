@@ -3,7 +3,7 @@
 # OUTILS DE COLLABORATION WEB : Étude exploratoire  
 _Marc Lefrançois_  
 
-_Le-Point-Technique_, _01/2024_  
+_Le-Point-Technique_, _06/2024_  
 
 __abstract__: Étude exploratoire des solutions de collaboration Web (visioconférence et partage de fichiers) avec analyse du marché, comparaison architecturale et recommandations pour la société Astra Recherche.
 
