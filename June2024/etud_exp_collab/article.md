@@ -1,202 +1,191 @@
 \setcounter{figure}{0}
 
-# Outils de collaboration web : Etude exploratoire
+# OUTILS DE COLLABORATION WEB : Étude exploratoire  
+_Marc Lefrançois_  
 
-_LeFrançois, Marc_
+_Le-Point-Technique_, _01/2023_  
 
-_Le-Point-Technique_, _January/2023_
+__abstract__: Étude exploratoire des solutions de collaboration Web (visioconférence et partage de fichiers) avec analyse du marché, comparaison architecturale et recommandations pour la société Astra Recherche.
 
-__abstract__: blablablablabla
+__keywords__: visioconférence, partage de fichiers, architecture logicielle, NextCloud, Jitsi
 
-__keywords__: bla1, bla2
+---
 
-## Démarche exploratoire
-La démarche de l’étude exploratoire a été réalisée selon les étapes suivantes :
-- *Options du marché* : pour déterminer quelles sont les solutions offertes par le marché.
-- *Options architecturales* : pour déterminer les options architecturales disponibles, et définir la 
-composition architecturale la plus pertinente à la réponse du besoin.
-- *Solution retenue* : pour déterminer les options de solutions, et définir celle permettant de répondre 
-au besoin.
+## 1. Objet
+Le présent document concerne l’étude exploratoire dans le cadre d’une solution Web de collaboration, réunion et présentation pour la société Astra Recherche. Son objectif est de présenter les différentes options d'architecture et d'étudier les différentes solutions pour les composants de visioconférences et de partage de fichier.  
 
+---
 
-## Options du marché
-Cette étude a pour objectif d’étudier et de comparer les solutions offertes par le marché, dans le but de 
-déterminer si une ou plusieurs solutions pourraient répondre au besoin d’outils collaboratifs.
+## 2. Situation actuelle
 
-Elle permettra également l’étude fonctionnelle desdits outils collaboratifs, pour déterminer les solutions qui 
-sont nécessaires et pertinentes pour chacun d’eux.
+### 2.1. Diagramme de composant
+Veuillez consulter _Figure 1_.  
 
-### Outil de visioconférence
-En ce qui concerne l’outil de visioconférence, les solutions suivantes ont été étudiées :
-- *Cisco WebEx Meetings (Webex Suite)* de la société Cisco ;
-- *Zoom* de la société Zoom Video Communications ;
-- *Solution applicative* de la société Google Inc.
-- *Microsoft Teams* de la société Microsoft ;
-- *NextCloud Talk* de la communauté NextCloud Gmbh. ;
-- *Jitsi* de la société Atlassian.
-
-#### Cisco WebEx Meetings (Webex Suite)
-#### Zoom
-#### Solution applicative Google
-#### Microsoft Teams
-#### NextCloud Talk
-#### Jitsi
-
-### Outil de partage de fichiers 
-En ce qui concerne l’outil de partage de fichiers, les solutions suivantes ont été étudiées :
-- *Google Drive* de la société Google Inc.
-- *NextCloud Files* de la communauté NextCloud Gmbh. ;
-- *SharePoint* de la société Microsoft ;
-- *Liferay* de la société éponyme.
-
-#### Google Drive
-#### NextCloud Files
-#### SharePoint
-#### Liferay
-### Conclusion
-Au regard des solutions étudiées, des besoins, des contraintes et spécifiés de chacune des solution, 
-trois d’entre elles ont été retenues :
-- *Jitsi* et *NextCloud Talk* pour l’outil de visioconférence.
-2. *NextCloud Files* pour l’outil de partage de fichiers.
-
-Les autres solution n’ont pu être retenues dans la mesure où ce sont des solutions ne s’intégrant pas 
-dans le système, mais fonctionnant en marge de celui-ci. De plus, elles ne répondent pas aussi bien aux 
-besoins et contraintes du projet que ceux qui ont été retenus.
-
-## Options architecturales
-Il s’agit ici d’étudier et de déterminer quelle composition architecturale est la plus pertinente pour répondre au 
-besoin d’outils de visioconférence et de partage de fichier, dans le cas où l’on choisirait de développer nous-même la solution ou spécialiser une solution existante que nous souhaiterions intégrer à notre système actuel.
-
-### Critères architecturaux
-Ci-dessous les critères définissant une architecture de référence, et sur lesquels l’évaluation architecturale a 
-été basée.
-
-#### Évolutivité
-#### Simplicité
-#### Maintenabilité 
-#### Compatibilité
-#### Interconnectivité 
-
-### Options architecturales
-Il s’agit ici avant tout de déterminer quelles sont les architectures logicielles qui sont à notre disposition 
-et qui pourraient convenir aux outils de visioconférence et de partage de fichiers, s’il était décidé de 
-faire nous même le développement.
-
-#### Typologie architecturale
-#### Architecture client-serveur
-#### Architecture pilotée par les évènements
-#### Architecture orientée services
-#### Architecture modulaire
-#### Architecture en couches 
-#### Architecture centrée sur les données
-
-### Architecture cible de visioconférence 
-Cette section détermine l’architecture cible la mieux adaptée à l’outil de visioconférence, parmi les six 
-modèles standards d’architecture défini dans la section précédente.
-
-#### Architectures non retenues
-#### Architecture retenue
-
-### Architecture cible de partage de fichiers 
-Cette section détermine l’architecture cible la mieux adaptée à l’outil de partage de fichiers, parmi les 
-six modèles standards d’architecture défini dans la section précédente.
-
-#### Architectures non retenues
-#### Architecture retenue
-
-## Option retenue
-Globalement deux choix s’offre à nous :
-- Celui de la solution interne, id. de développer nous même les outils de visioconférence et de partage 
-de fichiers.
-- Celui de la solution externe, id. d’utiliser une solution en partie pré-faite à implémenter en tant que 
-composante du système actuel
-
-### Comparatif des options
-
-Ci-dessous la comparaison entre solution interne et externe.
-
-#### Solution interne
-#### Solution externe
-#### Conclusion
-Au regard des éléments de comparaison, notamment sur le coût, le délai et la facilité de déploiement, 
-ainsi que sur la réponse aux besoins et contraintes du projet, le choix doit s’orienter sur une solution 
-externe. En effet, la société Astra n’a pas pour vocation d’être une société éditrice de logiciel, et n’a 
-donc aucune raison d’investir autant, financièrement et en temps, et ni aucune prétention à se 
-substituer aux références du marché. D’autant plus que certaines solutions permettent une grande 
-spécialisation aux besoins et contraintes de leurs clients / utilisateurs.
-
-### Autre comparaison
-Ci-dessous une autre comparaison à titre informatif entre une solution propriétaire et open source.
-
-#### Propriétaire
-#### OpenSource
-#### Conclusion
-Au regard des éléments de comparaison, notamment sur le coût, l’autonomie d’implémentation et 
-de maintenance, et donc sur la nécessité de répondre au plus juste aux besoins et contraintes du 
-projet, le choix doit s’orienter sur une solution OpenSource. En effet, une solution propriétaire nous 
-rendrait trop dépendant, autant sur l’implémentation que la maintenance, et notamment en cas de 
-bugs majeurs. De plus, l’accès au code permet une bien plus grande et meilleure spécialisation des 
-fonctionnalités, qu’une solution propriétaire qui est de facto plus limitée. Même si le coût de 
-déploiement OpenSource est généralement plus élevé, qu’une solution propriétaire, celui-ci est très 
-largement compensé par le coût de la solution OpenSource, qui ne comprend généralement que le 
-support ; id. pas de loyer de licence à payer.
-
-### Choix final
-
-Pour résumé, le choix doit s’orienter sur une solution externe et OpenSource. 
-Aussi, ce choix offre à la société Astra, le meilleur des deux mondes, à savoir celui du développement 
-spécifique sans pour autant réinventer la roue et sans les délais inhérents, et celui de la solution touten-un, sans le coût inhérent au prix des licences, et sans la dépendance fournisseur, tout en gardant les 
-données entreprise dans son giron.
-En conclusion de l’étude de marché, nous avons retenue trois solutions pour nos 
-besoins d’outils de visioconférence et de partage de fichiers, et correspondant à notre besoin :
-- Visioconférence :
-    - Jitsis
-    - NextCloud Talk
-- Partage de fichiers :
-    - NextCloud Files
-Pour des raisons évidentes de rationalisation de coût et de simplicité, le choix doit se porter sur la 
-solution *NextCloud*, solution tout-en-un répondant à l’ensemble de notre besoin.
-
-Check this link [link](google.fr).
-
-Please check _Figure 1_
-
-> ![legend](https://user-images.githubusercontent.com/6229031/142882134-04839c93-ce4d-4af5-88f6-97feb5cf7373.png)
+> ![Diagramme de composant](images/diagramme_composants.png)
 > <pre>
-> Figure 1: legend
+> Figure 1 : Diagramme de composant de l’architecture IT actuelle d’Astra Recherche
 > </pre>
 
-I am joining table either as a figure or using [pandoc tables](https://pandoc.org/MANUAL.html#tables).
+### 2.2. Description du diagramme de composant
+- **Site web Astra** : application web réactive affichant des informations publiques et protégées par login, accessible depuis tout type d’appareil.  
+- **Application mobile Astra** : application Android/iOS offrant accès mobile aux données Astra et un stockage limité de documents.  
+- **Firewall réseau** : protège les systèmes Astra et filtre les accès par port 80 pour les services exposés.  
+- **Point d’entrée de service** : vérifie l’accès des utilisateurs aux services autorisés.  
+- **Système de gestion des utilisateurs** : gère les permissions, rôles et authentifications.  
+- **Système de gestion de l’organisation** : gère les organisations autorisées et l’accès aux données associées.  
+- **Email** : service interne de messagerie et emails transactionnels.  
+- **Gestion des documents Astra** : protection et accès contrôlé aux documents selon rôles et autorisations.  
+- **Gestion RH** : gestion des utilisateurs internes (rôle, département, permissions).  
 
-Please check _Table 1_. Note the hack with the lack of closing `</pre>` tag,
-enforcing tables to be rendered as text in markdown (and in the same time not be ignored by pandoc).
+### 2.3. Remarques sur le diagramme de composant
+- L’architecture des opérations IT d’Astra comprend 9 composants.  
+- Les composants sont fortement couplés.  
+- L’architecture semble monolithique.  
 
-_Table 1: legend_
+---
 
-<div><pre>
-+---------------+---------------+
-| Fruit         | Price         | 
-+===============+===============+
-| Bananas       | $1.34         |
-|               |               |
-+---------------+---------------+
-| Oranges       | $2.10         |
-|               |               |
-+---------------+---------------+
-</div>
+## 3. Démarche exploratoire
+La démarche de l’étude exploratoire a été réalisée selon trois étapes :  
+1. Étude des options du marché  
+2. Étude des options architecturales  
+3. Sélection de la solution retenue  
 
-Here is an awesome list:
+---
 
-- first item
+## 4. Options du marché
 
-- second item
+### 4.1. Outil de visioconférence
 
-### Subsection II
-## Section II
+#### 4.1.1. Cisco WebEx Meetings (Webex Suite)
+**Description** : solution clé en main (appels audio/vidéo, visioconférence, messagerie instantanée, sondages, événements).  
+**Avantages** : support, compatibilité multiplateforme, chiffrement de bout en bout, conformité RGPD, API d’extension, choix de la région de stockage.  
+**Inconvénients** : propriétaire, données stockées chez un tiers, coût mensuel (30–50€/licence), pas de support Linux.  
+**Conclusion** : 90 % des besoins couverts mais non retenue (coût + absence d’intégration).  
 
-## References
+#### 4.1.2. Zoom
+**Description** : messagerie et visioconférence (appels, messagerie, calendrier, événements).  
+**Avantages** : support, mise en place rapide, API, chiffrement, conformité RGPD.  
+**Inconvénients** : propriétaire, données chez un tiers, coût (≥17€/licence), pas de Linux, suspicion sur la collecte des données.  
+**Conclusion** : 85 % des besoins couverts mais non retenue (coût + confidentialité).  
 
-Use the Chicago Manual of Style 17th Edition (full note), e.g.:
+#### 4.1.3. Microsoft Teams
+**Description** : communication collaborative intégrée à Microsoft 365.  
+**Avantages** : support, interconnectivité dans l’écosystème Microsoft, chiffrement, conformité RGPD.  
+**Inconvénients** : propriétaire, dépendance à Microsoft 365, coût (~12€/licence), pas d’enregistrement natif, pas d’API d’extension.  
+**Conclusion** : 80 % des besoins couverts mais non retenue (coût + verrou Microsoft).  
 
-‘Web API Fuzz Testing | GitLab’. Accessed 29 June 2022.
-[https://docs.gitlab.com/ee/user/application_security/api_fuzzing/](https://docs.gitlab.com/ee/user/application_security/api_fuzzing/).
+#### 4.1.4. Solution applicative Google
+**Description** : Google Meet (visioconférence) + Google Chat (messagerie).  
+**Avantages** : solution clé en main, chiffrement, conformité RGPD.  
+**Inconvénients** : propriétaire, collecte de données possible, coût (~12€/licence), dépendance au cloud Google.  
+**Conclusion** : 95 % des besoins couverts mais non retenue (coût + intégration limitée).  
+
+#### 4.1.5. Jitsi
+**Description** : application libre (OpenSource) pouvant fonctionner en JaaS.  
+**Avantages** : marque blanche, coût maîtrisé, données internes, extensible via API et code source, adoption étatique française, pas de limite logicielle de participants.  
+**Inconvénients** : nécessite des moyens d’intégration et de maintenance supplémentaires.  
+**Conclusion** : répond à 100 % des besoins → **retenue**.  
+
+#### 4.1.6. NextCloud Talk
+**Description** : extension NextCloud pour la collaboration (appels, visioconférence, messagerie).  
+**Avantages** : OpenSource, marque blanche, maîtrise des coûts, extensible, données internes, adoption ministérielle, pas de limitation logicielle.  
+**Inconvénients** : besoin de moyens pour intégration et maintien.  
+**Conclusion** : répond à 98 % des besoins → **retenue**.  
+
+---
+
+### 4.2. Outil de partage de fichiers
+
+#### 4.2.1. Google Drive
+**Avantages** : intégration avec de nombreux outils, chiffrement, conformité RGPD, antivirus intégré.  
+**Inconvénients** : propriétaire, données chez un tiers, coût mensuel, suspicion sur la collecte de données.  
+**Conclusion** : non retenue.  
+
+#### 4.2.2. NextCloud Files
+**Avantages** : OpenSource, marque blanche, extensible, chiffrement, conformité RGPD, adoption ministérielle.  
+**Inconvénients** : nécessite des moyens d’intégration et de maintenance.  
+**Conclusion** : répond à 98 % des besoins → **retenue**.  
+
+#### 4.2.3. SharePoint
+**Avantages** : intégration Microsoft, extensible, déploiement interne possible.  
+**Inconvénients** : propriétaire, dépendance Microsoft, offre trop large, coût mensuel (~28€/licence), pas Linux.  
+**Conclusion** : non retenue.  
+
+#### 4.2.4. Liferay
+**Avantages** : OpenSource, extensible en JEE, coûts maîtrisés.  
+**Inconvénients** : nécessite des compétences spécifiques et un temps d’implémentation élevé.  
+**Conclusion** : non retenue.  
+
+---
+
+### 4.3. Conclusion
+Solutions retenues :  
+- **Visioconférence :** Jitsi ou NextCloud Talk  
+- **Partage de fichiers :** NextCloud Files  
+
+---
+
+## 5. Options architecturales
+
+### 5.1. Critères architecturaux
+- **Évolutivité** : ajout efficace de nouvelles solutions.  
+- **Simplicité** : bonne granularité, documentation à jour, réutilisabilité.  
+- **Maintenabilité** : support du MCO, outils d’investigation, évolutivité.  
+- **Compatibilité** : avec les plateformes matérielles et logicielles.  
+- **Interconnectivité** : standards d’interfaçage (ETL, Web services).  
+
+### 5.2. Options architecturales
+#### 5.2.1. Typologie architecturale
+_(Voir tableau dans _Table 1_ ci-dessous)_  
+
+> <div><pre>
+> +-------------------------+---------------------------------------------------+
+> | ARCHITECTURE            | EXEMPLE D'APPLICATION                            |
+> +=========================+===================================================+
+> | Client-serveur          | ERP, serveur d'impression, messagerie            |
+> | Pilotée par événements  | Micro-blogging, automatisation d'usine           |
+> | Orientée services       | Suivi de colis, validation bancaire               |
+> | Modulaire               | Progiciel avec extensions VBA                    |
+> | En couches              | Pile TCP/IP, DAO                                 |
+> | Centrée sur les données | CRM                                              |
+> +-------------------------+---------------------------------------------------+
+> </div>
+> <pre>
+> Table 1 : Typologie architecturale
+> </pre>
+
+#### 5.2.2 – 5.2.7  
+Analyse des six architectures (client-serveur, pilotée par événements, orientée services, modulaire, en couches, centrée données).
+
+### 5.3. Architecture cible de visioconférence
+**Architecture retenue :** pilotée par événements.  
+
+### 5.4. Architecture cible de partage de fichiers
+**Architecture retenue :** client-serveur.  
+
+---
+
+## 6. Option retenue
+
+### 6.1. Comparatif interne vs externe
+#### 6.1.1. Solution interne
+Avantages : sur-mesure, maîtrise des coûts, indépendance fournisseur.  
+Inconvénients : coûts humains/financiers élevés, délais longs, risques sécurité.  
+
+#### 6.1.2. Solution externe
+Avantages : clé en main, support, délais réduits.  
+Inconvénients : dépendance fournisseur, coût mensuel possible.  
+
+#### 6.1.3. Conclusion
+Choix : **solution externe**.  
+
+### 6.2. Propriétaire vs OpenSource
+**Conclusion :** OpenSource préférable (indépendance, personnalisation, coûts).  
+
+### 6.3. Choix final
+**Solution retenue :** **NextCloud** (NextCloud Talk + NextCloud Files).  
+
+---
+
+## Références
+Aucune URL spécifique mentionnée dans le PDF.
