@@ -64,9 +64,9 @@ Cette méthode possède trois hyperparamètres :
 
 - le nombre initial de pas de temps utilisé par la guide-policy : `max_horizon` ;
 - le nombre d'étapes de transfert progressif entre guide-policy et exploration-policy (N) ;
-- le seuil β de performance souhaitée avant de passer de l'étape de transfert k à k+1.
+- le seuil bêta de performance souhaitée avant de passer de l'étape de transfert k à k+1.
 
-Pour l'ensemble des entraînements concernés par le JSRL, j'ai fixé N=10 et max_horizon=100. Tous les 2000 pas de temps, l'agent est évalué sur 100 épisodes ; la moyenne des récompenses obtenues lors de ces 100 épisodes est conservée, et au cours de l'entraînement, β prend la valeur du maximum de ces moyennes.
+Pour l'ensemble des entraînements concernés par le JSRL, j'ai fixé N=10 et max_horizon=100. Tous les 2000 pas de temps, l'agent est évalué sur 100 épisodes ; la moyenne des récompenses obtenues lors de ces 100 épisodes est conservée, et au cours de l'entraînement, le seuil bêta prend la valeur du maximum de ces moyennes.
 
 ### 2.2. Entraînements réalisés
 

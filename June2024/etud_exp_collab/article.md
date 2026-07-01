@@ -65,7 +65,7 @@ La démarche de l’étude exploratoire a été réalisée selon trois étapes 
 #### 4.1.2. Zoom
 **Description** : messagerie et visioconférence (appels, messagerie, calendrier, événements).  
 **Avantages** : support, mise en place rapide, API, chiffrement, conformité RGPD.  
-**Inconvénients** : propriétaire, données chez un tiers, coût (≥17€/licence), pas de Linux, suspicion sur la collecte des données.  
+**Inconvénients** : propriétaire, données chez un tiers, coût (17€/licence ou plus), pas de Linux, suspicion sur la collecte des données.  
 **Conclusion** : 85 % des besoins couverts mais non retenue (coût + confidentialité).  
 
 #### 4.1.3. Microsoft Teams
@@ -84,13 +84,13 @@ La démarche de l’étude exploratoire a été réalisée selon trois étapes 
 **Description** : application libre (OpenSource) pouvant fonctionner en JaaS.  
 **Avantages** : marque blanche, coût maîtrisé, données internes, extensible via API et code source, adoption étatique française, pas de limite logicielle de participants.  
 **Inconvénients** : nécessite des moyens d’intégration et de maintenance supplémentaires.  
-**Conclusion** : répond à 100 % des besoins → **retenue**.  
+**Conclusion** : répond à 100 % des besoins, d'où le statut **retenue**.  
 
 #### 4.1.6. NextCloud Talk
 **Description** : extension NextCloud pour la collaboration (appels, visioconférence, messagerie).  
 **Avantages** : OpenSource, marque blanche, maîtrise des coûts, extensible, données internes, adoption ministérielle, pas de limitation logicielle.  
 **Inconvénients** : besoin de moyens pour intégration et maintien.  
-**Conclusion** : répond à 98 % des besoins → **retenue**.  
+**Conclusion** : répond à 98 % des besoins, d'où le statut **retenue**.  
 
 ---
 
@@ -104,7 +104,7 @@ La démarche de l’étude exploratoire a été réalisée selon trois étapes 
 #### 4.2.2. NextCloud Files
 **Avantages** : OpenSource, marque blanche, extensible, chiffrement, conformité RGPD, adoption ministérielle.  
 **Inconvénients** : nécessite des moyens d’intégration et de maintenance.  
-**Conclusion** : répond à 98 % des besoins → **retenue**.  
+**Conclusion** : répond à 98 % des besoins, d'où le statut **retenue**.  
 
 #### 4.2.3. SharePoint
 **Avantages** : intégration Microsoft, extensible, déploiement interne possible.  
@@ -222,8 +222,3 @@ Choix : **solution externe**.
 
 ### 6.3. Choix final
 **Solution retenue :** **NextCloud** (NextCloud Talk + NextCloud Files).  
-
----
-
-## Références
-Ce document est un livrable d'étude interne réalisé pour la société Astra Recherche ; la source ne comporte ni bibliographie ni référence externe citée.
