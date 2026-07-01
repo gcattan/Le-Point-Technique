@@ -1,0 +1,23 @@
+CLAUDE.md
+  s_9d37d7ef4565bc::t_f2a2c1db1072b5 1-76
+June2024/qsvm/article.md
+  s_9d37d7ef4565bc::t_6ddcfba9432e9c 3-4,6,8,10,12,14,16,18,20,23,25,27,29,31,33,35,37,39,41,43-158
+June2024/reinf_learning/article.md
+  s_9d37d7ef4565bc::t_11b79d17376d01 3-4,6,8,10,12,14,16,18,20,23,25,27,29,31,33,35,37,39,41-42,44-130
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.8",
+  "base_commit_sha": "353d2c205fc82767173d37f1b3d522e7759532e5",
+  "prompts": {},
+  "sessions": {
+    "s_9d37d7ef4565bc": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "77ea888e-5bb4-4945-a480-973f0453b46c",
+        "model": "unknown"
+      },
+      "human_author": "Gregoire CATTAN <gregoire.cattan@ibm.com>"
+    }
+  }
+}
