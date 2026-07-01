@@ -1,0 +1,28 @@
+.claude/skills/build-pdf/SKILL.md
+  s_9d37d7ef4565bc::t_22ce7a5a5f0d54 1-105
+June2024/etud_exp_collab/article.md
+  s_9d37d7ef4565bc::t_1e227ef5f8cbc0 68,87,93,107
+June2024/reinf_learning/article.md
+  s_9d37d7ef4565bc::t_f344973e125f7f 67,69
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.8",
+  "base_commit_sha": "6821e71af7e844c450bb0f2864a810c579ba079e",
+  "prompts": {},
+  "humans": {
+    "h_57d8170b41e3bb": {
+      "author": "Gregoire CATTAN <gregoire.cattan@ibm.com>"
+    }
+  },
+  "sessions": {
+    "s_9d37d7ef4565bc": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "77ea888e-5bb4-4945-a480-973f0453b46c",
+        "model": "unknown"
+      },
+      "human_author": "Gregoire CATTAN <gregoire.cattan@ibm.com>"
+    }
+  }
+}
