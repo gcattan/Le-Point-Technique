@@ -1,0 +1,26 @@
+.claude/skills/build-pdf/SKILL.md
+  s_9d37d7ef4565bc::t_8f95645e8e3103 88-110,115,122,125,127
+CLAUDE.md
+  s_9d37d7ef4565bc::t_31b7633f50e29e 63-68
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.8",
+  "base_commit_sha": "f6abbf699cc17155d0d832b2416c7cf4e99b74ce",
+  "prompts": {},
+  "humans": {
+    "h_57d8170b41e3bb": {
+      "author": "Gregoire CATTAN <gregoire.cattan@ibm.com>"
+    }
+  },
+  "sessions": {
+    "s_9d37d7ef4565bc": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "77ea888e-5bb4-4945-a480-973f0453b46c",
+        "model": "unknown"
+      },
+      "human_author": "Gregoire CATTAN <gregoire.cattan@ibm.com>"
+    }
+  }
+}
