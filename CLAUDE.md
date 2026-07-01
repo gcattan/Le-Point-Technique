@@ -60,6 +60,12 @@ This produces `<Year>.pdf` per that folder's `pandoc_defaults.yaml` `input-files
 When adding a new article, add its `article.md` path to both `Sommaire.md` and the year's
 `pandoc_defaults.yaml` `input-files` list.
 
+Use the local skill `/build-pdf <year-folder>` (defined in `.claude/skills/build-pdf/SKILL.md`) rather than
+running this by hand — it also covers installing Pandoc if missing, diagnosing the Unicode/`pdflatex`
+failures this repo's articles are prone to, splitting the combined PDF into a per-article PDF in each
+article's subfolder (as already done for `June2023/*/article.pdf`), and updating README.md's list of
+publications.
+
 ## CI (`.github/workflows/`)
 
 - `spellcheck.yml`: runs `rojopolis/spellcheck-github-actions` on every push against all `**/*.md` files,
