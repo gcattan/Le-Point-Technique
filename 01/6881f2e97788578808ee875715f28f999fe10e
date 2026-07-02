@@ -1,0 +1,24 @@
+.spellcheck.yaml
+  s_9d37d7ef4565bc::t_f5d0d5368fb7d3 18
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.8",
+  "base_commit_sha": "016881f2e97788578808ee875715f28f999fe10e",
+  "prompts": {},
+  "humans": {
+    "h_57d8170b41e3bb": {
+      "author": "Gregoire CATTAN <gregoire.cattan@ibm.com>"
+    }
+  },
+  "sessions": {
+    "s_9d37d7ef4565bc": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "77ea888e-5bb4-4945-a480-973f0453b46c",
+        "model": "unknown"
+      },
+      "human_author": "Gregoire CATTAN <gregoire.cattan@ibm.com>"
+    }
+  }
+}
