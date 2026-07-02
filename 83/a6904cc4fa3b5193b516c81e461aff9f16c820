@@ -1,0 +1,12 @@
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.9",
+  "base_commit_sha": "83a6904cc4fa3b5193b516c81e461aff9f16c820",
+  "prompts": {},
+  "humans": {
+    "h_57d8170b41e3bb": {
+      "author": "Gregoire CATTAN <gregoire.cattan@ibm.com>"
+    }
+  }
+}
