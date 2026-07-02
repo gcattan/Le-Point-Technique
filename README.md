@@ -29,6 +29,6 @@ Montpellier, France
 - _A. Andreev_, Notes on Large Language Models, [Article](https://github.com/gcattan/Le-Point-Technique/blob/master/June2023/notes_llm/article.pdf)
 
 [June 2024](June2024/June2024.pdf)
-- _Marc Lefrançois_, Outils de Collaboration Web : Étude exploratoire, [Article](https://github.com/gcattan/Le-Point-Technique/blob/master/June2024/etud_exp_collab/article.pdf)
-- _Adrien Veres_, Quantum Support Vector Classification with the Titanic Dataset, [Article](https://github.com/gcattan/Le-Point-Technique/blob/master/June2024/qsvm/article.pdf)
-- _Fabien Chopin_, Jumpstart Reinforcement Learning with PPO, [Article](https://github.com/gcattan/Le-Point-Technique/blob/master/June2024/reinf_learning/article.pdf)
+- _Marc Lefrançois_, Outils de Collaboration Web : Étude exploratoire, [Article](https://github.com/gcattan/Le-Point-Technique/blob/master/June2024/etud_exp_collab/article.pdf), [DOI](https://doi.org/10.5281/zenodo.21129149)
+- _Adrien Veres_, Quantum Support Vector Classification with the Titanic Dataset, [Article](https://github.com/gcattan/Le-Point-Technique/blob/master/June2024/qsvm/article.pdf), [DOI](https://doi.org/10.5281/zenodo.21129583)
+- _Fabien Chopin_, Jumpstart Reinforcement Learning with PPO, [Article](https://github.com/gcattan/Le-Point-Technique/blob/master/June2024/reinf_learning/article.pdf), [DOI](https://doi.org/10.5281/zenodo.21129712)
