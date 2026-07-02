@@ -1,0 +1,25 @@
+June2024/etud_exp_collab/article.md
+  h_57d8170b41e3bb 27,31,37
+  s_69d66a9dd82c39::t_985f80618a7154 8,15,19,29,43,49,55,61,69,71,76,81,86,93,100,102,109-110,134,137,140,143,146,149,152,154,161,164,166,169,173-174,178,180-181,185,189,192,195
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.9",
+  "base_commit_sha": "006cfbd64b331cd9bcc227f79bb9cb4734a295da",
+  "prompts": {},
+  "humans": {
+    "h_57d8170b41e3bb": {
+      "author": "Gregoire CATTAN <gregoire.cattan@ibm.com>"
+    }
+  },
+  "sessions": {
+    "s_69d66a9dd82c39": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "fc199450-6729-42a2-b8bc-20304e3eb8fb",
+        "model": "unknown"
+      },
+      "human_author": "Gregoire CATTAN <gregoire.cattan@ibm.com>"
+    }
+  }
+}
